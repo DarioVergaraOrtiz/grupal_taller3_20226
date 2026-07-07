@@ -19,6 +19,7 @@ export const App: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isOffline, setIsOffline] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [sessionToDelete, setSessionToDelete] = useState<string | null>(null);
 
   // Save sessions to LocalStorage on change
   useEffect(() => {
@@ -96,9 +97,15 @@ export const App: React.FC = () => {
     }
   };
 
-  const deleteSession = async (sessionId: string, e: React.MouseEvent) => {
+  const deleteSession = (sessionId: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!confirm('¿Estás seguro de que deseas eliminar esta conversación?')) return;
+    setSessionToDelete(sessionId);
+  };
+
+  const confirmDeleteSession = async () => {
+    if (!sessionToDelete) return;
+    const sessionId = sessionToDelete;
+    setSessionToDelete(null);
 
     try {
       await fetch(`${API_BASE_URL}/api/session/${sessionId}`, {
@@ -353,6 +360,32 @@ export const App: React.FC = () => {
           onModelChange={setSelectedModel}
         />
       </main>
+
+      {/* Custom Modal for Session Deletion */}
+      {sessionToDelete && (
+        <div className="modal-overlay-gemini">
+          <div className="modal-content-gemini">
+            <h3 className="modal-title">¿Eliminar conversación?</h3>
+            <p className="modal-description">
+              Esta conversación se borrará de forma permanente de tu historial de recientes.
+            </p>
+            <div className="modal-actions-gemini">
+              <button 
+                className="modal-btn btn-cancel" 
+                onClick={() => setSessionToDelete(null)}
+              >
+                Cancelar
+              </button>
+              <button 
+                className="modal-btn btn-confirm" 
+                onClick={confirmDeleteSession}
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
