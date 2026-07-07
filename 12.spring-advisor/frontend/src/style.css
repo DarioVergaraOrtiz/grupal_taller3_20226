@@ -1298,3 +1298,326 @@ body {
   background: #d93025;
   box-shadow: 0 2px 6px rgba(234, 67, 53, 0.4);
 }
+
+/* ========================================================
+   SIIU UCE PRELOADER SPLASH ANIMATION
+   ======================================================== */
+#preloader-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0a0d1a;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* layout flow spacing */
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+.preloader-logos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  animation: logad-center 2.0s ease-out both;
+}
+
+.logo_load_splash {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes logad-center {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.preloader-wrapper {
+  position: relative;
+  color: #fff;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.preloader-slash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  transform-origin: center center;
+  width: 0.2rem;
+  height: 145%;
+  background: var(--uce-blue-light);
+  z-index: 4;
+  animation: slash 3.2s ease-in forwards;
+}
+
+.preloader-slash:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.85rem;
+  height: 120%;
+  background: linear-gradient(90deg, #0a0d1a 0%, #0f1324 50%, #0a0d1a 100%);
+  z-index: -1;
+}
+
+.preloader-slash:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.preloader-sides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.preloader-sides .preloader-side {
+  position: absolute;
+  background: var(--uce-gold);
+}
+
+.preloader-sides .preloader-side:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  transform: translateX(-101%);
+  animation: side-top ease 3.2s forwards;
+}
+
+.preloader-sides .preloader-side:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 0.15rem;
+  height: 100%;
+  transform: translateY(-101%);
+  animation: side-right ease 3.2s forwards;
+}
+
+.preloader-sides .preloader-side:nth-child(3) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.15rem;
+  transform: translateX(101%);
+  animation: side-bottom ease 3.2s forwards;
+}
+
+.preloader-sides .preloader-side:nth-child(4) {
+  top: 0;
+  left: 0;
+  width: 0.15rem;
+  height: 100%;
+  transform: translateY(101%);
+  animation: side-left ease 3.2s forwards;
+}
+
+.preloader-text {
+  position: relative;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  white-space: nowrap; /* CRITICAL: Prevent long text from wrapping and breaking division */
+}
+
+.preloader-text--backing {
+  opacity: 0;
+}
+
+.preloader-text--left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.preloader-text--left .preloader-inner {
+  transform: translateX(100%);
+  animation: text-left 3.2s ease-in-out forwards;
+}
+
+.preloader-text--right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.preloader-text--right .preloader-inner {
+  transform: translateX(-200%);
+  animation: text-right 3.2s ease-in-out forwards;
+}
+
+#preloader-splash.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Preloader Responsive scaling */
+@media (max-width: 768px) {
+  #preloader-splash {
+    gap: 24px;
+  }
+  .preloader-logos-container {
+    gap: 16px;
+  }
+  .logo_load_splash {
+    width: 100px;
+    height: 100px;
+  }
+  .preloader-wrapper {
+    font-size: 0.78rem;
+    letter-spacing: 0.1rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Keyframes animations for SIIU UCE Preloader */
+@keyframes slash {
+  0% {
+    transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+  6% {
+    transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+  }
+  13% {
+    transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+  }
+  16.6% {
+    transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+}
+
+@keyframes text-left {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  58% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes text-right {
+  0% {
+    transform: translateX(-200%);
+  }
+  10% {
+    transform: translateX(-100%);
+  }
+  58% {
+    transform: translateX(-100%);
+  }
+  70% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+@keyframes side-top {
+  0%, 14% {
+    transform: translateX(-101%);
+  }
+  24%, 55% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(101%);
+  }
+  100% {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes side-right {
+  0%, 14%, 23% {
+    transform: translateY(-101%);
+  }
+  30%, 62% {
+    transform: translateY(0);
+  }
+  72% {
+    transform: translateY(101%);
+  }
+  100% {
+    transform: translateY(101%);
+  }
+}
+
+@keyframes side-bottom {
+  0%, 14%, 24%, 28% {
+    transform: translateX(101%);
+  }
+  37%, 70% {
+    transform: translateX(0);
+  }
+  79% {
+    transform: translateX(-101%);
+  }
+  100% {
+    transform: translateX(-101%);
+  }
+}
+
+@keyframes side-left {
+  0%, 14%, 24%, 34%, 35% {
+    transform: translateY(101%);
+  }
+  44%, 79% {
+    transform: translateY(0);
+  }
+  86% {
+    transform: translateY(-101%);
+  }
+  100% {
+    transform: translateY(-101%);
+  }
+}
+
