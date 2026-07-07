@@ -3,6 +3,9 @@ import { Sidebar } from './components/Sidebar';
 import { ChatArea } from './components/ChatArea';
 import { ChatInput } from './components/ChatInput';
 import { Session, Message } from './types/chat';
+import sellosUce from './assets/sellos-uce.png';
+import logoComputacion from './assets/logoComputacion.png';
+import { InteractiveParticles } from './components/InteractiveParticles';
 
 const API_BASE_URL = 'http://localhost:8091';
 
@@ -20,6 +23,23 @@ export const App: React.FC = () => {
   const [isOffline, setIsOffline] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [sessionToDelete, setSessionToDelete] = useState<string | null>(null);
+  const [isPreloading, setIsPreloading] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => {
+      setIsFadingOut(true);
+    }, 3800);
+
+    const unmountTimer = setTimeout(() => {
+      setIsPreloading(false);
+    }, 4300);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(unmountTimer);
+    };
+  }, []);
 
   // Save sessions to LocalStorage on change
   useEffect(() => {
@@ -305,8 +325,38 @@ export const App: React.FC = () => {
   const activeSession = sessions.find((s) => s.id === currentSessionId);
   const activeMessages = activeSession?.messages || [];
 
+  if (isPreloading) {
+    return (
+      <div id="preloader-splash" className={isFadingOut ? 'fade-out' : ''}>
+        <div className="preloader-logos-container">
+          <img className="logo_load_splash logo-sello" src={sellosUce} alt="Sello UCE" />
+          <img className="logo_load_splash logo-computacion" src={logoComputacion} alt="Logo Computación" />
+        </div>
+        <div className="preloader-wrapper">
+          <div className="preloader-slash"></div>
+          <div className="preloader-sides">
+            <div className="preloader-side"></div>
+            <div className="preloader-side"></div>
+            <div className="preloader-side"></div>
+            <div className="preloader-side"></div>
+          </div>
+          <div className="preloader-text">
+            <div className="preloader-text--backing">CARRERA DE COMPUTACIÓN</div>
+            <div className="preloader-text--left">
+              <div className="preloader-inner">CARRERA DE COMPUTACIÓN</div>
+            </div>
+            <div className="preloader-text--right">
+              <div className="preloader-inner">CARRERA DE COMPUTACIÓN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div id="app" className="gemini-app">
+      <InteractiveParticles />
       <Sidebar
         sessions={filteredSessions}
         currentSessionId={currentSessionId}
@@ -320,6 +370,15 @@ export const App: React.FC = () => {
         isOffline={isOffline}
         onReconnect={checkBackendConnection}
       />
+
+      {/* Backdrop overlay for mobile when sidebar is open */}
+      {!isSidebarCollapsed && (
+        <div 
+          className="sidebar-backdrop" 
+          onClick={() => setIsSidebarCollapsed(true)}
+          title="Cerrar menú"
+        />
+      )}
 
       <main className="main-content-gemini">
         {/* Toggle Sidebar Button for Mobile View */}

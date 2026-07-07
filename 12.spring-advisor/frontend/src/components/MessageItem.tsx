@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Message } from '../types/chat';
+import logoComputacion from '../assets/logoComputacion.png';
 
 interface MessageItemProps {
   message: Message;
@@ -50,18 +51,12 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
   return (
     <div className={`message-item-gemini ${role}`}>
       {role === 'assistant' && (
-        <div className="message-avatar-gemini">
-          <svg className={`gemini-star-icon ${isGenerating && !content ? 'spinning' : ''}`} width="28" height="28" viewBox="0 0 24 24" fill="none">
-            <path d="M12 0L14.7 9.3L24 12L14.7 14.7L12 24L9.3 14.7L0 12L9.3 9.3L12 0Z" fill="url(#starGradient)"></path>
-            <defs>
-              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#4285F4"></stop>
-                <stop offset="30%" stopColor="#9B72CB"></stop>
-                <stop offset="70%" stopColor="#D96570"></stop>
-                <stop offset="100%" stopColor="#F3AF3D"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
+        <div className="message-avatar-uce">
+          <img 
+            src={logoComputacion} 
+            alt="Asistente UCE" 
+            className={`uce-assistant-avatar-img ${isGenerating && !content ? 'pulse-avatar' : ''}`} 
+          />
         </div>
       )}
 

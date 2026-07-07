@@ -1,5 +1,6 @@
 import React from 'react';
 import { Session } from '../types/chat';
+import logoComputacion from '../assets/logoComputacion.png';
 
 interface SidebarProps {
   sessions: Session[];
@@ -29,7 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onReconnect
 }) => {
   return (
-    <aside className={`sidebar ${isCollapsed ? 'collapsed' : ''}`} id="sidebar">
+    <aside className={`sidebar ${isCollapsed ? 'collapsed' : 'open'}`} id="sidebar">
       {/* Sidebar Header */}
       <div className="sidebar-header">
         <button className="btn-icon btn-collapse" onClick={onToggleCollapse} title={isCollapsed ? "Expandir menú" : "Contraer menú"}>
@@ -41,19 +42,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </button>
         
         {!isCollapsed && (
-          <div className="gemini-logo-container">
-            <svg className="gemini-star-logo" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M12 0L14.7 9.3L24 12L14.7 14.7L12 24L9.3 14.7L0 12L9.3 9.3L12 0Z" fill="url(#geminiGradient)"></path>
-              <defs>
-                <linearGradient id="geminiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#4285F4"></stop>
-                  <stop offset="30%" stopColor="#9B72CB"></stop>
-                  <stop offset="70%" stopColor="#D96570"></stop>
-                  <stop offset="100%" stopColor="#F3AF3D"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span className="logo-text">Gemini</span>
+          <div className="uce-logo-container">
+            <img src={logoComputacion} alt="Computación UCE" className="uce-sidebar-logo" />
+            <div className="uce-logo-text-wrapper">
+              <span className="uce-logo-title">Computación</span>
+              <span className="uce-logo-subtitle">FICA - UCE</span>
+            </div>
           </div>
         )}
       </div>

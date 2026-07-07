@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { Message } from '../types/chat';
 import { MessageItem } from './MessageItem';
+import logoComputacion from '../assets/logoComputacion.png';
+import sellosUce from '../assets/sellos-uce.png';
 
 interface ChatAreaProps {
   messages: Message[];
@@ -58,7 +60,15 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isGenerating, onCa
         {messages.length === 0 ? (
           /* Welcome Screen */
           <div className="welcome-screen-gemini">
-            <h2 className="welcome-title">¿Qué toca ahora, Dario?</h2>
+            <div className="welcome-header-logos">
+              <img src={sellosUce} alt="Sello UCE" className="welcome-logo-sello" />
+              <img src={logoComputacion} alt="Logo Computación" className="welcome-logo-computacion" />
+            </div>
+            <h2 className="welcome-title">Asistente Virtual de Computación</h2>
+            <p className="welcome-subtitle-desc">
+              Desarrollado por la <strong>Carrera de Computación</strong> de la Facultad de Ingeniería y Ciencias Aplicadas (FICA - UCE). 
+              Pregúntame sobre el proceso de titulación, proyectos integradores y normativas académicas.
+            </p>
             
             <div className="welcome-cards-gemini">
               {welcomeCards.map((card, index) => (
