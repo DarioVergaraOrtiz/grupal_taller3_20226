@@ -1,0 +1,25 @@
+{
+    "titulo": "Desarrollo de un sistema de seguridad domiciliaria: identificación de intentos de intrusión con Deep Learning y alertas móviles",
+    "autores": [
+        "Hidalgo Beltrán, Reymon Alexander"
+    ],
+    "director": "Ruiz Chávez, Zoila de Lourdes",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Seguridad domiciliaria",
+        "Aprendizaje automático",
+        "API REST",
+        "Faster R-CNN",
+        "Android",
+        "Home security",
+        "Machine Learning"
+    ],
+    "resumen_es": "El presente proyecto desarrolla un sistema de seguridad domiciliaria inteligente que integra una API REST basada en Deep Learning y una aplicación móvil nativa para Android, con el objetivo de detectar intrusiones en tiempo real y notificar inmediatamente al usuario. El modelo de aprendizaje profundo implementado, basado en Faster R-CNN con arquitectura ResNet50, permite identificar objetos de riesgo como pistolas, cuchillos e intentos de intrusión, utilizando un dataset personalizado que combina imágenes de dominio público y capturas propias. La API REST gestiona la comunicación entre el modelo y los dispositivos móviles, almacenando los eventos de detección en Firebase Cloud Firestore y enviando alertas mediante Firebase Cloud Messaging (FCM). La aplicación móvil se desarrolló siguiendo principios de usabilidad y arquitectura limpia, implementando navegación por fragments, visualización de video en tiempo real, notificaciones push y gestión de detecciones. El sistema fue validado experimentalmente en un entorno doméstico real, evaluando precisión del modelo, experiencia de usuario y viabilidad económica.",
+    "resumen_en": "This project develops a smart home security system that integrates a Deep Learning-based REST API and a native Android mobile application to detect intrusions in real time and immediately notify the user. The deep learning model implemented, based on Faster R-CNN with ResNet50 architecture, allows the identification of risky objects such as guns, knives, and intrusion attempts, employing a customized dataset that combines public domain images and proprietary captures. The REST API manages communication between the model and mobile devices, storing detection events in Firebase Cloud Firestore and sending alerts via Firebase Cloud Messaging (FCM). The mobile application was developed following usability principles and clean architecture, implementing fragment navigation, realtime video viewing, push notifications, and detection management. The system was experimentally validated in a real home environment, evaluating model accuracy, user experience, and economic viability.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/38930",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "titulo": "Recorrido Virtual en 3D de la historia del Imperio Inca, aplicada a la educación",
+    "autores": [
+        "Chaquinga Chauca, Josselyn Patricia"
+    ],
+    "director": "Ruiz Chávez, Zoila de Lourdes",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2021,
+    "palabras_clave": [
+        "APRENDIZAJE",
+        "PROGRAMACIÓN",
+        "TECNOLOGÍAS",
+        "RECORRIDO VIRTUAL"
+    ],
+    "resumen_es": "El aprendizaje mecánico es una problemática que ha marcado muchas generaciones, sin embargo, las nuevas tecnologías, brindan una nueva oportunidad al campo educativo. El mundo tecnológico ofrece una amplia gama de software, para que desarrolladores principiantes y profesionales creen nuevas aplicaciones interactivas y dinámicas, que ayuden al usuario con la retención adecuada del conocimiento. El presente proyecto pretende ser una nueva opción que colabore con el aprendizaje del usuario, permitiéndole experimentar la Realidad Virtual, al sumergirse en escenarios muy reales, en los cuales, el usuario puede recorrer libremente por cada una de las siete salas, para ir descubriendo y respondiendo a ciertas interrogantes que surgen sobre la forma de vida de los Incas; entre ellas, ¿Quiénes eran los verdaderos protagonistas?, ¿Cuál fue su aporte a la sociedad? y otras curiosidades, que forjan la identidad cultural del usuario. Estos espacios lograron combinar diferentes conceptos de Modelado 3D con la Programación, desafiaron la creatividad del desarrollador y se obtuvo un producto con un diseño creativo, innovador, original, dinámico, interactivo y entretenido, que puede ser ejecutado en la PC",
+    "resumen_en": "Mechanical learning is a problem that has marked many generations; however, new technologies offer a new opportunity to the educational field. The technological world offers a wide range of software, for beginner and professional developers to create new interactive and dynamic applications that help the user with the adequate retention of the knowledge. This project aims to be a new option that collaborates with the user's learning, allowing you to experience Virtual Reality, by immersing yourself in very real scenarios, in which the user can freely tour through each of the seven rooms, to discover and answering certain questions that arise about the way of life of the Incas; among them, Who were the true protagonists? What was their contribution to society? and other curiosities, which forge the cultural identity of the user. These spaces managed to combine different 3D Modeling concepts with Programming, challenged the creativity of the developer, and a product was obtained with a creative, innovative, original, dynamic, interactive and entertaining design that can be executed on the PC",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/22412",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

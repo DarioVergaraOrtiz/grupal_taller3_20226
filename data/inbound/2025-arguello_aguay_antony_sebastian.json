@@ -1,0 +1,28 @@
+{
+    "titulo": "Creación y validación de dataset para el control de calidad de uvillas para exportación",
+    "autores": [
+        "Arguello Aguay, Antony Sebastian"
+    ],
+    "director": "Borja Borja, Luis Felipe",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Uvilla",
+        "Dataset",
+        "Modelo",
+        "Validación",
+        "CNN",
+        "Golden Berry",
+        "Dataset",
+        "Model",
+        "Validation",
+        "CNN"
+    ],
+    "resumen_es": "Este trabajo de investigación se enfoca en la creación y validación de un dataset específico para el control de calidad de uvillas destinadas a la exportación en Ecuador. Aunque existen diversos datasets para otras frutas, no se ha desarrollado uno específico para uvillas, lo que convierte a esta investigación en pionera en su campo. El objetivo es establecer un estándar que garantice la consistencia y calidad del producto exportado, utilizando técnicas avanzadas de recolección y análisis de datos, integrando inteligencia artificial, visión por computadora y aprendizaje automático. El proceso de obtención de imágenes incluyó la identificación de características, recopilación de datos en tres escenarios (fondo blanco, cesta y césped), limpieza de imágenes y balance del dataset, asegurando 484 imágenes por clase (Industria, Golpeada y Partida). En la fase de validación del modelo, se importaron bibliotecas, se configuró el entorno, se cargó el dataset y se seleccionó un modelo preentrenado, el cual se optimizó utilizando RandAugment y Keras Tuner. Tras la compilación, el modelo fue evaluado y guardado, generándose una matriz de confusión para visualizar los resultados y realizar predicciones de calidad. Finalmente, se desarrolló una API que permite a los usuarios subir imágenes de uvillas y comprobar su calidad de manera automatizada. Esta propuesta no solo optimiza los procesos de control de calidad de las uvillas, sino que también sienta bases para futuras investigaciones en agricultura y exportación de productos agrícolas, contribuyendo al desarrollo del sector en Ecuador.",
+    "resumen_en": "This research focuses on creating and validating a specific dataset for the quality control of golden berries for exportation in Ecuador. Although there are several datasets for other fruits, a particular dataset for golden berries has not been developed, which makes this research a pioneer in its field. The objective is to establish a standard that guarantees the consistency and quality of the exported product, employing advanced data collection and analysis techniques and integrating artificial intelligence, computer vision, and machine learning. The imaging process included feature identification, data collection in three scenarios (white background, basket, and grass), image cleaning, and dataset balancing, ensuring 484 images per class (Industry, Beaten, and Split). In the model validation phase, libraries were imported, the environment was configured, the dataset was loaded, and a pre-trained model was selected and optimized using RandAugment and Keras Tuner. After compilation, the model was evaluated and saved, generating a confusion matrix to visualize the results and make quality predictions. Finally, an API was developed that allows users to upload images of golden berries and check their quality in an automated way. This proposal not only optimizes golden berry quality control processes but also lays the groundwork for future research in agriculture and the exportation of agricultural products, contributing to the development of the sector in Ecuador.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/37502",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

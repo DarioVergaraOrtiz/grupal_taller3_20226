@@ -1,0 +1,22 @@
+{
+    "titulo": "Asistente virtual didáctico en 3D, para niños entre 3 y 5 años del Centro Infantil Sueños de Papel, aplicando realidad aumentada.",
+    "autores": [
+        "Montalvo Lucero, Adriana Luzdary"
+    ],
+    "director": "Ruiz Chavez, Zoila de Lourdes",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "EDUCACIÓN INICIAL",
+        "REALIDAD VIRTUAL",
+        "MODELADOS 3D",
+        "REALIDAD AUMENTADA"
+    ],
+    "resumen_es": "La Realidad Aumentada es una herramienta que permite descubrir nuevos usos y hábitos de consumo a la hora de visualizar e interactuar con la información. Se consigue al momento de combinar elementos del mundo real con elementos de un entorno virtual, siendo ésta su principal característica, y a la vez la diferencia fundamental que tiene con la realidad virtual, en la que el personaje se aísla completamente del mundo. Es trascendental que en el Ecuador se estimule el trabajo con estas nuevas tecnologías de innovación, empezando con los más pequeños, ya que es aquí donde el cerebro humano se desarrolla un 90%, y donde se crean las principales conexiones neurológicas. El presente proyecto de titulación tiene como objetivo desarrollar una aplicación de Realidad Aumentada; mediante una cámara que toma la información del mundo real y a través de un software los combina con el mundo virtual, todo esto con la ayuda de marcadores, que no son más que símbolos que el aplicativo interpreta y procesa, devolviendo una imagen en 3D; permitiendo así optimizar el proceso de aprendizaje de niños mediante actividades visuales, interactivas y llamativas, adquiriendo y/o reforzando conceptos de forma segura, entretenida y fácil de utilizar.",
+    "resumen_en": "Augmented Reality is a tool that permits to discover new usages and habits of consumption at the moment to visualize and interact on information. This is possible when the elements of the real world are combined with the ones in virtual environment; a thing that does not occur with virtual reality which make the person to become completely isolated from the world. It is really significant that Ecuador starts working with this new innovation technology, starting from the youngest children since they develop a 90 percent of their brain in that stage, as well as their main neurological connections are created to remain all their life. This degree project pursues to develop an application of Augmented Reality by taking real moments with a camera and with the use of a software, which combines this with the virtual world through the use of markers. These markers are just symbols that the application interprets and process to make a 3D modeling image. By this means, the process of learning is optimized and children can learn by visual, interactive, and appealing activities so they can reinforce concepts in a secure, entertained, and easy way.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/8053",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

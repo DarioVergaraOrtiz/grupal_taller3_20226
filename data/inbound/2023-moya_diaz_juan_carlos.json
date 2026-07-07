@@ -1,0 +1,30 @@
+{
+    "titulo": "Compresión de imágenes mediante sistemas de funciones iteradas.",
+    "autores": [
+        "Moya Díaz, Juan Carlos"
+    ],
+    "director": "Dávila Cazar, Eduardo Remigio",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Por Entidad",
+    "fecha": 2023,
+    "palabras_clave": [
+        "Compresión fractal",
+        "Funciones iteradas",
+        "Compresión de imágenes",
+        "Tiempo de compresión",
+        "Escalabilidad",
+        "Fractal compression",
+        "Iterated function system",
+        "Image compression",
+        "Compression time",
+        "Scalability",
+        "Cita bibliográfica",
+        "Moya Díaz, J. (2023). Compresión de imágenes mediante sistemas de funciones iteradas. Universidad Central del Ecuador."
+    ],
+    "resumen_es": "El método de compresión mediante sistemas de funciones iteradas, también llamado compresión fractal fue propuesto hace más de tres décadas, y en ese tiempo se llegó a la conclusión que era inviable, debido al alto costo computacional para realizar los cálculos necesarios, por ello no está estandarizado. Sin embargo, con el hardware moderno es posible optimizar los algoritmos para reducir el tiempo de compresión hasta máximo varios minutos. Es un método de compresión muy potente con alta tasa de compresión y poca pérdida de información, ideal para ser aplicado en la actualidad, donde cada vez las cámaras capturan fotografías de mayor calidad, resolución y tamaño, y estas al ser comprimidas con estándares tradicionales, se distorsionan y existe mucha pérdida de información sin posibilidad de regresar a la imagen original. El método de compresión de imágenes mediante SFI tiene una gran particularidad; su escalabilidad, lo que nos indica que una vez la imagen haya sido comprimida, es posible reconstruir la imagen al tamaño que necesitemos, manteniendo la calidad y sin mayor pérdida de información. El presente trabajo abarca el estudio matemático y conceptual necesario para el desarrollo y construcción de los algoritmos requeridos para aplicar este método de compresión, además también se recorre su implementación haciendo uso del lenguaje de programación Python y sus respectivas librerías, para culminar con una aplicación con interfaz de usuario que permita hacer uso efectivo de este método para quien lo requiera. Así como también se presentan los resultados, comparaciones y se recomienda trabajos a futuro.",
+    "resumen_en": "There is the iterated function system compression method also called fractal compression among digital image compression methods variety. It was proposed more than three decades ago, but at that moment it was concluded that it was unfeasible because of its high computational cost to perform the necessary calculations, and that is the reason why it was not standardized. However, it is possible to optimize the algorithms to reduce the compression time to a maximum of several minutes with modern hardware. It is a powerful compression method with a high rate of compression and little loss of information. Nowadays, it is ideal to be applied increasingly capture photographs of higher quality, resolution, and size, which can be compressed with compression standards. Images can be distorted and lost a lot of information without the possibility of returning to the original image in traditional compression. The image compression method using SFI has scalability has a particularity. If an image was compressed this method tells us it is possible to reconstruct the image to the size we need, maintaining quality and without losing information. This project covers the mathematical and conceptual studies which are necessary for the development and construction of the required algorithms. It was important its path from its implementation using the Python programming language and its respective libraries. This research finishes with an application with a user interface that allows the effective use of this method for those who require it. Also, with the results, comparisons and future work were presented.\n\nDescripción general\nilustraciones.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/33498",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

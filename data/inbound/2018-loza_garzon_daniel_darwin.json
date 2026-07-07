@@ -1,0 +1,21 @@
+{
+    "titulo": "Desarrollo de un videojuego con captura de movimiento, para representar la leyenda de Cantuña [Quito]",
+    "autores": [
+        "Loza Garzón, Daniel Darwin"
+    ],
+    "director": "Caina Aysabucha, Darwin Rodolfo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2018,
+    "palabras_clave": [
+        "VIDEOJUEGOS",
+        "OPENGL",
+        "JAVA"
+    ],
+    "resumen_es": "Con el objetivo de rescatar aspectos propios de la cultura de Quito, se propone el desarrollo de un Videojuego basado en una de las leyendas más icónicas que tiene la ciudad, como es Cantuña y la Iglesia de San Francisco. Con este contexto, se crea el Videojuego Cantuña, en modalidad de primera persona, dando así, una sensación de presencia del jugador en el juego, su manejo se realiza mediante la detección del movimiento de las manos en el espacio, esto permite una nueva forma para interactuar con los Videojuegos. En el desarrollo del Videojuego, se unifican las librerías de OPENGL y OPENCV; la primera utilizada principalmente para realizar gráficos por computadora y la segunda, empleada fundamentalmente en la captura de movimiento y para el procesamiento de imágenes, estas librerías son implementadas con lenguaje JAVA.",
+    "resumen_en": "This project aims to rescue typical culture aspects Quito’s city, the development of a Videogame is proposed that based on one of the most iconic legends of the city called “Cantuña and the San Francisco’s Church”. Regarding this context, the Cantuña’s Videogame is developed in first-person mode, thus the user has a presence in the foreground of the game. The user handles the Videogame by hands movement, this proposal is a new form to do human-machine interaction for Videogames.The OPENGL and OPENCV libraries’ were placed together for the development of the Videogame; the first one was used mainly to make graphics by computer, whereas the second one was used for capture movement and the digital image processing, these libraries are embedded in JAVA programming language.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/16267",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

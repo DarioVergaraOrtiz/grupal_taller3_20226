@@ -1,0 +1,22 @@
+{
+    "titulo": "Video juego 3D que simula la conducción de un vehículo a través de un camino montañoso del Ecuador.",
+    "autores": [
+        "García Arellano, Vinicio Gabriel"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2015,
+    "palabras_clave": [
+        "VIDEO JUEGO 3D",
+        "SIMULADOR DE CONDUCCIÓN",
+        "CONDUCCIÓN VEHICULAR",
+        "FÍSICA DE AUTOS"
+    ],
+    "resumen_es": "El presente proyecto tiene como fin desarrollar un videojuego 3d que permita tener una experiencia cercana a la conducción a través de un camino montañoso. He escogido como camino en particular la Av. De los Conquistadores. El entorno gráfico, el escenario y su forma de juego están pensados para jóvenes y adultos para reforzar conocimientos previos de manejo. El capítulo primero comprende: la justificación, los objetivos a cumplirse del juego y además la fundamentación teórica que constituye la base del proyecto; es decir principios físicos y matemáticos. El capítulo dos nos habla de la conceptualización del juego: el diseño de los escenarios y niveles del juego. El tercer capítulo se encarga de la instalación del motor gráfico y su interfaz. El capítulo cuatro estudia las diferentes técnicas empleadas para el modelado 3d del camino y su entorno, además los métodos de programación para la física y manejo del automóvil. El capítulo quinto habla sobre el estudio económico del proyecto. El capítulo final muestra las conclusiones y recomendaciones del presente trabajo.",
+    "resumen_en": "This project aims to develop a 3D game that allows to have an experience close to driving through a mountain road. I have chosen the particular path Av. De los Conquistadores. The graphical environment, the stage and his play are designed for youth and adults to reinforce previous knowledge management. The first chapter includes: justification, objectives to be met in the game and also the theoretical foundation that is the basis of the project; therefore physical and mathematical principles. Chapter two talks about the conceptualization of the game: the design stages and levels of the game. The third chapter is responsible for installation and interface graphics engine. Chapter four examines the different techniques used for 3D modeling of the road and its environment, and programming methods for physics and handling of the car. The fifth chapter discusses the economic study of the project. The final chapter shows the conclusions and recommendations of this work.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/5364",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

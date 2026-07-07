@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de una aplicación para simular un vuelo con Realidad Virtual por el entorno Ecuatoriano con el avión de combate de las Fuerzas Armadas del Ecuador “Tucano”, para plataformas Android utilizando Unity y Google VR",
+    "autores": [
+        "López Encalada, Paula Alexandra"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2019,
+    "palabras_clave": [
+        "REALIDAD VIRTUAL",
+        "GOOGLE VR",
+        "JOYSTICK",
+        "CINEMA 4D"
+    ],
+    "resumen_es": "La Realidad Virtual es una tecnología que está en auge, en la actualidad son varios los campos en los que puede ser utilizada, tales como: entrenamientos, aprendizaje, entretenimiento, etc. El presente proyecto trata sobre el desarrollo de un simulador de vuelo para teléfonos móviles utilizando Realidad Virtual mediante Google VR; donde el usuario podrá visualizar e interactuar con el entorno desarrollado mediante dispositivos externos, tales como: gafas “Cardboard” y un joystick. Para el desarrollo de la aplicación se investigó las partes de un avión y su funcionamiento básico y, se recolectó diferentes imágenes para el modelado y texturizado del avión “Embraer Super Tucano”. La tecnología que se usó para el desarrollo del simulador es: Cinema 4D y Maya para el modelado 3D, Substance Painter para el texturizado y Unity para el desarrollo del entorno y su funcionamiento.",
+    "resumen_en": "Virtual Reality is a booming technology. Nowadays, there are several fields in which it can be used such as: training, learning, entertainment, etc. Th is project deals with the development of a flight simulator for mobile phones using Virtual Reality through Google VR, where the user can see and interact with the developed surroundings by means of external devices such as: “Cardboard” glasses and a joystick. For development of the application, the parts of an airplane and its basic functionality were thoroughly researched, while different images were collected for the modeling and texturing of the “Embraer Super Tucano” aircraft. The technologic tools used for the development of the simulator were: Cinema 4D and Maya for 3D modeling, Substance Painter for texturing, and Unity for the development of the surroundings and operation",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/19837",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

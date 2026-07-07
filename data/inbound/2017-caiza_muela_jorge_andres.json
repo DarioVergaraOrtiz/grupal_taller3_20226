@@ -1,0 +1,24 @@
+{
+    "titulo": "Desarrollo de una aplicación con realidad aumentada, para dispositivos móviles android, que permita obtener información de las instalaciones de la facultad de ingeniería, ciencias físicas y matemática",
+    "autores": [
+        "Caiza Muela, Jorge Andrés"
+    ],
+    "director": "Caina Aysabucha, Darwin Rodolfo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2017,
+    "palabras_clave": [
+        "REALIDAD AUMENTADA",
+        "DISEÑO 3D",
+        "SDK VUFORIA",
+        "UNITY GAME ENGINE",
+        "BLENDER",
+        "ANDROID"
+    ],
+    "resumen_es": "El proyecto aquí presentado muestra una breve revisión de la historia y funcionamiento de la Realidad Aumentada, además del diseño, desarrollo y pruebas de una Aplicación para Dispositivos Móviles Android llamada FING AR, que implementa la tecnología de Realidad Aumentada y tiene como finalidad la visualización de información acerca de las instalaciones y puntos de interés del Edificio de Aulas, Edificio de Suelos y Edificio de Resistencia de Materiales pertenecientes a la Facultad de Ingeniería, Ciencias Físicas y Matemática de la Universidad Central del Ecuador. El proyecto contempla las etapas de diseño, creación de los modelos tridimensionales y la integración de estos elementos en la aplicación final. Mediante el uso de las herramientas de desarrollo Blender para el modelado 3D, Vuforia para la implementación de Realidad Aumentada y el entorno de desarrollo integrado Unity Game Engine.",
+    "resumen_en": "The project presented here shows a brief review of the history and operation of Augmented Reality, as well as the design, development and testing of an Android Mobile Application called FING AR, which implements the Augmented Reality technology and aims to display information about the facilities and places of interest of the Classroom Building, Soils Building and Material Resistance Building that are part of the Faculty of Engineering, Physical Science and Mathematics at the Central University of Ecuador (Universidad Central del Ecuador). The project comprises the stages of design, creation of three-dimensional models and the integration of these elements into the final application. This is achieved by using Blender development tools for 3D modeling, Vuforia for the Augmented Reality implementation and Unity Game Engine integrated development environment",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/13568",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "titulo": "Recorrido virtual 3D utilizando fotogrametría de la sala de exposición sobre la matanza del 2 de agosto de 1810 del museo Alberto Mena Caamaño.",
+    "autores": [
+        "Morales Mayorga, Veruzka Avrezla"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2024,
+    "palabras_clave": [
+        "Fotogrametría",
+        "Recorrido virtual",
+        "Modelado 3D",
+        "Retopología",
+        "Optimización poligonal",
+        "Photogrammetry",
+        "Virtual tour",
+        "3D modeling",
+        "Retopology",
+        "Polygonal optimization",
+        "Cita bibliográfica",
+        "Morales Mayorga, V. (2024). Recorrido virtual 3D utilizando fotogrametría de la sala de exposición sobre la matanza del 2 de agosto de 1810 del museo Alberto Mena Caamaño. Universidad Central del Ecuador."
+    ],
+    "resumen_es": "El siguiente trabajo de titulación tiene como propósito encontrar una forma de innovar la manera de exposición tradicional que tiene el museo Alberto Mena Caamaño en sus salas por medio de la fusión entre la tecnología, el arte y la cultura. Dicho propósito se cumple para este tema gracias a los avances que existen en la actualidad con respecto a las técnicas de escaneo 3D para la digitalización de objetos. En este proyecto se utilizarán las técnicas de fotogrametría y escaneo LiDAR con el fin de generar un recorrido virtual a través de la escena que representa a la masacre de los próceres ocurrida el 2 de agosto de 1810, para lo cual a lo largo de este documento se revisarán algunos conceptos básicos necesarios para el desarrollo y el buen término de este trabajo, y se analizarán los resultados obtenidos durante el proceso.",
+    "resumen_en": "This paper aims to find a way to innovate the traditional way of exhibition that the Alberto Mena Caamaño Museum has in its rooms through the fusion between technology, art, and culture. This purpose is fulfilled thanks to the current advances in 3D scanning techniques for the digitization of objects. In this project, photogrammetry and LiDAR scanning techniques will be used to generate a virtual tour representing the scene of the heroes massacre occurred on August 2, 1810, for which some basic concepts necessary for the development and successful completion of this work will be reviewed throughout this document, and the results, obtained during the process, will be analyzed.\n\nDescripción general\ntablas, ilustraciones, gráficos",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/33063",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

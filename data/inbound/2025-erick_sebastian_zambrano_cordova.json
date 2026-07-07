@@ -1,0 +1,26 @@
+{
+    "titulo": "Sistema de gestión documental incorporando técnicas de Inteligencia Artificial en la nube",
+    "autores": [
+        "Erick Sebastián Zambrano Córdova"
+    ],
+    "director": "Ruiz Chávez, Zoila de Lourdes",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Inteligencia artificial",
+        "Sistema de gestión de calidad",
+        "Procesamiento de lenguaje natural",
+        "Detección de plagio",
+        "Artificial intelligence",
+        "Quality management systems",
+        "Natural language processing",
+        "Plagiarism detection"
+    ],
+    "resumen_es": "Actualmente el uso de inteligencia artificial (IA) ha ido en aumento, aplicando diversas técnicas para facilitar su implementación en un sin número de sistemas y áreas, logrando así que su uso sea algo cotidiano. Como caso particular, las empresas y organizaciones buscando el control eficiente de la información documentada al implementar Sistemas de Gestión de Calidad (SGC) han incursionado en el uso de IA obteniendo beneficios tanto para la automatización como para la gestión de dicha información. El presente trabajo se basa en implementar diferentes técnicas de IA para automatizar y optimizar el proceso de control de la información mediante el uso de extracción automática de metadatos utilizando procesamiento de lenguaje natural, clasificación inteligente de documentos mediante aprendizaje automático, detección de plagio y contenido duplicado.",
+    "resumen_en": "Currently the use of artificial intelligence (AI) has been increasing, applying various techniques to facilitate its implementation in many different systems and areas, making it use an everyday occurrence. As a particular case, companies and organizations seeking the efficient control of documented information when implementing Quality Management Systems (QMS) have ventured into the use of AI, obtaining benefits for both automation and management of such information. This work is based on implementing different AI techniques to optimize and automate the processes related to the information control process. The key capabilities of the software will be automatic extraction of metadata using natural language processing, intelligent classification of documents through machine learning, plagiarism and duplicate content detection.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/38782",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

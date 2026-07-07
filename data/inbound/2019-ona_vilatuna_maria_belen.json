@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de un prototipo de escáner óptico 3D montado en un UAV con cámara 360 utilizando fotogrametría",
+    "autores": [
+        "Oña Vilatuña, María Belén"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2019,
+    "palabras_clave": [
+        "FOTOGRAMETRÍA ESFÉRICA",
+        "ESCÁNER TRIDIMENSIONAL",
+        "DIGITALIZACIÓN 3D",
+        "CÁMARA OMNIDIRECCIONAL"
+    ],
+    "resumen_es": "El presente proyecto consiste en el desarrollo de un prototipo de escáner 3D utilizando como base la técnica de fotogrametría haciendo uso de una cámara omnidireccional o de 360° como una alternativa rápida para la obtención de modelos 3D principalmente de espacios exteriores. En una primera instancia se realizó una investigación sobre la técnica de Fotogrametría que haga uso de este tipo de lentes de 360° para este propósito, con la finalidad de conocer su complejidad ya que este mercado no ha sido explorado en países de Latinoamérica. Se seleccionó la herramienta de software libre más adecuado para el procesamiento de imágenes, la cual fue Python, y la librería OpenCV. Este prototipo ha sido desarrollado de tal forma que la captura de imágenes se lo pueda realizar con la ayuda de un UAV (vehículo aéreo no tripulado) con la finalidad de en un futuro poder obtener fotografías aéreas de una determinada edificación.",
+    "resumen_en": "The present project consists of the development of a prototype of 3D scanner using as a base the technique of photogrammetry in the use of an omnidirectional camera or 360° as a fast alternative for the obtaining of 3D models mainly of exterior spaces. In the first time an investigation was carried out on the photogrammetry technique that makes use of this type of 360 ° lens for this purpose, with the objective of knowing its content and that this market has not been explored in the Latin American countries. It is selected the most appropriate free software tool for image processing, which was Python, and the OpenCV library. This prototype has been developed in such a way that the capture of images can be done with the help of a UAV (unmanned aerial vehicle) with the purpose of a future to obtain the characteristics of a specific building",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/19999",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

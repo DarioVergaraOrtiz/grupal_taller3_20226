@@ -1,0 +1,22 @@
+{
+    "titulo": "Estimación de Parámetros en Ecuaciones Diferenciales Ordinarias. Aplicación de la Inteligencia Artificial.",
+    "autores": [
+        "Benavides Medina, Paul Esteban"
+    ],
+    "director": "Guerrero Suarez, Giovanny Fabián",
+    "editores": "Quito : UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2022,
+    "palabras_clave": [
+        "Estimación",
+        "Inteligencia colectiva",
+        "Estocástico",
+        "PSO"
+    ],
+    "resumen_es": "Predecir el comportamiento de un fenómeno, sujeto a experiencia sensible, así como establecer las variables y parámetros involucrados en la estructura del modelo matemático consecuente; adquiere un grado alto de complejidad, el cual ha evolucionado en los últimos años al establecer nuevas metodologías para la estimación de parámetros y resultados verosímiles. Estas nuevas técnicas de optimización son innovadoras pues tienen como principal característica el simular la inteligencia colectiva de especies animales como: abejas, lobos, aves entre otros. Esta propiedad permite adquirir soluciones a modelos estocásticos, que antes con el uso de métodos clásicos se tornaba una tarea inverosímil. El presente trabajo propone desarrollar una aplicación web que permita la ejecución de algoritmos fundamentados en inteligencia colectiva, mediante el manejo de librerías y frameworks relativos a la visualización y análisis de datos, con la finalidad de documentar y comparar el rendimiento de PSO con otros algoritmos semejantes, en la estimación de parámetros de ecuaciones diferenciales ordinarias. Analizaremos, casos de estudio con datos experimentales reales, a través de la investigación bibliográfica, y ejecutaremos los algoritmos propuestos para simular datos obtenidos de un modelo matemático con el fin de establecer estadísticas referentes al rendimiento y precisión de los parámetros resultantes del proceso de estimación.",
+    "resumen_en": "Predicting the behavior of a phenomenon exposes to a sensible experience, as well as establish the variables and parameters involved in the structure of the consequent mathematical model acquires a high degree of complexity. It has evolved in recent years by establishing new methodologies for estimating parameters and plausible results. These new optimization techniques are innovative because their main characteristic is to simulate the collective intelligence of animal species such as: bees, wolves, birds, among others. This property allows us to acquire solutions to stochastic models, which before the classical methods uses became an implausible task. The present project proposes to develop a web application that allows the execution of algorithms based on collective intelligence. It means that through the management of libraries and frameworks related to data visualization and analysis are done. It has the objective to keep record and compare the performance of PSO with other similar algorithms in the estimation of parameters of ordinary differential equations. This project will analyze case studies with real experimental data through bibliographic research and will execute the proposed algorithms to simulate data obtained from a mathematical model. In order to establish statistics regarding the performance and precision of the parameters resulting from the estimation process.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/31712",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

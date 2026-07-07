@@ -1,0 +1,30 @@
+{
+    "titulo": "Elaboración de un algoritmo para generar superficies de Bézier a partir de una nube de puntos.",
+    "autores": [
+        "Tipán Espinoza, Jonathan Marcelo"
+    ],
+    "director": "Toalombo Montero, Oscar William",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2024,
+    "palabras_clave": [
+        "Algoritmo",
+        "Código",
+        "Geometría",
+        "Optimización",
+        "Visualización",
+        "Algorithm",
+        "Code",
+        "Geometry",
+        "Optimization",
+        "Visualization",
+        "Cita bibliográfica",
+        "Tipán Espinoza, J. (2024). Elaboración de un algoritmo para generar superficies de Bézier a partir de una nube de puntos. Universidad Central del Ecuador."
+    ],
+    "resumen_es": "El propósito de este trabajo de titulación es generar un algoritmo que permita, a partir de un archivo PLY que almacena información de un objeto en forma de nube de puntos, construir una superficie de Bézier que luego será exportada en un archivo OBJ para su visualización en programas de modelado 3D. Además, se propone no solo generar la superficie con los puntos como malla de control sino intentar interpolarlos. Previo al desarrollo y análisis del código, se parte de un marco teórico introductorio en el que se abordan temas necesarios para entender el proceso. A grandes rasgos se tienen dos temas, el primero es una descripción matemática que parte desde la geometría computacional hasta las curvas y superficies de Bézier, incluyendo el proceso de interpolación. Mientras que en la segunda parte se analiza cómo representar modelos tridimensionales, los tipos de archivo existentes y la estructura de estos. Una vez se tiene en claro estos fundamentos, se procede a explicar la arquitectura propuesta para el código y analizar los resultados obtenidos al aplicar este proceso sobre cuatro figuras representadas por nubes de puntos.",
+    "resumen_en": "The purpose of this thesis is to develop an algorithm that, based on a PLY file storing information in the form of a point cloud, constructs a Bézier surface, which is subsequently exported to an OBJ file for visualization in 3D modeling programs. Furthermore, it aims not only to generate the surface using the points as control mesh but also to attempt interpolation. Prior to the development and analysis of the code, it starts with an introductory theoretical framework covering topics necessary to understand the process. Broadly, two main subjects are addressed. The first involves a mathematical description, starting from computational geometry and extending to Bézier curves and surfaces, including the interpolation process. In the second part, the focus is on representing three-dimensional models, examining existing file types, and their structures. Once these foundations are well-established, the proposed code architecture is explained, and the results obtained by applying this process to four figures represented by point clouds are analyzed.\n\nDescripción general\ngráficos.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/33454",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "titulo": "Desarrollo de una aplicación móvil para el envío de imágenes implementando esteganografía como técnica de ocultación para el envío de mensajes encriptados",
+    "autores": [
+        "Pilco Yajamín, Dennis Alexander"
+    ],
+    "director": "Torres Gordillo, Bayron Fabricio",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Esteganografía",
+        "Criptografía",
+        "Seguridad",
+        "Protección",
+        "Confidencialidad",
+        "Steganography",
+        "Cryptography",
+        "Security",
+        "Protection",
+        "Confidentiality"
+    ],
+    "resumen_es": "El siguiente trabajo de titulación tiene como enfoque el desarrollo de una aplicación móvil para el sistema operativo Android, cuyo principal objetivo es emplear la esteganografía en imágenes como una técnica de ocultación de mensajes cifrados mediante criptografía para mantener protección y confidencialidad de la información. Para ello se empleará algoritmos correspondientes a dos modelos de seguridad propuestos: el algoritmo AES (Advanced Encryption Standard) para cifrar el mensaje de texto y el algoritmo LSB (Least Significant Bit) para la inserción de información en imágenes sin causar cambios visuales notables. La aplicación permitirá enviar la imagen y la llave para el descifrado del mensaje a otro usuario registrado en la aplicación, asegurando una comunicación segura y confiable entre las partes involucradas.",
+    "resumen_en": "The following project focuses on developing a mobile application for the Android operating system, with the primary goal of using steganography in images to hide encrypted messages using cryptography, thereby maintaining information protection and confidentiality. For this purpose, algorithms corresponding to two proposed security models will be used: the AES (Advanced Encryption Standard) algorithm to encrypt the text message and the LSB (Least Significant Bit) algorithm for the insertion of information in images without causing noticeable visual changes. The application ensures secure and reliable communication between the parties involved by allowing the sending of the image and the key for decrypting the message to another registered user.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/37706",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

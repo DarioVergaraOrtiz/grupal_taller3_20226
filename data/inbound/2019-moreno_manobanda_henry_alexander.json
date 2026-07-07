@@ -1,0 +1,22 @@
+{
+    "titulo": "Aplicación educativa (orientada a la música) para teléfonos móviles android, para niños con discapacidad visual, de entre 8 y 10 años",
+    "autores": [
+        "Moreno Manobanda, Henry Alexander"
+    ],
+    "director": "Lucero Navarrete, Wagner Vladimir",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2019,
+    "palabras_clave": [
+        "VIDEOJUEGOS",
+        "APLICACIÓN EDUCATIVA",
+        "DISCAPACIDAD VISUAL",
+        "AUDIO 3D"
+    ],
+    "resumen_es": "El desarrollo de los videojuegos con el tiempo se ha ido involucrando cada vez más en áreas como el aprendizaje. Las personas que hacen uso de los videojuegos ya no solo buscan entretenimiento sino también aprender a través de este. El presente proyecto integrador está inmerso en el desarrollo de las aplicaciones móviles educativas orientado a personas con discapacidad visual. El videojuego enseña teoría musical básica. Se usaron diferentes formas de interacción con el usuario como el audio y el tacto. El videojuego contiene un módulo donde se usa audio 3D para poder interactuar con el usuario. Las principales herramientas utilizadas fueron Unity, Illustrator, Audacity. Se utilizó el SDK Resonance Audio para el control del audio 3D, esta funcionalidad está incorporada en un módulo del juego, y le permite al usuario poder ubicar un audio en un espacio 3D. Así mismo la aplicación está desarrollada para teléfonos móviles Android. El juego incorpora una interfaz de usuario pensada para una persona con discapacidad visual. En este sentido la manera en que el usuario navega por el juego es a través de sonidos o instrucciones habladas que le indica el juego",
+    "resumen_en": "The development of video games over time has become increasingly involved in areas such as learning. People who make use of video games no longer only seek entertainment but also learn through it. This integrating project is immersed in the development of mobile educational applications aimed at people with visual disabilities. The video game teaches basic music theory. Different forms of user interaction were used, such as audio and touch. The video game contains a module where 3D audio is used to interact with the user. The main tools used were Unity, Illustrator, Audacity. The Resonance Audio SDK was used to control 3D audio, this functionality is incorporated in a game module, and allows the user to place an audio in a 3D space. The application is also developed for Android mobile phones. The game incorporates a user interface designed for a person with visual impairment. In this sense, the way in which the user navigates through the game is through sounds or spoken instructions indicated by the game.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/20329",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

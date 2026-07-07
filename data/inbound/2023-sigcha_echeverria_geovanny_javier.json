@@ -1,0 +1,25 @@
+{
+    "titulo": "Desarrollo de un videojuego 2D multiplataforma, en base a dos historias grandes del Ecuador “Primer grito de la independencia” “Batalla de Pichincha”.",
+    "autores": [
+        "Sigcha Echeverria, Geovanny Javier"
+    ],
+    "director": "Lucero Navarrete, Wagner Vladimir",
+    "editores": "Quito : UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2023,
+    "palabras_clave": [
+        "Videojuegos",
+        "Gamificación",
+        "Educación",
+        "Historia",
+        "Niños",
+        "Adolescentes",
+        "Animación 2D"
+    ],
+    "resumen_es": "La industria de los videojuegos ha ido creciendo durante estos últimos años, causando un gran impacto en la sociedad, logrando así que las personas hagan uso de este medio ya no solo para entretenimiento, sino también para el aprendizaje de varias disciplinas como la Física, la Matemática, la Historia entre otros. Uno de los problemas que se presenta en el aprendizaje de las asignaturas en la población ecuatoriana es el empleo de la misma metodología de enseñanza tradicional, y esto se denota específicamente en materias como Historia donde se complementa la falta de hábitos hacia la lectura, generando en el alumnado desinterés en el aprendizaje. El siguiente proyecto integrador ha desarrollado un videojuego 2D multiplataforma, utilizando el método de la gamificación a través de la incorporación de elementos de diseño de juego; los temas seleccionados para el desarrollo de este método corresponden a la historia del “Primer Grito de la Independencia” y la “Batalla de Pichincha”, se cuenta con un personaje principal que conduce al aprendizaje de la asignatura; se utilizaron herramientas como Photoshop e Ilustrador para los personajes, ítems, y escenarios, Unity para la programación y funcionamiento, además de Premier y After Effects para cinemáticas cortas que muestra tramas del videojuego e información. Con este proyecto se espera aportar con recursos metodológicos que conduzcan el aprendizaje de la historia del Ecuador mediante el videojuego, en tal razón esta metodología motivará al alumno y consolidará sus logros de desempeño académico, así como los hábitos de lectura.",
+    "resumen_en": "The video game industry has been growing in recent years, causing a great impact on society, thus making people use this medium not only for entertainment, but also for learning various disciplines such as Physics, Mathematics, and History among others. One of the problems faced by the Ecuadorian population when learning these subjects is the use of the same traditional teaching methodology. This is specifically evident in subjects such as History, where the lack of reading habits is complemented by a lack of interest in learning. The following integrative project has developed a cross-platform 2D video game, using the gamification method through the incorporation of game design elements; the topics selected for the development of this method correspond to the history of the \"First Proclamation of Independence\" and the \" Pichincha’s Battle\", there is a main character that leads to the learning of the subject. Tools such as Photoshop and Illustrator were used for the characters, items, and scenery; Unity software was used to program and run the game, in addition to Premier and After Effects for short cinematics that show video game plots and information. This project aims to provide methodological resources that lead to the learning of Ecuadorian history through video games. This methodology will motivate students and consolidate their academic performance achievements, as well as their reading habits.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/29048",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

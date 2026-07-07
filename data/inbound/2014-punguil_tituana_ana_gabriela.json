@@ -1,0 +1,21 @@
+{
+    "titulo": "Videojuego controlado por los gestos y movimientos de la mano derecha.",
+    "autores": [
+        "Punguil Tituaña, Ana Gabriela"
+    ],
+    "director": "Salvador Meneses, Jaime Oswaldo",
+    "editores": "Quito: UCE.",
+    "tipo_material": "Tesis",
+    "fecha": 2014,
+    "palabras_clave": [
+        "VIDEOJUEGOS",
+        "JUEGOS DE RECONOCIMIENTO DE FIGURAS",
+        "VIDEOJUEGO MANEJADO POR LOS MOVIMIENTOS DE LA MANO DERECHA"
+    ],
+    "resumen_es": "El presente proyecto de investigación, está dirigido a desarrollar un videojuego, controlado por la mano derecha del ser humano. Tanto el diseño de personajes y escenarios, así como el flujo del mismo están dirigidos a niños, en etapa de aprendizaje; enfocado a reforzar el reconocimiento de objetos simples basados en su forma y color. Para la interacción entre el jugador y la máquina, se hará uso de la Realidad Aumentada, además de técnicas de Reconocimiento de Patrones y Procesamiento de Imágenes. Este trabajo abarca las etapas de diseño, programación, pruebas y finalmente el estudio económico de la puesta en marcha de la aplicación.",
+    "resumen_en": "This investigation project is aimed to develop a videogame controlled by a human only through the right hand. The characters design, as well as the scenery and the flow of the game are focused on the learning stage of kids. The target is to reinforce simple object recognition based on shape and color. The interaction between player and machine will be done by use of Augmented Reality, Pattern Recognition techniques and Image Processing. This project covers the stages of design, coding, tests and finally a financial study of the implementation of the application.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/2832",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

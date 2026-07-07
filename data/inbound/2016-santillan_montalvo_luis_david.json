@@ -1,0 +1,22 @@
+{
+    "titulo": "Programación del videojuego la dama.",
+    "autores": [
+        "Santillán Montalvo, Luis David"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "ANDROID",
+        "LA DAMA TAPADA",
+        "VIDEOJUEGO",
+        "INTERFAZ GRÁFICA DE USUARIO"
+    ],
+    "resumen_es": "En el proyecto Programación del Videojuego La Dama, se ha buscado darle una adecuada funcionalidad, tratando de definir la mecánica correcta, que nos permita poder integrar todos los elementos del videojuego, y así poder darle sentido a la historia que trata de describir el videojuego. El proyecto básicamente constó de cuatro etapas, control de las acciones del personaje principal, es decir, la acción y reacción del mismo, control del entorno, que se refiere a los objetos y personas con las que tiene que interactuar el personaje principal, control de la interfaz gráfica de usuario (GUI), es decir el uso de ventanas, menús, información referente al videojuego y controles generales del mismo, y pruebas para comprobar el funcionamiento correcto del proyecto. El resultado brinda una funcionalidad acorde a lo planteado al inicio del proyecto, lo que permite al jugador poder vivir las situaciones descritas por la historia del videojuego “La Dama”, y que puede ser ejecutada en la mayoría de dispositivos móviles con sistema operativo Android.",
+    "resumen_en": "In the following project Programming the Game La Dama, we have sought to give it a proper functionality, trying to define the correct mechanic, which allows us to integrate all elements of the game in order to give meaning to the story that describes the game. The project basically has four stages, controlling the actions of the main character, i.e. his behavior or reaction, environmental control, i.e. the objects and people interacting with the main character, controlling the Graphical User Interface (GUI), i.e. the use of windows, menus, information about the videogame and general controls and tests to verify the proper operation of the project. The result provides functionality according to what was established at the beginning of the project, allowing the player to experience situations described in the story of the videogame “La Dama” and to run the majority of mobile devices with the Android operating system.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/6506",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

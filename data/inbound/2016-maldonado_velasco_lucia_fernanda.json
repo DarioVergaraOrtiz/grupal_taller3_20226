@@ -1,0 +1,22 @@
+{
+    "titulo": "Generación automática de diseños a partir de procedimientos matemáticos.",
+    "autores": [
+        "Maldonado Velasco, Lucía Fernanda"
+    ],
+    "director": "Almagro Blanco, Pedro",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "LIBRERÍA DE SOFTWARE",
+        "DISEÑO GRÁFICO",
+        "TRIGONOMETRÍA",
+        "CURVAS DE PERSECUCIÓN"
+    ],
+    "resumen_es": "El presente proyecto radica en el desarrollo de una librería de software para la generación de diseños a partir de procedimientos matemáticos. Esta librería permite encapsular a los algoritmos que se encargan de generar dichos diseños, los procedimientos matemáticos que se utilizan son tres: fractales, curvas de persecución y funciones trigonométricas. Al concentrar toda la lógica en esta librería, permite que todo el proceso de generación de los patrones de diseño, sea independiente de la interfaz cliente. La librería desarrollada en este proyecto es capaz de generar una gran variedad de imágenes (diseños) resultantes del alto grado de parametrización que caracteriza a los procedimientos matemáticos utilizados. Para evidenciar el potencial de esta librería, como aplicación se desarrolla una aplicación móvil que hace uso de la misma, de esta manera se permite la interacción del usuario con la herramienta.",
+    "resumen_en": "The present project is based on the development of a software library to generate designs from mathematical procedures. This library allows encapsulate the algorithms that are responsible for generating these designs. The mathematical procedures used are three: fractals, pursuit curves and trigonometric functions. Concentrating all the logic in this library, makes the generation of designs procedure independent of the client interface. The software developed during this project is able to provide a wide variety of images (designs) resulting from the high degree of parameterization of the underlying mathematical procedures. To demonstrate the potential of this library, a mobile application that allows the user to interact with it has been developed.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/6016",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

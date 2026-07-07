@@ -1,0 +1,28 @@
+{
+    "titulo": "Análisis, Diseño e Implementación de una aplicación en la nube para gestión de campeonatos deportivos de atletismo",
+    "autores": [
+        "Aguilar Velasco, Kevin Xavier"
+    ],
+    "director": "Borja Borja, Luis Felipe",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Aplicación informática",
+        "Sistema en línea",
+        "Arquitectura de Software",
+        "Desarrollo Web",
+        "Aplicación móvil",
+        "Computer Application",
+        "Software Architecture",
+        "Online System",
+        "Web Development",
+        "Mobile Application"
+    ],
+    "resumen_es": "El presente proyecto de titulación tiene como objetivo el desarrollo de una aplicación en la nube que facilite la gestión integral de campeonatos deportivos de atletismo en el Ecuador, abarcando procesos como la inscripción de participantes, la creación de campeonatos, y el registro y presentación de resultados. La metodología aplicada incluye el análisis de requerimientos, el diseño de la arquitectura y la implementación de funcionalidades clave del sistema. La aplicación utiliza una base de datos PostgreSQL alojada en Render, un frontend desarrollado con Vue.js desplegado en Azure y un backend desarrollado con Spring, también implementado en los servicios de Azure. Además, se incluye una aplicación móvil desarrollada específicamente para dispositivos Android utilizando Kotlin como lenguaje de programación, que permite a los organizadores registrar los resultados durante las competencias, complementando las funcionalidades del sistema. Esta combinación de tecnologías en la nube garantiza escalabilidad, disponibilidad y un rendimiento eficiente, al mismo tiempo que elimina la necesidad de invertir en servidores físicos y su mantenimiento",
+    "resumen_en": "This undergraduate project aims to develop a cloud application that facilitates the comprehensive management of athletics sports championships in Ecuador, covering processes such as registering participants, creating championships, and registering and presenting results. The applied methodology includes requirements analysis, architecture design, and implementation of key system functionalities. The application uses a PostgreSQL database hosted by Render, a frontend developed with Vue.js deployed in Azure, and a backend developed with Spring, also deployed in Azure services. In addition, a mobile application developed specifically for Android devices using Kotlin as a programming language is included, which allows organizers to record results during competitions, complementing the system's functionalities. This combination of cloud technologies ensures scalability, availability, and efficient performance while eliminating the need to invest in physical servers and their maintenance",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/38327",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

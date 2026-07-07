@@ -1,0 +1,28 @@
+{
+    "titulo": "Visualizador arquitectónico interactivo asistido por un agente conversacional.",
+    "autores": [
+        "Portero Guanoluisa, Fabian Alejandro"
+    ],
+    "director": "Navarrete Pinto, Sandra Marianela",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Visualización arquitectónica",
+        "Inteligencia artificial",
+        "Reconocimiento de voz",
+        "Recorrido virtual",
+        "Realidad virtual",
+        "Architectural visualization",
+        "Artificial intelligence",
+        "Voice recognition",
+        "Virtual tour",
+        "Virtual reality"
+    ],
+    "resumen_es": "En el presente proyecto se muestra el desarrollo de un software de visualización arquitectónica integrada con realidad virtual para brindar al usuario una experiencia inmersiva. La solución cuenta con un agente conversacional dotado de una técnica de inteligencia artificial para el reconocimiento de lenguaje natural la cual le permite interactuar con el usuario; de forma que, el agente reconoce palabras clave en el idioma español, provee información al usuario sintetizando una voz humana y además realiza determinadas acciones en el recorrido virtual como: cambiar los tipos de materiales de las paredes o pisos y teletransportar al usuario a un área determinada. Para conseguirlo, primeramente, se recrea un departamento amoblado en 3D, utilizando herramientas como Blender, Maya y Substance Painter. Luego se migra el modelo completo al motor de videojuegos Unreal Engine donde se desarrolla un personaje virtual que representa el agente conversacional interactivo el cual es generado y animado por computadora y se le incorpora el sistema de reconocimiento de lenguaje natural y el sintetizador de voz, para que apoyado en una estructura de datos con preguntas y respuestas simples el agente pueda interactuar con el usuario creando así un instrumento novedoso e interactivo que permite ofrecer un producto acercado a la realidad, con posibilidades de previsualizar diseños alternativos en los acabados del inmueble, conocer información del mismo y visitar las distintas áreas del departamento de forma más rápida.",
+    "resumen_en": "This project shows the development of architectural visualization software integrated with virtual reality to provide the user with an immersive experience. The solution has a conversational agent equipped with an artificial intelligence technique for natural language recognition, which allows interaction with the user. So, the agent recognizes keywords in the Spanish language, and it provides information to the user by synthesizing a human voice. It also performs certain actions in the virtual tour such as: changing the types of materials on the walls or floors and teleporting the user to an area determined. Firstly, a furnished apartment is recreated in 3D, using tools such as Blender, Maya, and Substance Painter to achieve this project. Then the complete model is migrated to the Unreal Engine videogame, which with a virtual character representing the interactive conversational agent was developed. The language recognition system and the voice synthesizer are incorporated into animation by a computer. That, supported by a data structure with simple questions and answers, the agent can interact with the user, thus creating a novel and interactive instrument that allows offering a product closer to reality, with the possibility of previewing alternative designs in the finishes of the property, obtaining information of it and visit the different areas of the department more quickly.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/36551",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

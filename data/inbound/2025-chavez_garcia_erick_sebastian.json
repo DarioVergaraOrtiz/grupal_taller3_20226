@@ -1,0 +1,28 @@
+{
+    "titulo": "Diseño e implementación de un sistema de gestión de proyectos de investigación basado en microservicios, integrado con plataforma de autenticación (Keycloak) y despliegue automatizado en la nube",
+    "autores": [
+        "Chávez García, Erick Sebastián"
+    ],
+    "director": "Salvador Meneses, Jaime Oswaldo",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Microservicios",
+        "Automatización",
+        "Sistemas distribuidos",
+        "Servicios en la nube",
+        "Autorización",
+        "Microservices",
+        "Authorization",
+        "Automation",
+        "Distributed systems",
+        "Cloud services"
+    ],
+    "resumen_es": "El siguiente proyecto de titulación tiene como objetivo desarrollar e implementar un sistema de gestión de proyectos de investigación utilizando una arquitectura de microservicios, creando una estructura modular que facilitará el mantenimiento del sistema y su escalabilidad, adaptándose a futuras necesidades. El sistema integrará una solución de autenticación mediante OpenID Connect, un estándar creado para proporcionar el inicio de sesión único (SSO), y autorización OAuth 2.0, un estándar ampliamente utilizado para otorgar permisos a aplicaciones para acceder a recursos protegidos en nombre de los usuarios. Adicionalmente, se integrará una herramienta de integración y despliegue continuo (CI/CD), con el propósito de optimizar los procesos de desarrollo y despliegue de los microservicios. Finalmente, el sistema será desplegado en un proveedor de servicios en la nube. Este enfoque integral busca ofrecer una solución robusta, escalable y alineada con los estándares modernos de desarrollo y gestión de software.",
+    "resumen_en": "The aim of the project is to develop and implement a research project management system using a microservices architecture, creating a modular structure that will facilitate the maintenance of the system's scalability and adapt to future needs. The system will integrate an authentication solution using OpenID Connect, a standard created to provide single sign-on (SSO), and OAuth 2.0 authorization, a widely used standard for granting permissions to applications to access protected resources on behalf of users. Additionally, a continuous integration and deployment (CI/CD) tool will be integrated to optimize the development and deployment processes of the microservices. Finally, a cloud service provider will deploy the system. This integrated approach seeks to offer a robust, scalable solution aligned with modern software development and management standards.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/38307",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

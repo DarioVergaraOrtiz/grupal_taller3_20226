@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de una aplicación móvil multiplataforma con geolocalización para localizar sitios y establecimientos cercanos",
+    "autores": [
+        "Morocho Rocha, Darwin Santiago"
+    ],
+    "director": "Ruíz Chávez, Zoila de Lourdes",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2018,
+    "palabras_clave": [
+        "GEOLOCALIZACIÓN",
+        "ANDROID",
+        "GOOGLE DEVELOPER CONSOLE",
+        "MULTIPLATAFORMA"
+    ],
+    "resumen_es": "El presente proyecto integrador incursiona en el desarrollo móvil multiplataforma mediante el uso de tecnologías web tales como Node.js, React y Firebase. Por otro lado, se explora las tecnologías de desarrollo móvil multiplataforma como React Native, NativeScript, Ionic y Xamarin. La aplicación móvil de este proyecto llamada NearbyFind está destinada a dispositivos iOS y Android, se incorpora varias APIs de geolocalización que permiten recuperar de manera sencilla sitios y establecimientos cercanos tomando como referencia una ubicación geográfica. Así mismo la aplicación en cuestión presenta una interfaz de usuario con apariencia nativa, fluida y de fácil uso para el cliente. Como fuente de información principal se emplea la API de Google Place, adicional se utiliza la API de Facebook Places como fuente de información alterna y se incorporó un inicio de sesión con Facebook en la aplicación para poder usar la API antes mencionada.",
+    "resumen_en": "The following integrating project ventures into the multiplatform mobile development through the use of web technologies such as Node.js, React and Firebase. On the other hand, it explores multiplatform mobile development technologies such as React Native, NativeScript, Ionic and Xamarin. The mobile application of this project called NearbyFind, is intended for iOS and Android devices, it incorporates several geolocation APIs that allow to easily retrieve nearby sites and establishments based on a geographical location. Moreover, the application at issue presents an user interface with a native, fluid and user-friendly appearance for the customer. The Google Place API is used as the main source of information, in addition to that, the Facebook Places API is used as an alternate source of information and a login with Facebook was incorporated into the application to use the aforementioned API.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/16490",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

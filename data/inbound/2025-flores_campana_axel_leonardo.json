@@ -1,0 +1,28 @@
+{
+    "titulo": "Desarrollo de un sistema web para la gestión y automatización de procesos en una empresa de control de plagas",
+    "autores": [
+        "Flores Campaña, Axel Leonardo"
+    ],
+    "director": "Toalombo Montero, Oscar William",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Sistema web",
+        "Módulo",
+        "Gestión",
+        "Automatización",
+        "Microservicios",
+        "Web System",
+        "Module",
+        "Management",
+        "Automation",
+        "Microservices"
+    ],
+    "resumen_es": "El presente trabajo de tesis tiene como objetivo principal el desarrollo de un sistema web para la gestión y automatización de procesos en la empresa Fumidez. La implementación de este sistema surge como respuesta a la necesidad de mejorar la eficiencia operativa y la calidad de los servicios mediante la digitalización y automatización de tareas administrativas recurrentes. Actualmente, la empresa enfrenta problemas significativos debido a la gestión manual de datos utilizando herramientas como Excel y Word, lo que resulta en un consumo excesivo de tiempo y una alta propensión a errores humanos. El sistema propuesto permitirá automatizar procesos como la generación de informes, cronogramas, inventarios e ingresos de clientes, integrando de manera eficiente la información y reduciendo el tiempo y esfuerzo necesarios para estas actividades. Además, se busca mejorar la capacidad de la empresa para responder a las demandas del mercado y a las necesidades de los clientes, optimizando la asignación de recursos y facilitando una toma de decisiones más eficiente. Este proyecto se basa en metodologías ágiles para asegurar una adaptación continua a los requerimientos y una implementación efectiva. La investigación también abarca un análisis exhaustivo de antecedentes y estudios previos relacionados con la automatización de procesos en diferentes contextos empresariales, destacando la importancia de la transformación digital en la obtención de ventajas competitivas",
+    "resumen_en": "The primary objective of this undergraduate project is to develop a web-based system for managing and automating processes within the Fumidez company. The implementation of this system arises in response to the need to improve operational efficiency and the quality of services through the digitalization and automation of recurring administrative tasks. Currently, the company faces significant challenges due to manual data management using tools such as Excel and Word, which results in excessive time consumption and a high propensity for human errors. The proposed system will automate processes such as report generation, scheduling, inventory management, and customer income tracking, efficiently integrating information and reducing the time and effort required for these activities. Additionally, it aims to enhance the company's capacity to meet market demands and customer needs, thereby optimizing resource allocation and facilitating more informed decision-making. This project is based on agile methodologies to ensure continuous adaptation to requirements and effective implementation. The research also includes an exhaustive analysis of background and previous studies related to processing automation in different business contexts, highlighting the importance of digital transformation in obtaining competitive advantages",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/38470",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

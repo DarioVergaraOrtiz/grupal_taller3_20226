@@ -1,0 +1,30 @@
+{
+    "titulo": "Desarrollo de un Sistema Web para la detección de Retinopatía Diabética mediante Deep Learning.",
+    "autores": [
+        "Chacón Galarza, Kenlly Lenin"
+    ],
+    "director": "Moncayo Unda, Milton Giovanny",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2024,
+    "palabras_clave": [
+        "Retinopatía diabética",
+        "Aprendizaje profundo",
+        "Redes neuronales convolucionales (CNN)",
+        "Procesamiento de datos",
+        "Medicina preventiva",
+        "Diabetic retinopathy",
+        "Deep learning",
+        "Convolutional neural networks (CNNs)",
+        "Data processing",
+        "Preventive medicine",
+        "Cita bibliográfica",
+        "Chacón Galarza, K. (2024). Desarrollo de un Sistema Web para la detección de Retinopatía Diabética mediante Deep Learning. Universidad Central del Ecuador."
+    ],
+    "resumen_es": "Esta investigación aborda el desarrollo de un prototipo de aplicativo web para la detección de retinopatía diabética utilizando técnicas de aprendizaje profundo (deep learning). Se empleará la metodología Crisp-DM para el desarrollo del proyecto y se utilizarán la base de datos Diabetic Retinopathy Detection de Kaggle, unificando un total de 3662 imágenes de retinografía en 5 categorías de severidad. Se realizará una revisión de la literatura existente en el área y se analizarán diferentes técnicas de regularización, como aumento de datos, batch normalization, detención temprana y checkpoint de modelos, para mitigar el sobreajuste en los modelos de clasificación. Se construirá una arquitectura de red neuronal convolucional (CNN) residual (ResNet) optimizada para este problema, aprovechando las conexiones residuales para evitar el desvanecimiento del gradiente en redes profundas. El modelo se entrenará con los conjuntos de datos aumentados, utilizando generadores de datos y técnicas como la detención temprana. Luego, se evaluará el rendimiento del modelo entrenado en el conjunto de prueba, obteniendo métricas como precisión, matriz de confusión e informes de clasificación detallados. Finalmente, se desarrollará una aplicación web utilizando Streamlit y se desplegará en GitHub para permitir el acceso y uso del modelo por parte de cualquier persona interesada.",
+    "resumen_en": "This research addresses the development of a prototype web application for the detection of diabetic retinopathy using deep learning techniques. The Crisp-DM methodology will be used for the development of the project and the Kaggle Diabetic Retinopathy Detection database will be used, unifying a total of 3662 retinography images in 5 severity categories. A review of the existing literature in the field will be performed and different regularization techniques, such as data augmentation, batch normalization, early stopping and model checkpointing, will be analyzed to mitigate overfitting in the classification models. A residual convolutional neural network (CNN) architecture (ResNet) optimized for this problem will be built, taking advantage of residual connections to avoid gradient fading in deep networks. The model will be trained on the augmented datasets, using data generators and techniques such as early stopping. Then, the performance of the trained model on the test set will be evaluated, obtaining metrics such as accuracy, confusion matrix and detailed classification reports. Finally, a web application will be developed using Streamlit and deployed on GitHub to allow access and use of the model by anyone interested.\n\nDescripción general\ngráficos.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/34985",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}
