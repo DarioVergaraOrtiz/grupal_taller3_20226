@@ -1,0 +1,27 @@
+{
+  "titulo": "Implementación de un sistema criptográfico en python basado en el cifrado hill.",
+  "autores": [
+    "Lugmaña Achig, Andrés Felipe"
+  ],
+  "director": "Dávila Cazar, Eduardo Remigio",
+  "editores": "Universidad Central del Ecuador",
+  "tipo_material": "Trabajo de grado - Pregrado",
+  "fecha": 2026,
+  "palabras_clave": [
+    "Cifrado hill",
+    "Criptografía simétrica",
+    "Álgebra lineal",
+    "Aritmética modular",
+    "Clean architecture",
+    "Hill cipher",
+    "Symmetric cryptography",
+    "Linear algebra",
+    "Modular arithmetic"
+  ],
+  "resumen_es": "El presente trabajo instrumenta el Cifrado Hill mediante un desarrollo en Python regido por los principios de Clean Architecture. Su motor lógico ejecuta transformaciones matriciales sobre el anillo Z26, integrando estrictamente álgebra lineal y aritmética modular. La propuesta incorpora una interfaz gráfica construida con PySide6 que desglosa visualmente la mecánica del algoritmo, facilitando su inspección paso a paso. A nivel de infraestructura, la persistencia de datos se delega a PostgreSQL y SQLAlchemy, este diseño permite recuperar el historial de operaciones y valida automáticamente la invertibilidad de las claves (módulo 26), agilizando el descifrado sin necesidad de reingresar la matriz original. Más allá de la implementación, el sistema utiliza este método clásico para demostrar la robustez y escalabilidad de las arquitecturas limpias en el desarrollo de software criptográfico.",
+  "resumen_en": "This research work implements the Hill Cipher through a Python-based development governed by the principles of Clean Architecture. Its logical engine performs matrix transformations over the ring Z26, strictly integrating linear algebra and modular arithmetic. The proposal incorporates a graphical user interface built with PySide6 that visually breaks down the mechanics of the algorithm, facilitating step-by-step inspection. At the infrastructure level, data persistence is handled using PostgreSQL and SQLAlchemy. This design enables the retrieval of the operation history and automatically validates the invertibility of keys (modulo 26), streamlining the decryption process without requiring re-entry of the original matrix. Beyond the implementation itself, the system employs this classical cryptographic method to demonstrate the robustness and scalability of clean architectures in the development of cryptographic software.",
+  "uri": "https://www.dspace.uce.edu.ec/handle/25000/40797",
+  "colecciones": [
+    "Ingeniería en Computación"
+  ]
+}

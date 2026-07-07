@@ -3,8 +3,8 @@ package com.programacion.taller3.rest;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
-import org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
+import com.programacion.taller3.services.ConversationMemoryService;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,6 +30,7 @@ public class ChatController {
     private final ChatClient chatClient;
     private final VectorStore documentVectorStore;
     private final ChatMemory chatMemory;
+    private final ConversationMemoryService conversationMemoryService;
 
     @Value("classpath:/prompts/systemPrompt.st")
     Resource systemPrompt;
@@ -40,7 +41,8 @@ public class ChatController {
     public ChatController(
             ChatClient.Builder builder,
             @Qualifier("documentVectorStore") VectorStore documentVectorStore,
-            ChatMemory chatMemory) {
+            ChatMemory chatMemory,
+            ConversationMemoryService conversationMemoryService) {
 
         this.chatClient = builder
                 .defaultAdvisors(new SimpleLoggerAdvisor())
@@ -48,6 +50,7 @@ public class ChatController {
 
         this.documentVectorStore = documentVectorStore;
         this.chatMemory = chatMemory;
+        this.conversationMemoryService = conversationMemoryService;
     }
 
     @PostMapping(path = "/api/chat", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_EVENT_STREAM_VALUE)
@@ -153,9 +156,14 @@ public class ChatController {
         // Diagnóstico de sesión
         System.out.println("ChatController :: Recibida petición chat. SessionID: " + sessionId + " | Mensaje: " + message);
 
+        // Guardar mensaje en Qdrant (Solo para trazabilidad)
+        conversationMemoryService.saveMessage(sessionId, "user", message);
+
         // Memoria cronológica de turnos de Spring AI (según Capítulo 5 de Spring AI In Action)
         var chronologicalMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory)
                 .build();
+
+        StringBuilder assistantResponse = new StringBuilder();
 
         Flux<ServerSentEvent<String>> tokens = chatClient.prompt()
                 .system(finalSystemPrompt)
@@ -164,6 +172,8 @@ public class ChatController {
                 .user(message)
                 .stream()
                 .content()
+                .doOnNext(assistantResponse::append)
+                .doOnComplete(() -> conversationMemoryService.saveMessage(sessionId, "assistant", assistantResponse.toString()))
                 .map(chunk -> ServerSentEvent.<String>builder()
                         .event("token")
                         .data(Base64.getEncoder().encodeToString(chunk.getBytes(StandardCharsets.UTF_8)))
