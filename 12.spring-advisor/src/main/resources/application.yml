@@ -36,7 +36,7 @@ advisor:
     collection-name: springai_memory
     top-k: 4
   rag:
-    top-k: 2
+    top-k: 15
   summarization:
     enabled: false
     max-tokens: 200
