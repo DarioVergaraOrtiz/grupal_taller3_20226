@@ -189,6 +189,7 @@ export const App: React.FC = () => {
 
     setIsGenerating(true);
     let fullReply = '';
+    let inactivityTimeoutId: any;
 
     try {
       // If offline, simulate local response to keep the educational app functional!
@@ -230,6 +231,14 @@ export const App: React.FC = () => {
         return;
       }
 
+      const controller = new AbortController();
+      inactivityTimeoutId = setTimeout(() => controller.abort("El servidor tardó demasiado en responder."), 180000);
+
+      const resetTimeout = () => {
+        clearTimeout(inactivityTimeoutId);
+        inactivityTimeoutId = setTimeout(() => controller.abort("El servidor tardó demasiado en responder."), 180000);
+      };
+
       const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -237,7 +246,8 @@ export const App: React.FC = () => {
           message: text,
           sessionId: currentSessionId,
           model: selectedModel
-        })
+        }),
+        signal: controller.signal
       });
 
       if (!response.ok) throw new Error(`Servidor respondió con código ${response.status}`);
@@ -251,6 +261,7 @@ export const App: React.FC = () => {
           const { value, done } = await reader.read();
           if (done) break;
 
+          resetTimeout();
           buffer += decoder.decode(value, { stream: true });
           const lines = buffer.split('\n');
           buffer = lines.pop() || '';
@@ -292,13 +303,19 @@ export const App: React.FC = () => {
       }
     } catch (error: any) {
       console.error('Error al transmitir respuesta:', error);
+      
+      let errorMsg = error.message || error;
+      if (error.name === 'AbortError' || error === "El servidor tardó demasiado en responder.") {
+        errorMsg = "El servidor tardó demasiado en responder o la conexión se cerró inesperadamente";
+      }
+
       setSessions((prev) =>
         prev.map((s) => {
           if (s.id === currentSessionId) {
             const msgs = [...s.messages];
             msgs[msgs.length - 1] = {
               ...msgs[msgs.length - 1],
-              content: `⚠️ Error de comunicación con el servidor: ${error.message}. Por favor, verifica el backend de Spring Boot.`
+              content: `⚠️ Ocurrió un error con el servidor: ${errorMsg}. Por favor, verifica tu conexión o el estado del LLM.`
             };
             return { ...s, messages: msgs };
           }
@@ -306,6 +323,7 @@ export const App: React.FC = () => {
         })
       );
     } finally {
+      if (inactivityTimeoutId) clearTimeout(inactivityTimeoutId);
       setIsGenerating(false);
     }
   };

@@ -6,7 +6,7 @@ app:
   aimodel: gemma-4-E4B-it-Q4_K_S
   url: http://localhost:8080/v1
   files:
-    inbound: C:/Taller3
+    inbound: ./data/inbound
 
 spring:
   docker:

@@ -19,7 +19,7 @@ public class FileReaderRouter extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        String from = "file:%s?antInclude=*.pdf&delay=1000&move=procesados".formatted(inboundPath);
+        String from = "file:%s?antInclude=*.pdf,*.json&delay=1000&move=procesados".formatted(inboundPath);
 
         from(from)
                 .log("Archivo leído: ${header.CamelFileName}")
