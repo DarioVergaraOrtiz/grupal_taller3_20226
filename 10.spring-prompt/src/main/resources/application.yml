@@ -1,0 +1,20 @@
+server:
+  port: 8090
+
+app:
+  key: ${APP_KEY}
+  aimodel: llama-3.1-8b-instant
+  url: https://api.groq.com/openai/v1
+
+spring:
+  ai:
+    openai:
+      api-key: ${app.key}
+      base-url: ${app.url}
+      chat:
+        model: ${app.aimodel}
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
+

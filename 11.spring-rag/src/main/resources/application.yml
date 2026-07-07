@@ -1,0 +1,36 @@
+server:
+  port: 8090
+
+app:
+  key: dummy
+  aimodel: gemma-4-E4B-it-Q4_K_S
+  url: http://localhost:8080/v1
+
+spring:
+  docker:
+    compose:
+      enabled: true
+      file: 11.spring-rag/docker-compose.yml
+  ai:
+    model:
+      embedding: transformers
+    embedding:
+      transformer:
+        onnx:
+          model-uri: classpath:models/model.onnx
+        tokenizer:
+          uri: classpath:models/tokenizer.json
+    vectorstore:
+      qdrant:
+        collection-name: springai
+
+    openai:
+      api-key: ${app.key}
+      base-url: ${app.url}
+      chat:
+        model: ${app.aimodel}
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
+

@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+app:
+  key: ${APP_KEY}
+  aimodel: llama-3.1-8b-instant
+  url: https://api.groq.com/openai/v1
+
+spring:
+  ai:
+    openai:
+      api-key: ${app.key}
+      base-url: ${app.url}
+      chat:
+        model: ${app.aimodel}

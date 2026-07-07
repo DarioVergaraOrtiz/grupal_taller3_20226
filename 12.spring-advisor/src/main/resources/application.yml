@@ -1,0 +1,48 @@
+server:
+  port: 8091
+
+app:
+  key: dummy
+  aimodel: gemma-4-E4B-it-Q4_K_S
+  url: http://localhost:8080/v1
+  files:
+    inbound: C:/Taller3
+
+spring:
+  docker:
+    compose:
+      enabled: false
+      file: docker-compose.yml
+  ai:
+    model:
+      embedding: transformers
+    embedding:
+      transformer:
+        onnx:
+          model-uri: classpath:models/model.onnx
+        tokenizer:
+          uri: classpath:models/tokenizer.json
+    vectorstore:
+      qdrant:
+        collection-name: springai_advisor
+    openai:
+      api-key: ${app.key}
+      base-url: ${app.url}
+      chat:
+        model: ${app.aimodel}
+
+advisor:
+  memory:
+    collection-name: springai_memory
+    top-k: 4
+  rag:
+    top-k: 2
+  summarization:
+    enabled: false
+    max-tokens: 200
+    threads: 1 # Incrementa este valor (ej. 4 u 8) si tu servidor LLM soporta peticiones concurrentes, o pon enabled: false para saltarte el resumen si va muy lento.
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
+    com.programacion.taller3: DEBUG

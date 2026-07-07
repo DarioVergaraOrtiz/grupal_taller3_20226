@@ -1,0 +1,9 @@
+name: spring-advisor
+services:
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - /C:/Taller3/qdrant_advisor_storage:/qdrant/storage
