@@ -7,7 +7,9 @@ import sellosUce from './assets/sellos-uce.png';
 import logoComputacion from './assets/logoComputacion.png';
 import { InteractiveParticles } from './components/InteractiveParticles';
 
-const API_BASE_URL = 'http://localhost:8091';
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:8091' 
+  : '';
 
 export const App: React.FC = () => {
   const [sessions, setSessions] = useState<Session[]>(() => {

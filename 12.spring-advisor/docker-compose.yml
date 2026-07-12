@@ -18,26 +18,22 @@ services:
     restart: unless-stopped
 
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: dariovergara/ucegemini:backend
     container_name: spring-advisor-backend
     depends_on:
       - qdrant
     environment:
-      # Variables de entorno para que Spring Boot conecte con Qdrant a través de la red de Docker
       - SPRING_AI_VECTORSTORE_QDRANT_HOST=qdrant
       - SPRING_AI_VECTORSTORE_QDRANT_PORT=6334
+      - APP_KEY=${GEMINI_API_KEY}
     ports:
-      - "8080:8080"
+      - "8091:8091"
     networks:
       - app-network
     restart: unless-stopped
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: dariovergara/ucegemini:frontend
     container_name: spring-advisor-frontend
     depends_on:
       - backend

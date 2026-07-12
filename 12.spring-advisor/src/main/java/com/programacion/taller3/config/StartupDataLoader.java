@@ -93,8 +93,23 @@ public class StartupDataLoader implements ApplicationRunner {
         }
 
         if (!documentsToLoad.isEmpty()) {
-            System.out.println("StartupDataLoader :: Insertando " + documentsToLoad.size() + " documentos en Qdrant (esto puede tomar unos minutos dependiendo del EmbeddingModel)...");
-            documentVectorStore.add(documentsToLoad);
+            System.out.println("StartupDataLoader :: Insertando " + documentsToLoad.size() + " documentos en Qdrant en lotes para evitar límites de API (Rate Limits)...");
+            int batchSize = 15;
+            for (int i = 0; i < documentsToLoad.size(); i += batchSize) {
+                int end = Math.min(i + batchSize, documentsToLoad.size());
+                List<Document> batch = documentsToLoad.subList(i, end);
+                System.out.println("StartupDataLoader :: Insertando lote " + (i / batchSize + 1) + " (documentos " + (i + 1) + " a " + end + ")...");
+                documentVectorStore.add(batch);
+                
+                // Esperar 15 segundos entre lotes para no exceder 100 RPM en la capa gratuita de Gemini
+                if (end < documentsToLoad.size()) {
+                    try {
+                        Thread.sleep(15000);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+            }
             System.out.println("StartupDataLoader :: Carga inicial completada con éxito.");
         }
     }

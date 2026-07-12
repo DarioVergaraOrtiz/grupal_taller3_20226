@@ -3,25 +3,21 @@ set -e
 exec > >(tee /var/log/user-data.log) 2>&1
 echo "=== INICIO USER DATA: $(date) ==="
 
-# 1. Instalar Docker
-apt-get update -y
-apt-get install -y ca-certificates curl gnupg
-install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-chmod a+r /etc/apt/keyrings/docker.asc
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  tee /etc/apt/sources.list.d/docker.list > /dev/null
-apt-get update -y
-apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# 1. Instalar Docker en Amazon Linux 2023
+dnf update -y
+dnf install -y docker
 systemctl start docker
 systemctl enable docker
-usermod -aG docker ubuntu
+usermod -aG docker ec2-user
+
+# Instalar Docker Compose
+mkdir -p /usr/local/lib/docker/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-$(uname -m) -o /usr/local/lib/docker/cli-plugins/docker-compose
+chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
 # 2. Crear directorio del proyecto
-mkdir -p /home/ubuntu/spring-advisor
-cd /home/ubuntu/spring-advisor
+mkdir -p /home/ec2-user/spring-advisor
+cd /home/ec2-user/spring-advisor
 
 # 3. Crear archivo .env con la API Key
 cat > .env << 'EOF'
@@ -81,7 +77,7 @@ volumes:
 EOF
 
 # 5. Asignar permisos
-chown -R ubuntu:ubuntu /home/ubuntu/spring-advisor
+chown -R ec2-user:ec2-user /home/ec2-user/spring-advisor
 
 # 6. Descargar imágenes y levantar
 docker compose pull

@@ -34,10 +34,16 @@ public class VectorStoreConfig {
         return new GeminiCustomEmbeddingModel(apiKey);
     }
 
+    @Value("${spring.ai.vectorstore.qdrant.host:localhost}")
+    private String qdrantHost;
+
+    @Value("${spring.ai.vectorstore.qdrant.port:6334}")
+    private int qdrantPort;
+
     @Bean
     public QdrantClient qdrantClient() {
         return new QdrantClient(
-                QdrantGrpcClient.newBuilder("localhost", 6334, false).build()
+                QdrantGrpcClient.newBuilder(qdrantHost, qdrantPort, false).build()
         );
     }
 
