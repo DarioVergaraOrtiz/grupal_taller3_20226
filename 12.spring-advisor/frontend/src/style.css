@@ -507,6 +507,10 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  background: radial-gradient(circle at 50% 100%, rgba(22, 42, 91, 0.25) 0%, rgba(0, 123, 196, 0.08) 50%, rgba(10, 13, 26, 0) 80%);
+  background-size: 100% 550px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 /* Toggle Menu on Mobile */
@@ -534,6 +538,42 @@ body {
   top: 12px;
   right: 16px;
   z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-header-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.header-avatar-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--uce-blue-dark);
+  object-fit: cover;
+  margin-left: -8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1;
+  transition: transform 0.2s;
+}
+
+.header-avatar-img:first-child {
+  margin-left: 0;
+}
+
+.header-avatar-img:hover {
+  transform: translateY(-2px) scale(1.1);
+  z-index: 10;
+}
+
+.header-avatar-img.main-avatar {
+  width: 32px;
+  height: 32px;
+  border-color: var(--uce-gold);
+  z-index: 5;
 }
 
 .btn-header-new {
@@ -567,15 +607,7 @@ body {
 }
 
 .radial-glow-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 550px;
-  background: radial-gradient(circle at 50% 100%, rgba(22, 42, 91, 0.25) 0%, rgba(0, 123, 196, 0.08) 50%, rgba(10, 13, 26, 0) 80%);
-  pointer-events: none;
-  z-index: 1;
-  transition: opacity 0.5s ease;
+  display: none; /* Hide the absolute element since it's applied to the main container now */
 }
 
 .chat-content-container {
@@ -1101,6 +1133,36 @@ body {
   box-shadow: 0 0 10px rgba(229, 168, 35, 0.2);
 }
 
+/* Profile Avatars Group in Sidebar */
+.sidebar-avatars-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sidebar-avatar-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--sidebar-bg);
+  object-fit: cover;
+  margin-left: -8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  z-index: 1;
+  transition: transform 0.2s;
+}
+
+.sidebar-avatar-img:first-child {
+  margin-left: 0;
+}
+
+.sidebar-avatar-img.main-avatar {
+  width: 34px;
+  height: 34px;
+  border-color: var(--uce-gold);
+  z-index: 5;
+}
+
 .btn-send-gemini.loading {
   opacity: 0.5;
   cursor: not-allowed;
@@ -1123,8 +1185,101 @@ body {
 }
 
 /* ========================================================
-   RESPONSIVE DESIGN
+   FIRE TYPING EFFECT
    ======================================================== */
+@keyframes fireGlow {
+  0% { box-shadow: 0 0 8px rgba(255, 100, 0, 0.3), 0 0 16px rgba(255, 60, 0, 0.15); border-color: rgba(255, 120, 0, 0.4); }
+  25% { box-shadow: 0 0 12px rgba(255, 80, 0, 0.45), 0 0 24px rgba(255, 40, 0, 0.2); border-color: rgba(255, 100, 0, 0.5); }
+  50% { box-shadow: 0 0 16px rgba(255, 60, 0, 0.5), 0 0 32px rgba(255, 30, 0, 0.25), 0 0 4px rgba(255, 200, 0, 0.15); border-color: rgba(255, 80, 0, 0.6); }
+  75% { box-shadow: 0 0 12px rgba(255, 80, 0, 0.45), 0 0 24px rgba(255, 40, 0, 0.2); border-color: rgba(255, 100, 0, 0.5); }
+  100% { box-shadow: 0 0 8px rgba(255, 100, 0, 0.3), 0 0 16px rgba(255, 60, 0, 0.15); border-color: rgba(255, 120, 0, 0.4); }
+}
+
+@keyframes fireParticle {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-20px) scale(0.3); }
+}
+
+.input-pill-gemini.typing {
+  animation: fireGlow 1.2s ease-in-out infinite;
+  border-color: rgba(255, 120, 0, 0.4);
+}
+
+.input-pill-gemini.typing::before,
+.input-pill-gemini.typing::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.input-pill-gemini.typing::before {
+  left: 20%;
+  background: #ff6a00;
+  animation: fireParticle 0.8s ease-out infinite;
+}
+
+.input-pill-gemini.typing::after {
+  right: 25%;
+  background: #ffaa00;
+  animation: fireParticle 1s ease-out 0.3s infinite;
+}
+
+/* AI generating sparks at the end of text */
+.message-markdown.generating-cursor > *:last-child {
+  position: relative;
+}
+
+.message-markdown.generating-cursor > *:last-child::after {
+  content: '🖋️';
+  display: inline-block;
+  font-size: 1.3em;
+  margin-left: 6px;
+  vertical-align: text-bottom;
+  animation: writingPen 0.25s ease-in-out infinite alternate;
+  transform-origin: bottom left; /* Tip of the pen */
+  
+  /* Reset previous flame styling */
+  width: auto;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes writingPen {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  100% {
+    transform: rotate(25deg) translateY(-4px);
+  }
+}
+
+
+
+
+/* ========================================================
+   RESPONSIVE DESIGN - ALL DEVICES
+   ======================================================== */
+
+/* ---- Tablets and small laptops ---- */
+@media (max-width: 1024px) {
+  .chat-content-container {
+    max-width: 700px;
+    padding: 70px 20px 20px;
+  }
+  .welcome-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ---- Mobile phones (portrait) ---- */
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
@@ -1143,8 +1298,13 @@ body {
     transform: translateX(-100%);
   }
 
+  /* FIXED hamburger icon - never scrolls */
   .btn-toggle-sidebar-mobile {
     display: flex;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 90;
   }
 
   .sidebar-backdrop {
@@ -1155,13 +1315,14 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     z-index: 95;
     animation: fadeIn 0.2s ease-out;
   }
 
   .chat-content-container {
-    padding: 70px 16px 20px;
+    padding: 64px 14px 16px;
   }
 
   .welcome-header-logos {
@@ -1171,19 +1332,19 @@ body {
 
   .welcome-logo-sello,
   .welcome-logo-computacion {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
   }
 
   .welcome-title {
-    font-size: 2rem;
-    margin-bottom: 16px;
+    font-size: 1.75rem;
+    margin-bottom: 12px;
   }
 
   .welcome-subtitle-desc {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     line-height: 1.5;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     padding: 0 8px;
   }
 
@@ -1193,27 +1354,615 @@ body {
   }
 
   .welcome-card-gemini {
-    padding: 16px;
+    padding: 14px;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .message-item-gemini {
     gap: 12px;
   }
 
   .message-bubble-wrapper {
-    max-width: 88%;
+    max-width: 90%;
   }
 
   .message-item-gemini.user .message-bubble-wrapper {
     max-width: 88%;
   }
 
+  .message-avatar-uce {
+    width: 30px;
+    height: 30px;
+  }
+
+  .message-bubble-gemini {
+    font-size: 0.9rem;
+  }
+
+  .messages-list-gemini {
+    gap: 24px;
+    padding-bottom: 20px;
+  }
+
   .chat-input-container-gemini {
-    padding: 0 12px 12px;
+    padding: 0 10px 10px;
   }
 
   .input-pill-gemini {
     padding: 4px 8px 4px 14px;
-    min-height: 48px;
+    min-height: 46px;
+    border-radius: 24px;
+  }
+
+  .input-pill-gemini textarea {
+    font-size: 0.9rem;
+  }
+
+  .model-select-pill {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  .input-disclaimer {
+    font-size: 0.65rem;
+  }
+
+  /* Fix header actions on mobile */
+  .top-header-actions {
+    top: 10px;
+    right: 12px;
   }
 }
+
+/* ---- Small phones (iPhone SE, Galaxy S8, etc.) ---- */
+@media (max-width: 480px) {
+  .chat-content-container {
+    padding: 60px 10px 12px;
+  }
+
+  .welcome-logo-sello,
+  .welcome-logo-computacion {
+    width: 55px;
+    height: 55px;
+  }
+
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .welcome-subtitle-desc {
+    font-size: 0.82rem;
+    margin-bottom: 16px;
+  }
+
+  .welcome-card-gemini {
+    padding: 12px;
+    gap: 8px;
+    font-size: 0.82rem;
+  }
+
+  .card-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .message-bubble-wrapper {
+    max-width: 92%;
+  }
+
+  .message-item-gemini.user .message-bubble-wrapper {
+    max-width: 90%;
+  }
+
+  .message-bubble-gemini {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .message-item-gemini.user .message-bubble-gemini {
+    padding: 10px 14px;
+  }
+
+  .input-pill-gemini {
+    min-height: 44px;
+    gap: 8px;
+  }
+
+  .pill-action-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .model-select-pill span {
+    display: none;
+  }
+
+  .model-select-pill {
+    padding: 4px 6px;
+    min-width: auto;
+  }
+}
+
+/* ---- Very small phones (iPhone 5/SE 1st gen, Galaxy Fold) ---- */
+@media (max-width: 360px) {
+  .chat-content-container {
+    padding: 56px 8px 10px;
+  }
+
+  .welcome-header-logos {
+    gap: 12px;
+  }
+
+  .welcome-logo-sello,
+  .welcome-logo-computacion {
+    width: 45px;
+    height: 45px;
+  }
+
+  .welcome-title {
+    font-size: 1.3rem;
+  }
+
+  .welcome-subtitle-desc {
+    font-size: 0.78rem;
+  }
+
+  .sidebar.open {
+    width: 240px;
+  }
+
+  .message-bubble-gemini {
+    font-size: 0.82rem;
+  }
+}
+
+/* ---- Landscape phones ---- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .chat-content-container {
+    padding: 50px 16px 10px;
+  }
+
+  .welcome-screen-gemini {
+    padding-bottom: 10px;
+  }
+
+  .welcome-header-logos {
+    margin-bottom: 8px;
+  }
+
+  .welcome-logo-sello,
+  .welcome-logo-computacion {
+    width: 40px;
+    height: 40px;
+  }
+
+  .welcome-title {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  .welcome-subtitle-desc {
+    font-size: 0.78rem;
+    margin-bottom: 12px;
+  }
+
+  .welcome-cards-gemini {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .welcome-card-gemini {
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ========================================================
+   Safari / WebKit Compatibility Fixes
+   ======================================================== */
+
+/* Safe area for iPhone notch and bottom bar */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .chat-input-container-gemini {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .sidebar {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .btn-toggle-sidebar-mobile {
+    top: calc(12px + env(safe-area-inset-top));
+  }
+
+  .top-header-actions {
+    top: calc(12px + env(safe-area-inset-top));
+  }
+}
+
+/* Fix for Safari input zoom on focus (font-size < 16px triggers zoom) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .input-pill-gemini textarea {
+    font-size: 16px; /* Prevents Safari auto-zoom on input focus */
+  }
+}
+
+/* Smooth scrolling for all WebKit browsers */
+.chat-area-gemini {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for 100vh on mobile Safari */
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+
+  #root, .gemini-app {
+    height: -webkit-fill-available;
+  }
+
+  .main-content-gemini {
+    height: -webkit-fill-available;
+  }
+
+  .sidebar {
+    height: -webkit-fill-available;
+  }
+}
+
+/* ========================================================
+   CUSTOM MODAL (GEMINI DIALOG STYLE)
+   ======================================================== */
+.modal-overlay-gemini {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content-gemini {
+  background: #1e1f20;
+  border: 1px solid var(--border-subtle);
+  border-radius: 28px;
+  width: 90%;
+  max-width: 440px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  animation: modalScaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes modalScaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.modal-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.modal-actions-gemini {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modal-btn {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.modal-btn.btn-cancel {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.modal-btn.btn-cancel:hover {
+  background: var(--bg-hover);
+}
+
+.modal-btn.btn-confirm {
+  background: #ea4335;
+  color: #fff;
+}
+
+.modal-btn.btn-confirm:hover {
+  background: #d93025;
+  box-shadow: 0 2px 6px rgba(234, 67, 53, 0.4);
+}
+
+/* ========================================================
+   SIIU UCE PRELOADER SPLASH ANIMATION
+   ======================================================== */
+#preloader-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0a0d1a;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* layout flow spacing */
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+.preloader-logos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  animation: logad-center 2.0s ease-out both;
+}
+
+.logo_load_splash {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes logad-center {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.preloader-wrapper {
+  position: relative;
+  color: #fff;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.preloader-slash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  transform-origin: center center;
+  width: 0.2rem;
+  height: 145%;
+  background: var(--uce-blue-light);
+  z-index: 4;
+  animation: slash 3.2s ease-in forwards;
+}
+
+.preloader-slash:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.85rem;
+  height: 120%;
+  background: linear-gradient(90deg, #0a0d1a 0%, #0f1324 50%, #0a0d1a 100%);
+  z-index: -1;
+}
+
+.preloader-slash:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.preloader-sides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.preloader-sides .preloader-side {
+  position: absolute;
+  background: var(--uce-gold);
+}
+
+.preloader-sides .preloader-side:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  transform: translateX(-101%);
+  animation: side-top ease 3.2s forwards;
+}
+
+.preloader-sides .preloader-side:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 0.15rem;
+  height: 100%;
+  transform: translateY(-101%);
+  animation: side-right ease 3.2s forwards;
+}
+
+.preloader-sides .preloader-side:nth-child(3) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.15rem;
+  transform: translateX(101%);
+  animation: side-bottom ease 3.2s forwards;
+}
+
+.preloader-sides .preloader-side:nth-child(4) {
+  top: 0;
+  left: 0;
+  width: 0.15rem;
+  height: 100%;
+  transform: translateY(101%);
+  animation: side-left ease 3.2s forwards;
+}
+
+.preloader-text {
+  position: relative;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  white-space: nowrap; /* CRITICAL: Prevent long text from wrapping and breaking division */
+}
+
+.preloader-text--backing {
+  opacity: 0;
+}
+
+.preloader-text--left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.preloader-text--left .preloader-inner {
+  transform: translateX(100%);
+  animation: text-left 3.2s ease-in-out forwards;
+}
+
+.preloader-text--right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.preloader-text--right .preloader-inner {
+  transform: translateX(-200%);
+  animation: text-right 3.2s ease-in-out forwards;
+}
+
+#preloader-splash.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Preloader Responsive scaling */
+@media (max-width: 768px) {
+  #preloader-splash {
+    gap: 24px;
+  }
+  .preloader-logos-container {
+    gap: 16px;
+  }
+  .logo_load_splash {
+    width: 100px;
+    height: 100px;
+  }
+  .preloader-wrapper {
+    font-size: 0.78rem;
+    letter-spacing: 0.1rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Keyframes animations for SIIU UCE Preloader */
+@keyframes slash {
+  0% { transform: translate(-50%, -50%) rotate(-24deg) scaleY(0); }
+  6% { transform: translate(-50%, -50%) rotate(-24deg) scaleY(1); }
+  13% { transform: translate(-50%, -50%) rotate(-24deg) scaleY(1); }
+  16.6% { transform: translate(-50%, -50%) rotate(-24deg) scaleY(0); }
+  100% { transform: translate(-50%, -50%) rotate(-24deg) scaleY(0); }
+}
+
+@keyframes text-left {
+  0% { transform: translateX(100%); }
+  10% { transform: translateX(0); }
+  58% { transform: translateX(0); }
+  70% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+@keyframes text-right {
+  0% { transform: translateX(-200%); }
+  10% { transform: translateX(-100%); }
+  58% { transform: translateX(-100%); }
+  70% { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
+}
+
+@keyframes side-top {
+  0%, 14% { transform: translateX(-101%); }
+  24%, 55% { transform: translateX(0); }
+  65% { transform: translateX(101%); }
+  100% { transform: translateX(101%); }
+}
+
+@keyframes side-right {
+  0%, 14%, 23% { transform: translateY(-101%); }
+  30%, 62% { transform: translateY(0); }
+  72% { transform: translateY(101%); }
+  100% { transform: translateY(101%); }
+}
+
+@keyframes side-bottom {
+  0%, 14%, 24%, 28% { transform: translateX(101%); }
+  37%, 70% { transform: translateX(0); }
+  79% { transform: translateX(-101%); }
+  100% { transform: translateX(-101%); }
+}
+
+@keyframes side-left {
+  0%, 14%, 24%, 34%, 35% { transform: translateY(101%); }
+  44%, 79% { transform: translateY(0); }
+  86% { transform: translateY(-101%); }
+  100% { transform: translateY(-101%); }
+}
+
 
 /* ========================================================
    CUSTOM MODAL (GEMINI DIALOG STYLE)

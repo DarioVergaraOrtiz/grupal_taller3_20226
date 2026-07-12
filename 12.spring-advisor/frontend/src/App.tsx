@@ -87,6 +87,17 @@ export const App: React.FC = () => {
   };
 
   const startNewSession = async () => {
+    const generateUUID = () => {
+      if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+        return crypto.randomUUID();
+      }
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    };
+
     try {
       const response = await fetch(`${API_BASE_URL}/api/session/new`, {
         method: 'POST'
@@ -105,7 +116,7 @@ export const App: React.FC = () => {
     } catch (error) {
       console.warn('Backend offline, generando sesión local:', error);
       setIsOffline(true);
-      const localId = crypto.randomUUID();
+      const localId = generateUUID();
       const newSession: Session = {
         id: localId,
         name: `Conversación Local ${sessions.length + 1}`,

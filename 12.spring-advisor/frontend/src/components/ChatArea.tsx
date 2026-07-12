@@ -3,6 +3,10 @@ import { Message } from '../types/chat';
 import { MessageItem } from './MessageItem';
 import logoComputacion from '../assets/logoComputacion.png';
 import sellosUce from '../assets/sellos-uce.png';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 interface ChatAreaProps {
   messages: Message[];
@@ -12,6 +16,7 @@ interface ChatAreaProps {
 
 export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isGenerating, onCardClick }) => {
   const chatBottomRef = useRef<HTMLDivElement>(null);
+  const welcomeRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to bottom of chat
   useEffect(() => {
@@ -59,7 +64,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isGenerating, onCa
       <div className="chat-content-container">
         {messages.length === 0 ? (
           /* Welcome Screen */
-          <div className="welcome-screen-gemini">
+          <div ref={welcomeRef} className="welcome-screen-gemini">
             <div className="welcome-header-logos">
               <img src={sellosUce} alt="Sello UCE" className="welcome-logo-sello" />
               <img src={logoComputacion} alt="Logo Computación" className="welcome-logo-computacion" />

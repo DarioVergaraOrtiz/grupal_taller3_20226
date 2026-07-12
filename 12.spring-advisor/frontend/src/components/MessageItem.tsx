@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Message } from '../types/chat';
 import logoComputacion from '../assets/logoComputacion.png';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 interface MessageItemProps {
   message: Message;
@@ -11,6 +15,17 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
   const { role, content } = message;
   const [copied, setCopied] = useState(false);
   const [liked, setLiked] = useState<boolean | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    // Animación de entrada para el mensaje
+    gsap.from(containerRef.current, {
+      y: 20,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power3.out',
+    });
+  }, { scope: containerRef });
 
   const handleCopy = async () => {
     try {
@@ -49,7 +64,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
   };
 
   return (
-    <div className={`message-item-gemini ${role}`}>
+    <div ref={containerRef} className={`message-item-gemini ${role}`}>
       {role === 'assistant' && (
         <div className="message-avatar-uce">
           <img 
@@ -65,7 +80,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
           {role === 'assistant' ? (
             content ? (
               <div 
-                className="message-markdown"
+                className={`message-markdown ${isGenerating ? 'generating-cursor' : ''}`}
                 dangerouslySetInnerHTML={{ __html: parseMarkdown(content) }}
               />
             ) : (
@@ -123,16 +138,6 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
               </svg>
             </button>
 
-            {/* Share Button */}
-            <button className="action-btn" title="Compartir">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="18" cy="5" r="3"></circle>
-                <circle cx="6" cy="12" r="3"></circle>
-                <circle cx="18" cy="19" r="3"></circle>
-                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-              </svg>
-            </button>
           </div>
         )}
       </div>

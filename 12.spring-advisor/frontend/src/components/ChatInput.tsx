@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import 'regenerator-runtime/runtime';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 interface ChatInputProps {
   onSendMessage: (text: string) => void;
@@ -18,6 +20,35 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition
+  } = useSpeechRecognition();
+
+  const handleMicClick = () => {
+    if (!browserSupportsSpeechRecognition) {
+      alert("Tu navegador no soporta dictado por voz nativamente. Por favor, usa Chrome o Safari 14.5+.");
+      return;
+    }
+    
+    if (listening) {
+      SpeechRecognition.stopListening();
+    } else {
+      SpeechRecognition.startListening({ language: 'es-ES', continuous: true });
+    }
+  };
+
+  useEffect(() => {
+    if (!listening && transcript) {
+      setText((prev) => prev + (prev ? ' ' : '') + transcript);
+      resetTranscript();
+    }
+  }, [listening, transcript, resetTranscript]);
+
+  const displayedText = text + (listening && transcript ? (text ? ' ' : '') + transcript : '');
+
   // Auto-resize textarea
   useEffect(() => {
     const textarea = textareaRef.current;
@@ -25,7 +56,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
       textarea.style.height = 'auto';
       textarea.style.height = `${Math.min(textarea.scrollHeight, 150)}px`;
     }
-  }, [text]);
+  }, [displayedText]);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -39,9 +70,14 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   }, []);
 
   const handleSend = () => {
-    if (text.trim() && !isLoading) {
-      onSendMessage(text.trim());
+    if (listening) {
+      SpeechRecognition.stopListening();
+    }
+    const finalToSend = displayedText.trim();
+    if (finalToSend && !isLoading) {
+      onSendMessage(finalToSend);
       setText('');
+      resetTranscript();
       if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';
       }
@@ -55,24 +91,23 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     }
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setText(e.target.value);
+    if (listening) {
+      SpeechRecognition.stopListening();
+    }
+  };
+
   return (
     <div className="chat-input-container-gemini">
-      <div className="input-pill-gemini">
-        {/* Attachment "+" Button */}
-        <button className="pill-action-btn btn-attach" title="Añadir archivos">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-        </button>
-
+      <div className={`input-pill-gemini ${displayedText.trim() || listening ? 'typing' : ''}`}>
         {/* Text Input area */}
         <textarea
           ref={textareaRef}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
+          value={displayedText}
+          onChange={handleChange}
           onKeyDown={handleKeyDown}
-          placeholder="Pregunta a Gemini UCE"
+          placeholder={listening ? "Escuchando..." : "Pregunta a Gemini UCE"}
           rows={1}
           disabled={isLoading}
         />
@@ -86,7 +121,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               title="Cambiar modelo"
             >
-              <span>{selectedModel === 'pro' ? 'Pro' : 'Flash'}</span>
+              <span>{selectedModel === 'pro' ? 'RAG' : 'Gema'}</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -102,8 +137,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
                   }}
                 >
                   <div className="model-option-info">
-                    <span className="model-name">Gemini Pro</span>
-                    <span className="model-desc">RAG local + Base de conocimiento UCE</span>
+                    <span className="model-name">gemma 4 31B IT uno es con QDRANT</span>
                   </div>
                   {selectedModel === 'pro' && (
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -120,8 +154,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
                   }}
                 >
                   <div className="model-option-info">
-                    <span className="model-name">Gemini Flash</span>
-                    <span className="model-desc">Respuestas rápidas directas</span>
+                    <span className="model-name">gemma 4 31B IT sin QDRANT</span>
                   </div>
                   {selectedModel === 'flash' && (
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -133,29 +166,35 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             )}
           </div>
 
-          {/* Voice Input or Send Button */}
-          {text.trim() ? (
-            <button 
-              className={`pill-action-btn btn-send-gemini ${isLoading ? 'loading' : ''}`} 
-              onClick={handleSend}
-              disabled={isLoading}
-              title="Enviar mensaje"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </button>
-          ) : (
-            <button className="pill-action-btn btn-mic" title="Usar micrófono (simulado)">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                <line x1="12" y1="19" x2="12" y2="23"></line>
-                <line x1="8" y1="23" x2="16" y2="23"></line>
-              </svg>
-            </button>
-          )}
+          {/* Mic Button */}
+          <button 
+            className={`pill-action-btn btn-mic ${listening ? 'recording' : ''}`} 
+            onClick={handleMicClick}
+            disabled={isLoading}
+            title={listening ? "Grabando..." : "Escribir por voz"}
+            style={{ color: listening ? '#ea4335' : 'var(--text-secondary)' }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+          </button>
+
+          {/* Send Button */}
+          <button 
+            className={`pill-action-btn btn-send-gemini ${isLoading ? 'loading' : ''} ${!displayedText.trim() ? 'disabled' : ''}`} 
+            onClick={handleSend}
+            disabled={isLoading || !displayedText.trim()}
+            title="Enviar mensaje"
+            style={{ opacity: displayedText.trim() ? 1 : 0.5, cursor: displayedText.trim() ? 'pointer' : 'not-allowed' }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
         </div>
       </div>
       <div className="input-disclaimer">
