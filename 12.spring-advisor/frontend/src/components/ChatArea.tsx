@@ -25,8 +25,8 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isGenerating, onCa
 
   const welcomeCards = [
     {
-      prompt: '¿Cuáles son los requisitos para titulación?',
-      title: 'Requisitos de titulación',
+      prompt: '¿Qué tesis existen sobre Inteligencia Artificial o Procesamiento de Imágenes?',
+      title: 'Buscar por tema',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
@@ -35,8 +35,8 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isGenerating, onCa
       )
     },
     {
-      prompt: '¿Qué es el proyecto integrador y cuál es su formato?',
-      title: 'Proyecto integrador',
+      prompt: '¿Cuáles son las tesis o proyectos de titulación más antiguos en la base de datos?',
+      title: 'Tesis más antiguas',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -45,8 +45,8 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isGenerating, onCa
       )
     },
     {
-      prompt: '¿Cuáles son los plazos importantes para el proceso de titulación?',
-      title: 'Plazos y fechas clave',
+      prompt: '¿Cuáles son los trabajos de titulación más recientes del año 2026?',
+      title: 'Trabajos más recientes',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
@@ -72,7 +72,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isGenerating, onCa
             <h2 className="welcome-title">Asistente Virtual de Computación</h2>
             <p className="welcome-subtitle-desc">
               Desarrollado por la <strong>Carrera de Computación</strong> de la Facultad de Ingeniería y Ciencias Aplicadas (FICA - UCE). 
-              Pregúntame sobre el proceso de titulación, proyectos integradores y normativas académicas.
+              Pregúntame sobre los trabajos de titulación, proyectos integradores e investigaciones de nuestros estudiantes.
             </p>
             
             <div className="welcome-cards-gemini">

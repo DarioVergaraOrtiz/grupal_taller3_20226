@@ -67,90 +67,64 @@ public class ChatController {
             throw new IllegalArgumentException("El sessionId es obligatorio");
         }
 
-        // === RAG Manual con doble búsqueda ===
-        // Búsqueda 1: General (sin filtro)
-        var generalResults = documentVectorStore.similaritySearch(
-                SearchRequest.builder()
-                        .query(message)
-                        .topK(5)
-                        .build()
-        );
-        
-        // Búsqueda 2: Filtrada solo por tesis (usando IN con los IDs conocidos)
-        java.util.List<org.springframework.ai.document.Document> thesisResults;
-        try {
-            var filterExpr = new org.springframework.ai.vectorstore.filter.Filter.Expression(
-                    org.springframework.ai.vectorstore.filter.Filter.ExpressionType.IN,
-                    new org.springframework.ai.vectorstore.filter.Filter.Key("document_id"),
-                    new org.springframework.ai.vectorstore.filter.Filter.Value(java.util.List.of(
-                            "thesis_uce-comp-001", "thesis_uce-comp-002", "thesis_uce-comp-003",
-                            "thesis_uce-comp-004", "thesis_uce-comp-005", "thesis_uce-comp-006",
-                            "thesis_uce-comp-007", "thesis_uce-comp-008", "thesis_uce-comp-009",
-                            "thesis_uce-comp-010"
-                    ))
-            );
-            thesisResults = new java.util.ArrayList<>(documentVectorStore.similaritySearch(
+        String finalSystemPrompt;
+
+        if ("flash".equals(request.model())) {
+            System.out.println("ChatController :: Modo ChatGPT Normal (Sin Qdrant)");
+            finalSystemPrompt = "Eres un asistente de Inteligencia Artificial útil, amigable y general, al estilo de ChatGPT.\n" +
+                    "Responde cualquier consulta del usuario en español de forma fluida, natural y directa.\n" +
+                    "PROHIBIDO usar etiquetas como <thought> o incluir tus procesos de razonamiento interno.\n" +
+                    "Escribe SOLO la respuesta final para el usuario.\n" +
+                    "No estás limitado a ningún tema en particular, puedes hablar de cualquier tema libremente.";
+        } else {
+            System.out.println("ChatController :: Modo RAG Tesis UCE (Con Qdrant)");
+            // RAG General para buscar en toda la base de datos de Tesis
+            var results = documentVectorStore.similaritySearch(
                     SearchRequest.builder()
                             .query(message)
                             .topK(5)
-                            .filterExpression(filterExpr)
                             .build()
-            ));
-        } catch (Exception e) {
-            System.err.println("ChatController :: Error en búsqueda filtrada de tesis: " + e.getMessage());
-            thesisResults = java.util.Collections.emptyList();
-        }
+            );
 
-        System.out.println("ChatController :: RAG General recuperó " + generalResults.size() + " docs");
-        System.out.println("ChatController :: RAG Tesis recuperó " + thesisResults.size() + " docs");
-        
-        // Combinar resultados: primero tesis, luego generales (sin duplicados)
-        var allDocIds = new java.util.HashSet<String>();
-        StringBuilder contextBuilder = new StringBuilder();
-        
-        for (var doc : thesisResults) {
-            String docId = (String) doc.getMetadata().getOrDefault("document_id", "unknown");
-            allDocIds.add(doc.getId());
-            String text = doc.getText();
-            if (text == null || text.isBlank()) {
-                text = (String) doc.getMetadata().getOrDefault("doc_content", "");
+            System.out.println("ChatController :: RAG recuperó " + results.size() + " docs");
+
+            StringBuilder contextBuilder = new StringBuilder();
+            for (var doc : results) {
+                String text = doc.getText();
+                if (text == null || text.isBlank()) {
+                    text = (String) doc.getMetadata().getOrDefault("doc_content", "");
+                }
+                
+                Object uri = doc.getMetadata().get("uri");
+                Object autores = doc.getMetadata().get("autores");
+                Object director = doc.getMetadata().get("director");
+                Object fecha = doc.getMetadata().get("fecha");
+
+                if (!text.isBlank()) {
+                    contextBuilder.append("[Documento Tesis]\n");
+                    if (autores != null) contextBuilder.append("Autores: ").append(autores).append("\n");
+                    if (director != null) contextBuilder.append("Director: ").append(director).append("\n");
+                    if (fecha != null) contextBuilder.append("Fecha: ").append(fecha).append("\n");
+                    if (uri != null) contextBuilder.append("Enlace URI: ").append(uri).append("\n");
+                    contextBuilder.append("Contenido: ").append(text).append("\n\n");
+                }
             }
-            if (!text.isBlank()) {
-                contextBuilder.append("[Tesis] ").append(text).append("\n\n");
-                System.out.println("ChatController :: Tesis doc: " + docId + " | Text (primeros 100): " + text.substring(0, Math.min(100, text.length())));
-            }
+
+            String ragContext = contextBuilder.toString();
+            System.out.println("ChatController :: Contexto RAG total: " + ragContext.length() + " caracteres");
+
+            finalSystemPrompt = "Eres un asistente académico especializado en Tesis y Trabajos de Titulación de la carrera de Computación de la Universidad Central del Ecuador (UCE).\n\n" +
+                    "REGLAS:\n" +
+                    "1. Basa tus respuestas EXCLUSIVAMENTE en el contexto de las tesis proporcionado abajo.\n" +
+                    "2. Si no encuentras información relevante en el contexto para responder la pregunta, indícalo de forma natural y amable.\n" +
+                    "3. Cita los autores o el título de la tesis cuando sea posible.\n" +
+                    "4. Sé conciso pero completo. Prioriza datos concretos de las investigaciones.\n" +
+                    "5. RESPONDE ÚNICAMENTE EN ESPAÑOL y de forma muy natural.\n" +
+                    "6. PROHIBIDO usar etiquetas como <thought> o incluir tus procesos de razonamiento interno. Escribe SOLO la respuesta final para el usuario.\n" +
+                    "7. Mantén una conversación fluida y directa.\n\n" +
+                    "CONTEXTO RECUPERADO (TESIS):\n" +
+                    ragContext;
         }
-        
-        for (var doc : generalResults) {
-            if (allDocIds.contains(doc.getId())) continue; // skip duplicados
-            String text = doc.getText();
-            if (text == null || text.isBlank()) {
-                text = (String) doc.getMetadata().getOrDefault("doc_content", "");
-            }
-            if (!text.isBlank()) {
-                contextBuilder.append("[Normativa] ").append(text).append("\n\n");
-            }
-        }
-        
-        String ragContext = contextBuilder.toString();
-        System.out.println("ChatController :: Contexto RAG total: " + ragContext.length() + " caracteres");
-        
-        String finalSystemPrompt = "Eres un asistente académico especializado de la Universidad Central del Ecuador (UCE).\n\n" +
-                "Tu rol es responder consultas sobre:\n" +
-                "- Tesis y trabajos de titulación de la carrera de Computación\n" +
-                "- Requisitos y procesos de titulación\n" +
-                "- Proyecto integrador (formato, requisitos, evaluación)\n" +
-                "- Normativa universitaria vigente\n" +
-                "- Investigación académica de la facultad de Ingeniería\n\n" +
-                "REGLAS:\n" +
-                "1. Basa tus respuestas EXCLUSIVAMENTE en el contexto proporcionado abajo.\n" +
-                "2. Si encuentras información relevante en los documentos marcados como [Tesis], priorízalos.\n" +
-                "3. Si no encuentras información relevante en el contexto, indícalo de forma natural.\n" +
-                "4. Cita la fuente del documento cuando sea posible.\n" +
-                "5. Sé conciso pero completo. Prioriza datos concretos.\n" +
-                "6. Responde en español.\n\n" +
-                "DOCUMENTOS RECUPERADOS:\n" +
-                ragContext;
 
 
         // Diagnóstico de sesión

@@ -25,6 +25,15 @@ public class VectorStoreConfig {
     @Value("${advisor.memory.collection-name:springai_memory}")
     private String memoryCollectionName;
 
+    @Value("${app.key}")
+    private String apiKey;
+
+    @Bean
+    @Primary
+    public EmbeddingModel customEmbeddingModel() {
+        return new GeminiCustomEmbeddingModel(apiKey);
+    }
+
     @Bean
     public QdrantClient qdrantClient() {
         return new QdrantClient(
@@ -39,7 +48,8 @@ public class VectorStoreConfig {
     @Primary
     @org.springframework.beans.factory.annotation.Qualifier("documentVectorStore")
     public VectorStore documentVectorStore(EmbeddingModel embeddingModel, QdrantClient qdrantClient) {
-        ensureCollectionExists(qdrantClient, documentCollectionName, 384);
+        // dimension is 3072 for gemini-embedding-2
+        ensureCollectionExists(qdrantClient, documentCollectionName, 3072);
 
         return QdrantVectorStore.builder(qdrantClient, embeddingModel)
                 .collectionName(documentCollectionName)
@@ -52,7 +62,7 @@ public class VectorStoreConfig {
     @Bean
     @org.springframework.beans.factory.annotation.Qualifier("memoryVectorStore")
     public VectorStore memoryVectorStore(EmbeddingModel embeddingModel, QdrantClient qdrantClient) {
-        ensureCollectionExists(qdrantClient, memoryCollectionName, 384);
+        ensureCollectionExists(qdrantClient, memoryCollectionName, 3072);
 
         return QdrantVectorStore.builder(qdrantClient, embeddingModel)
                 .collectionName(memoryCollectionName)

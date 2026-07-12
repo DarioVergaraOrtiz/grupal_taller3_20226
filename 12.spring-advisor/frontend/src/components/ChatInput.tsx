@@ -121,7 +121,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               title="Cambiar modelo"
             >
-              <span>{selectedModel === 'pro' ? 'RAG' : 'Gema'}</span>
+              <span>{selectedModel === 'pro' ? 'Con QDRANT' : 'Sin QDRANT'}</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -137,7 +137,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
                   }}
                 >
                   <div className="model-option-info">
-                    <span className="model-name">gemma 4 31B IT uno es con QDRANT</span>
+                    <span className="model-name">gemini-3.1-flash-lite con Qdrant</span>
                   </div>
                   {selectedModel === 'pro' && (
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -154,7 +154,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
                   }}
                 >
                   <div className="model-option-info">
-                    <span className="model-name">gemma 4 31B IT sin QDRANT</span>
+                    <span className="model-name">gemini-3.1-flash-lite sin Qdrant</span>
                   </div>
                   {selectedModel === 'flash' && (
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

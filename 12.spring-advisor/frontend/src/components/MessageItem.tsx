@@ -3,6 +3,9 @@ import { Message } from '../types/chat';
 import logoComputacion from '../assets/logoComputacion.png';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 gsap.registerPlugin(useGSAP);
 
@@ -50,18 +53,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
     }
   };
 
-  const parseMarkdown = (text: string) => {
-    if (!text) return '';
-    try {
-      if ((window as any).marked) {
-        return (window as any).marked.parse(text);
-      }
-    } catch (e) {
-      console.error("Error parsing markdown with marked:", e);
-    }
-    // Fallback if marked is not available or fails
-    return text.replace(/\n/g, '<br />');
-  };
+
 
   return (
     <div ref={containerRef} className={`message-item-gemini ${role}`}>
@@ -79,10 +71,14 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
         <div className="message-bubble-gemini">
           {role === 'assistant' ? (
             content ? (
-              <div 
-                className={`message-markdown ${isGenerating ? 'generating-cursor' : ''}`}
-                dangerouslySetInnerHTML={{ __html: parseMarkdown(content) }}
-              />
+              <div className={`message-markdown ${isGenerating ? 'generating-cursor' : ''}`}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkMath]}
+                  rehypePlugins={[rehypeKatex]}
+                >
+                  {content}
+                </ReactMarkdown>
+              </div>
             ) : (
               <div className="gemini-typing-loader">
                 <span></span>

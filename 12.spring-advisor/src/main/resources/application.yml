@@ -2,11 +2,12 @@ server:
   port: 8091
 
 app:
-  key: dummy
-  aimodel: gemma-4-E4B-it-Q4_K_S
-  url: http://localhost:8080/v1
+  key: AQ.Ab8RN6LfZ9u7xNtGmUWx3UPU-QMd8h6htktebszdy4up8v2KlA 
+  aimodel: gemini-3.1-flash-lite
+  url: https://generativelanguage.googleapis.com/v1beta/openai/
   files:
     inbound: ./data/inbound
+    procesados: ./data/inbound/procesados
 
 spring:
   docker:
@@ -15,17 +16,12 @@ spring:
       file: docker-compose.yml
   ai:
     model:
-      embedding: transformers
-    embedding:
-      transformer:
-        onnx:
-          model-uri: classpath:models/model.onnx
-        tokenizer:
-          uri: classpath:models/tokenizer.json
+      embedding: openai
     vectorstore:
       qdrant:
         collection-name: springai_advisor
     openai:
+      # Ahora esto tomará correctamente los valores del bloque "app"
       api-key: ${app.key}
       base-url: ${app.url}
       chat:
@@ -40,7 +36,7 @@ advisor:
   summarization:
     enabled: false
     max-tokens: 200
-    threads: 1 # Incrementa este valor (ej. 4 u 8) si tu servidor LLM soporta peticiones concurrentes, o pon enabled: false para saltarte el resumen si va muy lento.
+    threads: 1
 
 logging:
   level:

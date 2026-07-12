@@ -23,7 +23,6 @@ dependencies {
     // Spring Boot Web
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
 
     // Spring AI - LLM Client (OpenAI compatible)
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
@@ -36,8 +35,6 @@ dependencies {
     implementation("org.springframework.ai:spring-ai-starter-vector-store-qdrant")
     implementation("org.springframework.ai:spring-ai-vector-store-advisor")
 
-    // Spring AI - Embeddings (ONNX local)
-    implementation("org.springframework.ai:spring-ai-starter-model-transformers")
 
     // Apache Camel (file ingestion pipeline)
     implementation("org.apache.camel.springboot:camel-spring-boot-starter:4.20.0")
