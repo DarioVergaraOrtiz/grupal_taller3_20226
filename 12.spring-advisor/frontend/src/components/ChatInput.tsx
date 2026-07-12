@@ -36,7 +36,8 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     if (listening) {
       SpeechRecognition.stopListening();
     } else {
-      SpeechRecognition.startListening({ language: 'es-ES', continuous: true });
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      SpeechRecognition.startListening({ language: 'es-ES', continuous: !isIOS });
     }
   };
 
