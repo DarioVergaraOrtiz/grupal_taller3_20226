@@ -1,0 +1,28 @@
+{
+    "titulo": "Diseño e Implementación de un Aplicativo Web Seguro para la Creación, Administración y Evaluación de Pruebas Prácticas de Programación en Java en Entornos Educativos.",
+    "autores": [
+        "Ortega Salinas, Jimmy Fabricio"
+    ],
+    "director": "Navarrete Pinto, Sandra Marianela",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2026,
+    "palabras_clave": [
+        "Evaluación en línea",
+        "Seguridad",
+        "Programación en Java",
+        "Inteligencia Artificial",
+        "Supervisión no intrusiva",
+        "Online assessment",
+        "Security",
+        "Java programming",
+        "Artificial Intelligence",
+        "Nonintrusive monitoring"
+    ],
+    "resumen_es": "El presente proyecto de titulación se centra en el diseño e implementación de un aplicativo web seguro para la evaluación práctica de programación en Java en el ámbito de la educación superior, buscando dar una solución real a los problemas de integridad académica en entornos virtuales. Siendo así, al abordar las limitaciones actuales en seguridad y retroalimentación, la solución propuesta facilita un entorno de ejecución controlado que no solo fortalece la transparencia, sino que también apoya la labor pedagógica mediante herramientas técnicas especializadas. Para lograrlo, en el desarrollo se siguió una metodología de prototipado con ciclos iterativos, aquello permitió estructurar una arquitectura que combina módulos de autenticación, ejecución segura de código fuente en entornos aislados y supervisión no intrusiva basada en visión por computador, junto con un asistente de IA local encargado de generar observaciones formativas sin sustituir el criterio del docente. Se utilizaron tecnologías como Spring Boot, React, PostgreSQL y Docker, integradas con énfasis en seguridad, mantenibilidad y usabilidad, bajo este enfoque, los resultados evidencian que el aplicativo cumple con los objetivos propuestos, al proporcionar un entorno seguro para la evaluación práctica en línea, reducir el riesgo de accesos no autorizados y fortalecer la trazabilidad del proceso evaluativo. Finalmente, el asistente de IA local demostró utilidad como complemento a la labor docente y abre camino para futuras implementaciones orientadas a incorporar nuevas métricas pedagógicas avanzadas en versiones posteriores.",
+    "resumen_en": "This capstone project focuses on the design and implementation of a secure web application for the practical evaluation of Java programming within higher education, aiming to provide a real solution to academic integrity issues in virtual learning environments. By addressing current limitations in security and feedback, the platform enables a controlled execution environment that not only enhances transparency but also supports pedagogical practice through specialized technical tools. To achieve this, a prototyping methodology with iterative cycles was employed during development, allowing for the design of an architecture that integrates authentication modules, secure code execution in isolated environments, and nonintrusive monitoring based on computer vision, together with a local AI assistant responsible for generating formative observations without replacing the instructor’s professional judgment. Technologies such as Spring Boot, React, PostgreSQL, and Docker were used, integrated with a strong emphasis on security, maintainability, and usability. Under this approach, the results demonstrate that the application meets the proposed objectives by providing a secure environment for online practical assessments, reducing the risk of unauthorized access, and strengthening the traceability of the evaluation process. Finally, the local AI assistant proved to be a valuable complement to teaching practice and opens the way for future implementations aimed at incorporating advanced pedagogical metrics in subsequent versions.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/40053",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "titulo": "Desarrollo de una aplicación interactiva usando realidad aumentada, del juego de ajedrez con personajes representativos del episodio histórico de la conquista Española contra Incas.",
+    "autores": [
+        "López Calle, Nataly Michelle"
+    ],
+    "director": "García Rubio, Yuri Wladimir",
+    "editores": "Universidad Central del Ecudaor",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2024,
+    "palabras_clave": [
+        "Ajedrez",
+        "Realidad Aumentada",
+        "Incas",
+        "Españoles",
+        "Educación",
+        "Chess",
+        "Augmented Reality",
+        "Inca",
+        "Spanish",
+        "Education",
+        "Cita bibliográfica",
+        "López Calle, N. (2024). Desarrollo de una aplicación interactiva usando realidad aumentada, del juego de ajedrez con personajes representativos del episodio histórico de la conquista Española contra Incas. Universidad Central del Ecudaor."
+    ],
+    "resumen_es": "Cada vez es más frecuente el uso de las tecnologías de realidad extendida para el desarrollo de aplicaciones más inmersivas para el usuario. Entre ellas se encuentra la realidad aumentada, que le permite al usuario interactuar con el entorno que rodea. Por ello, el presente trabajo de titulación se centró en la elaboración de una aplicación interactiva de realidad aumentada combinando el entretenimiento y la educación, diseñada para el aprendizaje básico del ajedrez, integrando piezas personalizadas de personajes representativos de la Conquista del Imperio Inca, además de la elaboración de una cartilla didáctica, la cual contiene información de las reglas básicas del juego y descripciones de dichos personajes.",
+    "resumen_en": "The use of extended reality technologies for the development of more immersive applications for the user is becoming increasingly common. Among them is augmented reality, which allows the user to interact with the surrounding environment. Therefore, this degree work focused on the development of an interactive augmented reality application combining entertainment and education, designed for the basic learning of chess, integrating personalized pieces of representative characters of the Conquest of the Inca Empire, in addition to the development of a didactic booklet, which contains information on the basic rules of the game and descriptions of these characters.\n\nDescripción general\nilustraciones.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/35322",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

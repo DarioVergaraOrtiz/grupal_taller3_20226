@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de un videojuego 3D para el aprendizaje de los movimientos y fuerzas para niños de 10 años del colegio Johann Amos Comenios",
+    "autores": [
+        "Domínguez Castillo, Everzon Feiner"
+    ],
+    "director": "Lucero Navarrete, Wagner Vladimir",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2019,
+    "palabras_clave": [
+        "VIDEOJUEGOS",
+        "GAMIFICACIÓN",
+        "ANIMACIÓN 3D",
+        "MODELOS 3D"
+    ],
+    "resumen_es": "La tecnología de los videojuegos permite al usuario introducirse en mundos virtuales llamando la atención de las personas, en especial los niños. El estudio de las ciencias duras, en específico como lo es la física, es complicado desde cualquier nivel educativo en especial si no se han impartido los conocimientos básicos desde temprana edad. El siguiente proyecto integrador ha desarrollado un videojuego 3D orientado a dispositivos móviles para que los niños aprendan los principios generales de la física jugando. El método utilizado en el proyecto está fundamentado en la gamificación, que es la enseñanza a través de dinámicas de juego. Se utilizaron herramientas de desarrollo como Blender y Cinema 4D para los modelos 3D y el motor de videojuegos Unity para la programación de la funcionalidad del videojuego. Se puso en práctica la aplicación en niños de 9 a 11 años del colegio “Johann Amos Comenios” y, además, se planteó probarlo en adolescentes de 12 a 16 años. La aplicación tuvo una gran aceptación por parte de los niños en donde los conceptos que propone el juego fueron bien comprendidos. El impacto fue mayor en los adolescentes debido a que los principios básicos de la física ya habían sido impartidos por sus docentes, por lo que el juego fortaleció y reafirmó sus conocimientos.",
+    "resumen_en": "Videogames technology allows the user to go in virtual worlds, which is an attraction for people and children. The study of hard sciences, specifically physics, is complicated for any educational level, mostly if basic knowledge has been provided at early ages. This integrating project has developed a 3D videogame, intended to mobile devices for children to learn general principles of physics while they play a game. The method used in the project is based on gamification, which is the teaching by using games dynamics. Development tools are used, such as Blender and Cinema 4D for 3D models and Unity videogames motor for programming functionality of the videogame. The application was used with 9 to 11-year old children of Colegio “Johann Amos Comenios” and, additionally it was proposed to try it in 12 to 16-year old teenagers. The application was widely accepted by children, and definitions proposed by the game were well understood. The impact was higher in teenagers, considering that basic principles of physics have been already thought by their teachers; hence, videogames consolidated their knowledge.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/17816",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

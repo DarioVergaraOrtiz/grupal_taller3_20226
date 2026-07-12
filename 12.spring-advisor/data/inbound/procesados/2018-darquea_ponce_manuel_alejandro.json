@@ -1,0 +1,21 @@
+{
+    "titulo": "Desarrollo de una aplicación para dispositivos móviles Android que permita compartir imágenes de forma segura utilizando algoritmos de encriptación",
+    "autores": [
+        "Darquea Ponce, Manuel Alejandro"
+    ],
+    "director": "Caina Aysabucha, Darwin Rodolfo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2018,
+    "palabras_clave": [
+        "ENCRIPTACIÓN DE DATOS",
+        "FUNCIÓN CAÓTICA",
+        "ANDROID"
+    ],
+    "resumen_es": "El presente proyecto se enfoca en el desarrollo de una aplicación para dispositivos móviles Android la cual se encarga de la encriptación de imágenes almacenadas dentro de la memoria del dispositivo para posteriormente ser compartidas por medio de correo electrónico o redes sociales. La parte más importante del desarrollo de esta aplicación es la implementación de un algoritmo de encriptación que utiliza un proceso de iteraciones combinado con una función caótica",
+    "resumen_en": "The present project focuses on the development of an Android application for mobile devices which is responsible of the image’s encryption, they are stored inside the device’s memory and later they can be shared by electronic mail or social networks. The most important part of the development of this application is the implementation of an encryption algorithm that uses an iterative process combined with a chaotic function",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/15761",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

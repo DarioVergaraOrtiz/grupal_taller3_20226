@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de un prototipo de escaneo móvil montado en un Quadcopter empleando iluminación estructurada que permita la reconstrucción 3D de interiores usando una geometría bifocal",
+    "autores": [
+        "Ontuña Narváez, Joel Sebastián"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2019,
+    "palabras_clave": [
+        "ESCANEO TRIDIMENSIONAL",
+        "RECONSTRUCCIÓN 3D",
+        "QUADCOPTER",
+        "PYTHON"
+    ],
+    "resumen_es": "El presente proyecto de investigación se centra en el estudio y desarrollo de un prototipo de software que permite realizar el escaneo tridimensional de interiores. En primera instancia se investigó los diferentes métodos existentes para realizar una reconstrucción 3D, además se investigó las diferentes tecnologías para empezar con el desarrollo. Se desarrolló un sistema con un par de cámaras y un láser, este sistema puede ser implementado en un Quadcopter para obtener las imágenes deseadas. Todo el software se desarrolló con ayuda del lenguaje Python y la librería de código abierto OpenCV. Este prototipo sirvió para obtener nubes de puntos de interiores de la facultad de Ingeniería, Ciencias Físicas y Matemática.",
+    "resumen_en": "The present project focuses on the study and development of a software prototype that allows indoor three-dimensional scanning. Firstly, a research of the different existing methods to do a 3D reconstruction was carried out, as well as a research of the different technologies to initiate such development. A system was created with a couple of cameras and a laser; this system can be implemented in a Quadcopter to obtain the desired images. The entire software was developed with the help of Python language and the open source library OpenCV. This prototype was used to obtain point clouds of the School of Engineering, Physical Sciences and Mathematics indoors",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/19994",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

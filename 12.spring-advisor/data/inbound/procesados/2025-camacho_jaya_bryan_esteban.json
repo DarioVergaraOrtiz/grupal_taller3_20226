@@ -1,0 +1,24 @@
+{
+    "titulo": "Desarrollo de un chatbot que implemente el uso del procesamiento del lenguaje natural y el aprendizaje automático para el asesoramiento en la consulta de artículos de electrónica y computación.",
+    "autores": [
+        "Camacho Jaya, Bryan Esteban"
+    ],
+    "director": "Lucero Navarrete, Wagner Vladimir",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Procesamiento del lenguaje natural (PLN)",
+        "APIs",
+        "Chatbot",
+        "Telegram",
+        "RASA framework",
+        "Natural language processing (NLP)"
+    ],
+    "resumen_es": "Este proyecto desarrolla un chatbot básico diseñado para asesorar en la consulta de artículos de electrónica y computación, utilizando tres parámetros clave: marca, precio y funcionalidad. A diferencia de soluciones que optimizan sistemas preexistentes, este trabajo ofrece una herramienta práctica y rápida para satisfacer las necesidades de los usuarios al investigar productos. El chatbot se implementa mediante el framework RASA, el cual integra procesamiento de lenguaje natural (PLN) y aprendizaje automático (ML), lo que facilita el desarrollo sin necesidad de crear algoritmos personalizados. Además, se conecta a una base de datos no relacional mediante APIs para devolver una lista de productos acorde a los parámetros de consulta del usuario. Telegram fue seleccionado como la interfaz del chatbot, debido a su compatibilidad y facilidad de integración. El proyecto utiliza una metodología de desarrollo incremental, permitiendo la incorporación gradual de características y mejoras. Las pruebas realizadas por el autor demostraron un rendimiento estable y respuestas eficientes, aunque el sistema depende de que el usuario siga estrictamente las instrucciones proporcionadas. Entre las limitaciones del sistema se incluye la falta de flexibilidad en las entradas de texto y la ausencia de integración con plataformas de comercio electrónico. A futuro, se sugiere mejorar la capacidad del chatbot para manejar entradas de usuario más diversas y agregar funcionalidades que personalicen aún más las respuestas. Si el chatbot se implementa a futuro en una empresa de ventas de productos de electrónica y computación, puede aliviar la carga de trabajo del personal de atención al cliente y proporcionar soporte automatizado las 24 horas, optimizando los recursos y reduciendo costos operativos.",
+    "resumen_en": "This project develops a basic chatbot designed to advise on the consultation of electronics and computer items, using three key parameters: brand, price and functionality. Unlike solutions that optimize pre-existing systems, this work offers a practical and fast tool to meet the needs of users when researching products. The chatbot is implemented using the RASA framework, which integrates natural language processing (NLP) and machine learning (ML), facilitating development without the need to create custom algorithms. In addition, it connects to a non-relational database via APIs to return a list of products according to the query parameters of the user. Telegram was selected as the chatbot interface, due to its compatibility and ease of integration. The project uses an incremental development methodology, allowing the gradual incorporation of features and improvements. Tests conducted by the author revealed stable performance and efficient responses, although the system is dependent on the user strictly following the instructions provided. Limitations of the system include the limited flexibility in text entries and the lack of integration with e-commerce platforms. Going forward, it is suggested to improve the ability of the chatbot to handle more diverse user input and to add functionality that further personalizes responses. If the chatbot is implemented in the future in a company that sells electronics and computer products, it could alleviate the workload of customer service personnel and provide automated 24-hour support, optimizing resources and reducing operating costs.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/36544",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

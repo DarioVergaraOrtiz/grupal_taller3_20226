@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de una aplicación de android, para la gestión y difusión de la información de una Institución Educativa dirigida a padres de familia.",
+    "autores": [
+        "García Cazares, Andrea Ximena"
+    ],
+    "director": "Caina Aysabucha, Darwin Rodolfo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "APLICACIÓN MÓVIL UCE",
+        "GESTIÓN DE INFORMACIÓN",
+        "DIFUSIÓN DE INFORMACIÓN",
+        "APLICATIVO WEB"
+    ],
+    "resumen_es": "Un proyecto que consta de dos aplicaciones una página web y una aplicación móvil, las cuales aportaran al mejoramiento en la gestión y difusión de la información de una institución educativa, dirigida para los padres de familia. Toda la gestión de la información se realizara mediante la pagina web, y estará encargada por un administrador de la institución educativa, por otra parte la difusión de esta información dirigida a los padres de familia, se hará mediante la aplicación móvil, con la finalidad de mantener a los padres de familia al tanto de la vida estudiantil de su hijo, de una manera rápida y eficaz.",
+    "resumen_en": "A project that consists of two applications, a web page and a mobile application, which help to improve the management and diffusion of the information of an educational institution, addressed to parents. All the management of the information will be done with the use of the web page, and it will be managed by an administrator of the educational institution, on the other hand the diffusion of this information directed the family parents, will be done by means of the mobile application, with the purpose of helping parents to keep them informed about their children’s progress in an effective and efficient way.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/6062",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

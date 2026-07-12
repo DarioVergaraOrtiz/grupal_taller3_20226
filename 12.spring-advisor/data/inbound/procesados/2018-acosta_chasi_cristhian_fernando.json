@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de un prototipo de videojuego “Escape en el panóptico de Quito” usando Unity 3d, para dispositivos móviles con sistema operativo Android",
+    "autores": [
+        "Acosta Chasi, Cristhian Fernando"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2018,
+    "palabras_clave": [
+        "PANÓPTICO",
+        "VIDEOJUEGOS",
+        "ANDROID",
+        "UNITY"
+    ],
+    "resumen_es": "El presente proyecto está enmarcado en el campo de los videojuegos bajo un entorno 3D, para dispositivos móviles con sistema operativo Android. Su desarrollo se basa en la utilización de herramientas de software libre Unity 3D. El videojuego desarrollado tiene una alta calidad visual y contenido. Se encuentra enmarcado dentro de los videojuegos de escape, y su narrativa se basa en la historia ecuatoriana, siendo el personaje principal el ex presidente Gabriel García Moreno. El escape del panóptico, construido por el ex presidente en el año 1874, se convierte en la parte central del juego. El personaje debe escapar mientras es perseguido por prisioneros que lo intentan asesinar. Se ha tomado en cuenta cada una de las etapas de desarrollo de videojuegos, para el diseño y programación.",
+    "resumen_en": "This project is developed in the field of video games under a 3D environment, for mobile devices with Android operating system. Its development is based on the use of the tools provided by the free license of Unity 3D software. The video game developed has a high quality content and high visual quality. It is framed within the video games of escape, and its narrative is based on the Ecuadorian history, being the main character the ex president Gabriel García Moreno. The escape of the panopticon, built by the former president in 1874, becomes the central part of the game. The character must escape while being chased by prisoners who try to kill him. It has taken into account each of the stages of video game development, for design and programming",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/17279",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "titulo": "Desarrollo e implementación de una aplicación para gestionar el proceso de solicitud de gas doméstico a domicilio en la ciudad de Quito.",
+    "autores": [
+        "Anrango Castillo, David Alberto"
+    ],
+    "director": "Rosas Lara, Mauro Leonardo",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2024,
+    "palabras_clave": [
+        "Gas Licuado de Petróleo (GLP)",
+        "Comercio Electrónico",
+        "Automatización",
+        "Geolocalización",
+        "Aplicación Informática",
+        "Liquefied Petroleum Gas (LPG)",
+        "E-commerce",
+        "Automation",
+        "Geolocation",
+        "Software Application",
+        "Cita bibliográfica",
+        "Anrango Castillo, D y Hernández Méndez, I. (2024). Desarrollo e implementación de una aplicación para gestionar el proceso de solicitud de gas doméstico a domicilio en la ciudad de Quito. Universidad Central del Ecuador."
+    ],
+    "resumen_es": "Un análisis de las recientes innovaciones en el ámbito de entrega de gas licuado de petróleo (GLP) a domicilio en la ciudad de Quito, Ecuador, reveló la carencia de un servicio de distribución de GLP accesible a través de aplicaciones móviles o web. Esta carencia resalta la relevancia y necesidad de abordar esta brecha en el mercado. En respuesta a esta situación, el presente trabajo de titulación se enfocó en la creación de una aplicación integral para optimizar la distribución de cilindros de GLP destinados al uso doméstico en Quito. La solución planteada fue desarrollada utilizando tecnologías modernas y la adopción de prácticas ágiles seleccionadas por su rendimiento superior mediante el método de ponderación aditiva simple (SAW). Entre las tecnologías utilizadas se encuentran Flutter, SvelteKit y Firebase. El aplicativo móvil emplea la API de Google Maps para acceder a información precisa de ubicaciones y rutas, lo cual brinda a los usuarios una manera sencilla y segura de solicitar gas a domicilio. Simultáneamente, ofrece a los distribuidores una herramienta para gestionar y optimizar sus rutas de entrega. Por otro lado, el aplicativo web es exclusivo para administradores de centros de acopio de gas. Su función principal es permitirles monitorear la ubicación de los camiones distribuidores mediante el uso de la geolocalización de Google Maps y sus avanzados algoritmos. Este trabajo presenta una solución digital que promete transformar la distribución de gas doméstico en Quito, al ofrecer beneficios significativos para los consumidores, distribuidores y administradores de centros de acopio.",
+    "resumen_en": "An analysis of recent innovations in the field of home delivery of liquefied petroleum gas (LPG) in the city of Quito, Ecuador, revealed the lack of a LPG distribution service accessible through mobile or web applications. This shortcoming highlights the relevance and need to address this market gap. In response to this situation, this research work focused on the creation of a comprehensive application to optimize the distribution of LPG cylinders intended for domestic use in Quito. The proposal was developed using modern technologies and the adoption of agile practices selected for their superior performance by the simple additive weighting method (SAW). The technologies used include Flutter, SvelteKit and Firebase. The mobile app uses the Google Maps API to access accurate location and route information, providing users with a simple and secure way to order gas at home. At the same time, it offers distributors a tool to manage and optimize their delivery routes. On the other hand, the web application is exclusive for managers of gas collection centers. Its main function is to enable them to monitor the location of distribution trucks by using Google Maps geolocation and its advanced algorithms. This paper presents a digital solution that seeks to transform household gas distribution in Quito, by offering significant benefits to consumers, distributors, and collection center managers.\n\nDescripción general\ntablas, ilustraciones.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/33515",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

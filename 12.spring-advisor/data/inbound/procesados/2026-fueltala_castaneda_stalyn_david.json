@@ -1,0 +1,28 @@
+{
+    "titulo": "Sistema web de recomendación para alojamiento compartido de estudiantes de la Universidad Central del Ecuador.",
+    "autores": [
+        "Fueltala Castañeda, Stalyn David"
+    ],
+    "director": "Salvador Meneses, Jaime Oswaldo",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2026,
+    "palabras_clave": [
+        "Sistema de recomendación",
+        "Alojamiento compartido",
+        "Aplicación web",
+        "Similitud de perfiles",
+        "Recomendación por zona",
+        "Recommendation System",
+        "Shared Housing",
+        "Web Application",
+        "Profile Similarity",
+        "Zone-based Recommendation."
+    ],
+    "resumen_es": "El presente trabajo de titulación desarrolla una plataforma web orientada a la gestión y recomendación de alojamiento compartido para estudiantes de la Universidad Central del Ecuador, con el objetivo de optimizar el proceso de búsqueda, publicación y selección de opciones habitacionales compatibles. El sistema considera las preferencias personales de los estudiantes, las características de los alojamientos y su ubicación en zonas cercanas a la institución universitaria, beneficiando tanto a los estudiantes como a las personas que ofrecen espacios habitacionales. La solución integra un sistema de recomendación por similitud de perfiles como un componente de apoyo dentro de la plataforma, empleando técnicas de representación del conocimiento e ingeniería de características para modelar la información declarada por los usuarios y aplicar métricas de similitud vectorial, específicamente la similitud del coseno, sobre vectores normalizados. Este enfoque permite generar sugerencias coherentes sin recurrir a modelos complejos de aprendizaje automático, resultando adecuado para escenarios con volúmenes de datos limitados. A nivel de implementación, la plataforma se desarrolla como una aplicación web basada en una arquitectura modular que separa la capa de presentación, la lógica de negocio y los módulos funcionales del sistema, permitiendo la gestión eficiente de perfiles de usuario y publicaciones de alojamiento, así como la ejecución de los procesos de recomendación. El sistema ofrece tanto recomendaciones de compatibilidad entre estudiantes como la visualización de alojamientos por zonas cercanas a la institución, ordenados según criterios definidos por el comportamiento de los usuarios. Los resultados obtenidos demuestran la viabilidad de la plataforma como una solución tecnológica de apoyo para la toma de decisiones en el contexto del alojamiento estudiantil.",
+    "resumen_en": "This research project develops a web platform aimed at the management and recommendation of shared housing for students of the Universidad Central del Ecuador, with the objective of optimizing the processes of searching, publishing, and selecting compatible housing options. The system considers students’ personal preferences, housing characteristics, and their location in areas close to the university campus, benefiting both students and individuals offering residential spaces. The solution integrates a profile-similarity–based recommendation system as a support component within the platform, employing knowledge representation techniques and feature engineering to model user-declared information and apply vector similarity metrics, specifically cosine similarity, over normalized vectors. This approach enables the generation of coherent recommendations without relying on complex machine learning models, making it suitable for scenarios with limited data volumes. At the implementation level, the platform is developed as a web application based on a modular architecture that separates the presentation layer, business logic, and functional system modules, allowing efficient management of user profiles and housing listings, as well as the execution of recommendation processes. The system provides both compatibility recommendations among students and the visualization of housing options by zones close to the university, ranked according to criteria derived from user behavior. The results demonstrate the feasibility of the platform as a technological solution that supports decision-making in the context of student housing",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/40408",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "titulo": "Desarrollo de un videojuego educativo para mejorar las habilidades de mecanografía para jóvenes de bachillerato",
+    "autores": [
+        "Montalvo Salas, Carlos Patricio"
+    ],
+    "director": "Lucero Navarrete, Wagner Vladimir",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Videojuego educativo",
+        "Gamificación",
+        "Entorno Unity 3d",
+        "Aprendizaje lúdico",
+        "Educational video game",
+        "Gamification",
+        "Unity 3d environment",
+        "Playful learning"
+    ],
+    "resumen_es": "El presente proyecto de titulación aborda el desarrollo de un videojuego educativo de carreras denominado \"Mecano Racing\", orientado al fortalecimiento de competencias mecanográficas mediante la aplicación de principios de gamificación. Este proyecto se fundamenta en la implementación de elementos lúdicos y diseño de videojuegos como estrategia para potenciar el compromiso y la motivación de los usuarios durante el proceso de adquisición de destrezas mecanográficas. La metodología contempla el desarrollo de una aplicación interactiva mediante el entorno Unity (v2022.3.41f1), estableciendo una integración coherente entre los mecanismos de práctica mecanográfica y las dinámicas propias de los juegos de competición. El sistema incorpora una modalidad arcade con registro local de puntuaciones para estimular la competitividad, complementado por un mecanismo de identificación y análisis de patrones de error que favorece el perfeccionamiento progresivo de las habilidades de digitación. La arquitectura del software incluye un sistema adaptativo de niveles de dificultad que permite la personalización de la experiencia de aprendizaje, así como herramientas de análisis cuantitativo para el monitoreo sistemático del progreso en términos de velocidad y precisión. Mediante una interfaz de usuario centrada en principios de usabilidad y experiencia de usuario, este proyecto constituye una propuesta educativa innovadora que transforma el aprendizaje mecanográfico tradicional en una actividad pedagógicamente efectiva y significativamente más atractiva para estudiantes y profesionales en el contexto digital contemporáneo.",
+    "resumen_en": "This graduation project addresses the development of an educational racing video game called \"Mecano Racing,\" aimed at strengthening typing skills through the application of gamification principles. This proyect is based on the implementation of ludic elements and video game design as a strategy to enhance user engagement and motivation during the process of acquiring typing skills. The methodology contemplates the development of an interactive application using the Unity (v2022.3.41f1) environment, establishing a coherent integration between typing practice mechanisms and the dynamics of competitive games. The system incorporates an arcade mode with local leaderboards to stimulate competitiveness, complemented by a mechanism for identifying and analyzing error patterns that promotes progressive improvement of typing abilities. The software architecture includes an adaptive difficulty level system that allows for the personalization of the learning experience, as well as quantitative analysis tools for systematic monitoring of progress in terms of speed and accuracy. Through a user interface centered on usability principles and user experience, this project constitutes an innovative educational proposal that transforms traditional typing learning into a pedagogically effective activity that is significantly more engaging for students and professionals in the contemporary digital context.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/38719",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

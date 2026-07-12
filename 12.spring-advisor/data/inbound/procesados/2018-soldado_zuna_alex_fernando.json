@@ -1,0 +1,22 @@
+{
+    "titulo": "Análisis, diseño e implementación de un sistema con notificaciones push para plataforma Android",
+    "autores": [
+        "Soldado Zuña, Alex Fernando"
+    ],
+    "director": "Salvador Meneses, Jaime Oswaldo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2018,
+    "palabras_clave": [
+        "NOTIFICACIÓN PUSH",
+        "TELÉFONO INTELIGENTE",
+        "APLICACIÓN MÓVIL",
+        "ANDROID"
+    ],
+    "resumen_es": "En este mundo donde el avance de los servicios que ofrece un teléfono inteligente va en crecimiento y con ello el desarrollo de las aplicaciones móviles aumenta, surge la necesidad de que la interactividad entre el usuario y las aplicaciones se fortalezcan. Para mejorar dicha interactividad, uno de los campos más importantes a trabajar es la comunicación para ello estas aplicaciones utilizan una tecnología llamada notificaciones push. Es trascendental que en el Ecuador se estimule el desarrollo de aplicaciones móviles con este sistema de notificaciones, ya que se va incrementando el uso de teléfonos inteligentes en la sociedad. El presente proyecto de titulación tiene como objetivo implementar un sistema de notificaciones, mediante la creación de una base de datos, una aplicación móvil y una aplicación web que administre la información, lo que nos permitirá enviar notificaciones push a teléfonos inteligentes con sistema operativo Android; permitiendo de esa manera mejorar la interactividad entre el usuario y la app",
+    "resumen_en": "In this world where the advance of services offered by a smartphone is growing and with it the development of mobile applications is increasing, there is a need to strengthen the interactivity between the user and the applications. To improve this interactivity, one of the most important fields to work on is communication. These applications use a technology called push notifications. It is important that the development of mobile applications in Ecuador is stimulated by this notification system, as the use of smartphones in society is increasing. The aim of this degree project is to implement a notification system, through the creation of a database, a mobile application and a web application that manages the information, which will allow us to send push notifications to smartphones with Android operating system, thus improving the interactivity between the user and the app.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/17084",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

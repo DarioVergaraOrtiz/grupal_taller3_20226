@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de una aplicación 3D para una tienda virtual en webgl.",
+    "autores": [
+        "Mites Borja, Grace Silvana"
+    ],
+    "director": "Caina Aysabucha, Darwin Rodolfo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "TIENDA VIRTUAL",
+        "WEB 3D",
+        "GRÁFICOS 3D",
+        "SOFTWARE LIBRE"
+    ],
+    "resumen_es": "Este proyecto de titulación presenta el desarrollo de una aplicación Web 3D para una tienda virtual dirigida a las páginas de alta costura, en todos sus ámbitos: diseño, implementación y experiencia del usuario dentro de la Web; una estrategia de apoyo que ofrezca un servicio diferente e innovador, resaltar la importancia y su enorme potencial como herramienta interactiva y como solución tecnológica. En los capítulos se exploró WebGL, la API multiplataforma destinada a crear gráficos 3D en un navegador web. El desarrollo del proyecto se realizó bajo la metodología en cascada. Para esta propuesta Web 3D se utilizaron las siguientes herramientas tecnológicas de desarrollo: Blender para el modelado de gráficos tridimensionales, Brackets como editor de texto para codificación web, WebGL y Three.js para mostrar gráficos 3D en un navegador web.",
+    "resumen_en": "This graduation project represents the development of a 3D Web Application for a virtual shop that allows for a hands-on couture experience; such as design implementation and complete end user involvement within its Webpages. The application also identifies support strategies that offer different and innovative services which inadvertently highlight its enormous potential as an important interactive tool and technological solution. In various chapters we explored WebGL, the API multi-platform destined to create 3D graphics within a web browser. The procurement of this project was developed using cascade methodology. For the Web 3D approach, we used the following developing tool technologies: Blender to model the tri-dimensional graphics, Brackets as text editor for web codification, WebGL and Three.js to show 3D graphics within a web browser.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/6006",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

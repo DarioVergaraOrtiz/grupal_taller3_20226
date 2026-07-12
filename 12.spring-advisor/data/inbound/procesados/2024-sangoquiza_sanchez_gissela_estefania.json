@@ -1,0 +1,28 @@
+{
+    "titulo": "Detección y monitoreo de la posición de la cabeza del conductor mediante procesamiento de imágenes.",
+    "autores": [
+        "Sangoquiza Sánchez, Gissela Estefanía"
+    ],
+    "director": "Toalombo Montero, Oscar William",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2024,
+    "palabras_clave": [
+        "Algoritmo",
+        "Procesamiento de imágenes",
+        "Visión computacional",
+        "Pixeles",
+        "Algorithm",
+        "Image processing",
+        "Computer vision",
+        "Pixels",
+        "Cita bibliográfica",
+        "Sangoquiza Sánchez, G. (2024). Detección y monitoreo de la posición de la cabeza del conductor mediante procesamiento de imágenes. Universidad Central del Ecuador."
+    ],
+    "resumen_es": "El trabajo de titulación consiste en proponer un algoritmo que permita detectar objetos en movimiento mediante métodos y técnicas utilizados en el área de visión computacional. El propósito del proyecto es monitorear y analizar el movimiento de la cabeza de un conductor en una secuencia de imágenes para mejorar la seguridad del conductor. El primer paso es definir una cuadrícula de pixeles en movimiento, haciendo uso de un número limitado de puntos que es ventajoso ya que ahorra costo de cálculo del algoritmo y se pueden buscar mejor los objetos delimitados por las regiones. Después se describe cada uno de los puntos basado en la información de posición, movimiento y fotometría, siendo esta la capacidad de medir las longitudes de onda que forman el espectro visible. El análisis de movimiento cuenta con temas de estudio amplios que constan desde identificación de pixeles de una imagen a otra para detectar un posible movimiento de un objeto, división de regiones de la imagen que sea segmentado y asilado, estimación de movimiento por parte de un objeto analizando su previo comportamiento, reconocimiento y modelado de actividades o gestos.",
+    "resumen_en": "The degree work proposes an algorithm to detect moving objects employing methods and techniques of computer vision. The project aims to monitor and analyze the movement of a driver's head in a sequence of images to improve driver safety. The first step is to define a grid of moving pixels using a limited number of points, which helps to reduce the computational cost of the algorithm, and the objects bounded by the regions can be better searched for. Each point is then described based on its position, motion, and photometry information, which is the ability to measure the wavelengths that make up the visible spectrum. Motion analysis has broad topics of study ranging from identification of pixels from one image to another to detect a possible movement of an object, division of regions of the image to be segmented and isolated, estimation of movement by an object by analyzing its previous behavior, recognition, and modeling of activities or gestures.\n\nDescripción general\nilustraciones.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/33636",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

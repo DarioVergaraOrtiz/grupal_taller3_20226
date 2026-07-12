@@ -1,0 +1,28 @@
+{
+    "titulo": "Simulación y análisis de la propagación del dengue, en la provincia del Guayas por medio de agentes inteligentes.",
+    "autores": [
+        "Cen Yunga, Michael Zhong"
+    ],
+    "director": "Ruiz Chávez, Zoila de Lourdes",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Agentes inteligentes",
+        "Simulación",
+        "Zonas tropicales",
+        "Enfermedades vectoriales",
+        "Dengue",
+        "Intelligent agents",
+        "Simulation",
+        "Tropical areas",
+        "Vector-borne diseases",
+        "Dengue"
+    ],
+    "resumen_es": "El presente trabajo de titulación se centra en la simulación y análisis detallado de la propagación del dengue en la provincia del Guayas, Ecuador, mediante el uso de agentes inteligentes. Este trabajo aborda una problemática crucial en el país, dado que el dengue, en particular, ha sido una preocupación significativa en la provincia de Guayas, debido a su rápida propagación y sus efectos devastadores en la salud de la población. La simulación de la propagación del dengue a través de agentes inteligentes en GAMA permite modelar el comportamiento dinámico de la enfermedad, considerando factores como la densidad de población, las condiciones ambientales y la presencia de vectores. Adicionalmente, se emplea el modelo epidemiológico SEIR (Susceptibles, Expuestos, Infectados y Recuperados) para representar cómo el virus afecta a las personas, proporcionando una descripción detallada del curso de la enfermedad en los individuos y permitiendo estimar la evolución de la epidemia en diferentes escenarios. A lo largo de este documento se describe cómo se realizó la simulación tanto de la propagación del vector como de la enfermedad en la población, y se analizan los resultados obtenidos.",
+    "resumen_en": "The current degree work focuses on the simulation and detailed analysis of the spread of dengue fever in Guayas, Ecuador, through the use of intelligent agents. This work addresses a crucial problem in the country, since dengue fever, in particular, has been a significant concern in Guayas, due to its rapid spread and devastating effects on the health of the population. The simulation of the spread of dengue through intelligent agents in GAMA allows modelling the dynamic behavior of the disease, considering factors such as population density, environmental conditions and the presence of vectors. Additionally, the SEIR (Susceptible, Exposed, Infected and Recovered) epidemiological model is used to represent how the virus affects people, providing a detailed description of the course of the disease in individuals and allowing estimation of the evolution of the epidemic in different scenarios. This paper describes how the simulation of both vector and disease spread in the population was performed, and discusses the results obtained.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/37311",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

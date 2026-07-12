@@ -1,0 +1,25 @@
+{
+    "titulo": "Desarrollo de un sistema Cloud Native para la gestión del proceso de plan de titulación en la Facultad de Ingeniería y Ciencias Aplicadas de la Universidad Central del Ecuador",
+    "autores": [
+        "Mosquera Romero, Luis Fernando"
+    ],
+    "director": "Salvador Meneses, Jaime Oswaldo",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2025,
+    "palabras_clave": [
+        "Microservicios",
+        "Arquitectura distribuida",
+        "Procesos de negocio",
+        "Cloud-Native",
+        "Distributed architecture",
+        "Microservices",
+        "Bussiness process management"
+    ],
+    "resumen_es": "El presente proyecto de titulación propone el desarrollo de un sistema Cloud Native para la automatización y gestión integral del proceso de plan de titulación en la Facultad de Ingeniería y Ciencias Aplicadas. Mediante el uso de una arquitectura de microservicios, se garantiza la escalabilidad, resiliencia y mantenibilidad del sistema, alineándose con los principios de computación Cloud Native y las prácticas DevOps modernas. La solución integra tecnologías como Java para el desarrollo backend, JavaScript/TypeScript para la interfaz web y BPMN 2.0 como estándar para la gestión de procesos de negocio. Además, el sistema incluye módulos para autenticación, notificación automática, trazabilidad de revisiones y reportes analíticos. Gracias a esta implementación, se mejora la eficiencia administrativa, se reduce la carga operativa y se agiliza la experiencia de estudiantes y personal académico. La interfaz está diseñada para ser amigable, responsiva y de fácil acceso, adaptándose a dispositivos móviles y navegadores modernos",
+    "resumen_en": "This degree project presents the development of a cloud-native system for the automation and comprehensive management of the degree process at the Faculty of Engineering and Applied Sciences. By adopting a microservices architecture, the system ensures scalability, resilience, and maintainability, in line with cloud-native computing principles and modern DevOps practices. The solution integrates Java for backend development, JavaScript/TypeScript for the web interface, and BPMN 2.0 as the standard for business process management. Additionally, the system incorporates modules for authentication, automated notifications, revision traceability, and analytical reporting. This implementation enhances administrative efficiency, reduces operational workload, and improves the user experience for both students and academic staff. The interface is designed to be intuitive, responsive, and fully accessible across mobile devices and modern web browsers",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/38635",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "titulo": "Implementación de un ambiente virtual 3D, para la enseñanza del bloque curricular 5: mi pais y yo, del primer año de educación general básica.",
+    "autores": [
+        "Guamán Yaguana, Ligia Margarita"
+    ],
+    "director": "Caina Aysabucha, Darwin Rodolfo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "WEB 3D",
+        "JAVASCRIPT",
+        "AMBIENTE VIRTUAL 3D",
+        "WEBGL"
+    ],
+    "resumen_es": "El presente trabajo consiste en la creación de un ambiente 3D para la Web, que contribuirá en la calidad del proceso de enseñanza-aprendizaje del bloque curricular 5: Mi País y Yo, para los estudiantes del primer año de educación general básica del país. La herramienta consiste en un ambiente virtual 3D con el objetivo de que los niños se familiaricen con la geografía del Ecuador, en un nivel elemental. En éste trabajo se aprenderán las regiones naturales, vestimenta, platos típicos, fauna, productos y clima de cada región. La herramienta a utilizar es WebGL, que genera contenido web 3D, y el lenguaje de programación orientado a objetos JavaScript; utilizando la metodología de software para desarrollo de aplicaciones web, OOHDM en cuatro etapas: diseño conceptual, diseño navegacional, diseño de interfaces abstractas e implementación.",
+    "resumen_en": "This present paper consists in creating a 3D environment for the Web, which will contribute to the quality of the teaching process of curricular block 5: My Country and I, for students of the first year of basic general education in the country. The tool consists of a 3D virtual environment with the aim that children become familiar with the geography of Ecuador in an elementary level. In this paper will be learned the natural regions, clothing, products, typical dishes, fauna and climate of each region. The tool to use is WEBGL, which generates 3D web content and programming language oriented to JavaScript objects; using the methodology of software for web application development, OOHDM, in four stages: conceptual design, navigational design, design and implementation of abstract interfaces.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/6009",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

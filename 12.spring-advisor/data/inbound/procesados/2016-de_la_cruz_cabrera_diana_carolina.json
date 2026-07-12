@@ -1,0 +1,22 @@
+{
+    "titulo": "Inteligencia artificial aplicada al videojuego Llumpak desarrollado en plataforma android.",
+    "autores": [
+        "De La Cruz Cabrera, Diana Carolina"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "VIDEOJUEGO",
+        "INTELIGENCIA ARTIFICIAL",
+        "ALGORITMO DE MOVIMIENTO",
+        "PLATAFORMA ANDROID"
+    ],
+    "resumen_es": "El presente proyecto radica en el deseo de representar un comportamiento real mediante simulación de personajes que intervienen en el videojuego Llumpak como: personas, animales, automotores y el enemigo en sí. Los actores junto al jugador Panchito, interactúan en un escenario que refleja la problemática actual de la contaminación ambiental en un lugar tradicional de la ciudad de Quito El Panecillo. Para simular la conducta de cada personaje, se basó en el estudio de programas agentes, complementados con algoritmos de movimiento; cuya ejecución fue desarrollada por medio de la herramienta Unity 3D. El desarrollo se genera con el uso scripts de la herramienta junto a creaciones propias realizadas en lenguaje C#. Finalmente, se evidencia la importancia de la implementación de técnicas de inteligencia artificial en el videojuego Llumpak, pues el proyecto se presenta atractivo y de interés para quienes lo juegan; por su interactividad y desenvolvimiento en cada nivel.",
+    "resumen_en": "This project lies in the desire to represent actual behavior by simulating characters involved in the game Llumpak as people, animals, vehicles and the enemy itself. The actors alongside the player Panchito, interact in a setting that reflects the current problems of environmental pollution in a traditional place in the city of Quito El Panecillo. To simulate the behavior of each character, it was based on the study of software agents, supplemented with algorithms of movement; whose execution was developed by the Unity 3D tool. The development is generated with scripts using the tool next to own creations in C # language. Finally, the importance of implementing artificial intelligence techniques in the game Llumpak is evident, as the project is presented attractive and interesting for those who play; by interactivity and development at every level.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/6548",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "titulo": "Programación del videojuego Llumpak para dispositivo móvil de sistema operativo android.",
+    "autores": [
+        "Moreno Arias, Juan Carlos"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2016,
+    "palabras_clave": [
+        "VIDEOJUEGO EDUCATIVO",
+        "CONTAMINACIÓN AMBIENTAL",
+        "PROGRAMACIÓN DE VIDEOJUEGOS",
+        "SISTEMA OPERATIVO ANDROID"
+    ],
+    "resumen_es": "El presente proyecto está enfocado en la programación del videojuego LLumpak (Limpieza) para dispositivos móviles con sistema operativo Android. Para lograrlo se implementó la metodología SUM, que basa el desarrollo de un videojuego en diferentes etapas desde su diseño hasta su entrega final, dicha metodología enfatiza la creación de la lógica o reglas de juego y la inserción de las mismas en un ordenador, para aquello se usó el lenguaje de programación C# y el software Unity 3D, que se enfoca en la programación de videojuegos, de la misma manera se utilizó elementos gráficos tales como imágenes, modelos 3D para hacer que el videojuego luzca visualmente atractivo. También se incorporó elementos funcionales y el conocimiento previo en programación.",
+    "resumen_en": "This present project is focused in the programming of the video game called LLumpak (Cleaning) for mobile devices with Android operating system. To achieve this, the methodology SUM was implemented, which is based on the creation of a video game at different stages from design to final delivery, This methodology emphasizes the creation of logic or rules and inserting them into a computer, it was used the programming language C# and software Unity 3D, which is software designed to be used video game programming, in the same way graphic elements such as images, 3D models to make the game look visually appealing was used. Functional elements such as artificial intelligence and prior knowledge in programming is also incorporated.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/6554",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

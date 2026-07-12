@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de un prototipo de página web con un recorrido virtual interactivo del grupo Étnico Shuar",
+    "autores": [
+        "Juanacio Lalangui, Bryan Oswaldo"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2021,
+    "palabras_clave": [
+        "RECORRIDO VIRTUAL",
+        "DESARROLLO WEB",
+        "ETNIA SHUAR",
+        "WEB 3D"
+    ],
+    "resumen_es": "El presente proyecto consiste en el desarrollo de un prototipo de recorrido virtual 3D de la etnia Shuar expuesto en una aplicación web, cuyo objetivo es proponer una forma actual y óptima la realización de plataformas de realidad virtual en la web y así brindar un consumo de información más entretenida y agradable, donde genere un sentido de pertenencia acentuada con el grupo étnico Shuar. Las tecnologías escogidas en este proyecto utilizan Javascript como único lenguaje de programación. El paquete de software utilizado incluye Blender para el modelado 3D, Three.js y Cannon.js para el renderizado 3D en el navegador mediante WebGL, MongoDB como base de datos no relacional, React.js como librería para el desarrollo Front-End y Node.js con su framework Express para el desarrollo Back-End y creación de la API REST. Utilizando el marco de desarrollo SCRUM se logró una óptima división de tareas, agilitando tiempos y brindando una agradable experiencia de desarrollo.",
+    "resumen_en": "This project consists of the development of a 3D virtual tour prototype of the Shuar ethnic exposed in a web application, whose objective is to propose a current and optimal way of developing virtual reality platforms on the web and thus provide more entertainment and enjoyable consumption of information, that generates a sense of accentuated belonging with the Shuar ethnic group. The technologies chosen for this project use Javascript as the only programming language. The software package used includes Blender for 3D modeling, Three.js and Cannon.js for 3D rendering in the browser using WebGL, MongoDB as a non-relational database, React.js as a library for Front-End development and Node.js with its Express framework for Back-End development and creation of the REST API. Using the SCRUM development framework, an optimal division of tasks was achieved, speeding up time and providing an experience pleasant of development.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/22581",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

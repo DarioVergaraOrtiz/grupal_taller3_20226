@@ -1,0 +1,22 @@
+{
+    "titulo": "Representación web de base de datos en grafos.",
+    "autores": [
+        "Alarcón Ruiz, Viviana Micaela"
+    ],
+    "director": "Almagro Blanco, Pedro",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2015,
+    "palabras_clave": [
+        "BASE DE DATOS EN GRAFO",
+        "PROGRAMACIÓN EN JAVASCRIPT",
+        "LENGUAJE HTML",
+        "NAVEGADOR MULTIMEDIA"
+    ],
+    "resumen_es": "Se presenta un prototipo de navegador web para Bases de Datos en Grafo que permite una correcta navegación a través de información altamente relacionada y con contenido multimedia, para ello se han implementado funcionalidades de navegación como son: apertura de nodos, cierre de nodos, visualización de la información multimedia y filtrado de nodos y relaciones. Para la creación del prototipo se desarrollan librerías JavaScript construidas sobre tecnologías robustas y ampliamente aceptadas en el ámbito del desarrollo web y el modelado de datos en forma de red como son: D3.js, JQuery, Cypher, Neo4j, y por supuesto HTML.",
+    "resumen_en": "It presents a prototype of web browser to Graph Databases in allowing a correct navigation through highly related information and multimedia content, for this has been implemented navigation features like as: opening nodes, closing nodes, visualization multimedia information and filtering nodes and relationships. For prototyping JavaScript libraries built on robust technologies are developed and widely accepted in the field of development and modeling data in a network like as: D3.js, JQuery, Cypher, Neo4j, and off course HTML.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/5419",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

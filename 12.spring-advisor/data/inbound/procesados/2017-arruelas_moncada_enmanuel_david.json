@@ -1,0 +1,22 @@
+{
+    "titulo": "Creación de un videojuego multiplataforma 2.5d en unity 3d y blender",
+    "autores": [
+        "Arruelas Moncada, Enmanuel David"
+    ],
+    "director": "Salvador Meneses, Jaime Oswaldo",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2017,
+    "palabras_clave": [
+        "VIDEOJUEGOS",
+        "UNITY 3D",
+        "BLENDER",
+        "MULTIPLATAFORMA"
+    ],
+    "resumen_es": "En el presente proyecto integrador, se desarrolló un videojuego 2.5D que permite al usuario ser un pequeño héroe que rescata a su princesa; este navegará con personajes creados en 3D en un mundo 2D. Creado para las plataformas Windows y Android, mostrando paso a paso el flujo de trabajo que se debe usar para la elaboración correcta de este producto interactivo, tratando de que sea innovador en el mercado interno del país y mejor a las propuestas actuales que presenta la carrera, además se implementó un sistema DLC, que permite a la aplicación extender su contenido y ser atractiva para el consumidor por un tiempo mayor, es decir mantiene al usuario usando el producto incluso después de concluir con el juego principal. Para alcanzar este objetivo se usó herramientas que actualmente son muy bien vistas en el sector, que son Adobe Photoshop para la creación de gráficos en 2D, Blender para generar modelos y animaciones en 3D y finalmente Unity 3D, los cuales nos permitierón unir estos objetos y hacerlos interactuar con el usuario mediante el uso del lenguaje de programación C#, además renderizar en tiempo real y empaquetar nuestra aplicación para las diferentes plataformas.",
+    "resumen_en": "In the present integrative project it was developed a 2.5D video game which allows the user to be a small hero who rescues his princess, this will navigate with characters created in 3D in a 2D World. Designed for the Windows and Android platforms, showing step-by-step the workflow to be used for the correct elaboration of this interactive product, trying to be innovative in the domestic market of the country and better to the current proposals presented by the race, in addition a DLC system was implemented that allows the application to extend its content and be attractive to the consumer for a longer time, that is to say it keeps the user using the product even after finishing with the main game. To achieve this goal we used tools that are currently very well seen in the sector, which are Adobe Photoshop for creating 2D graphics, Blender to generate models and animations in 3D and finally Unity 3D, which allowed us to join these objects and make them interact with the user through the use of the C# programming language, also render in real time and package our application for different platforms",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/13089",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

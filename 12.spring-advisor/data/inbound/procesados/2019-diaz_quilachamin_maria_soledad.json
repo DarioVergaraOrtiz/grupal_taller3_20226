@@ -1,0 +1,21 @@
+{
+    "titulo": "Desarrollo de simulaciones con sistemas multi-agentes georreferenciados para evidenciar problemas sociales",
+    "autores": [
+        "Díaz Quilachamín, María Soledad"
+    ],
+    "director": "Ruiz Chávez, Zoila de Lourdes",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2019,
+    "palabras_clave": [
+        "PLATAFORMA GAMA",
+        "AGENTES GEORREFERENCIADOS",
+        "SISTEMAS MULTI-AGENTES"
+    ],
+    "resumen_es": "El proyecto se basa en el análisis de la problemática social, utilizado la metodología de simulaciones con sistemas multi-agentes georreferenciados. Esta metodología fue desarrollada en un Proyecto Semilla de Investigación. El modelado y construcción de una simulación basada en sistemas multi-agentes referenciados espacialmente, considera los diferentes elementos que conforman un sistema complejo y cuyo medio en el que se desenvuelven son capas temáticas georreferenciadas, que contienen información para ser integrada en el modelo y poder realizar cálculos o establecer restricciones, utilizando la plataforma GAMA. Como casos de estudio de la metodología desarrollada se obtuvieron dos artículos científicos denominados: “Solid waste management using georeferenced multi-agent systems” y “Analysis of dogs’s abandonment problem using georeferenced multi-agent systems”. En ambas simulaciones, se representa el comportamiento de los agentes, las reacciones frente a otros agentes o la interacción con el medio.",
+    "resumen_en": "The project is based on the analysis of social problems, using the methodology of simulations with georeferenced multi-agent systems. This methodology was developed in a Seed Research Project. The modeling and construction of a simulation based on spatially referenced multi-agents systems, considers the different elements that make up a complex system and whose environment in which they operate are geo-referenced thematic layers, which contain information to be integrated into the model and be able to perform calculations or establish restrictions, using the GAMA platform. As case studies of the methodology developed we obtained two scientific articles called: \"Solid waste management using georeferenced multi-agent systems\" and \"Analysis of dogs’s abandonment problem using georeferenced multi-agent systems\". In both simulations, the behavior of the agents, the reactions to other agents or the interaction with the environment are represented.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/18238",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "titulo": "Obtención de nube de puntos de todo el cuerpo humano basado en el proyecto “humano visible de corea” para obtener un modelo 3D hiperrealista",
+    "autores": [
+        "Cuaycal Cevallos, Juan Carlos"
+    ],
+    "director": "Toalombo Montero, Oscar William",
+    "editores": "Quito : UCE",
+    "tipo_material": "Por Entidad",
+    "fecha": 2023,
+    "palabras_clave": [
+        "Procesamiento de imágenes",
+        "Nube de Puntos",
+        "Ciencias de la salud"
+    ],
+    "resumen_es": "La Reconstrucción tridimensional basada en imágenes biomédicas digitales es un tema que no se ha tratado dentro del Ecuador. En este contexto especialistas de distintas áreas de la salud buscan un software que permita visualizar e interactuar con la anatomía humana para resolver distintos problemas de diagnóstico médico, y poder aplicarlo a áreas del conocimiento como instrumento de aprendizaje. Es por ello que, empleando tecnologías en auge tanto de programación como herramientas\nrelacionadas al procesamiento de imágenes, se procesará el repositorio de imágenes digitales médicas del proyecto denominado “Humano Visible de Corea”, más conocido como “Human Visible of Korean” en sus siglas (VKH) , para extraer la información necesaria en nubes de puntos y así reconstruir el volumen tridimensional de cada parte del cuerpo para posteriormente perfeccionarlos y obtener resultados visuales en alta calidad",
+    "resumen_en": "In Ecuador, a three-dimensional reconstruction based on digital biomedical images is a new topic. In this context, health specialists from different areas are looking for software that allows them to visualize and interact with the human anatomy. The goals are to solve different medical diagnostic problems and apply them in knowledge areas as a learning tool. For those reasons, it is vital to use programming technologies and tools related to image processing. The repository of digital medical images of the project called \"Visible Human of Korea\" will be processed, better known by its acronym (VHK). The necessary information is extracted in point clouds and thus reconstructs the three-dimensional volume of each parts of the body. Later, it is vital to refine them and obtain high-quality visual results",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/31058",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

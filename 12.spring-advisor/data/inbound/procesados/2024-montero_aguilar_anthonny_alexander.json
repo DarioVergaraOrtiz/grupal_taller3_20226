@@ -1,0 +1,26 @@
+{
+    "titulo": "Análisis, diseño y desarrollo de una aplicación móvil de descubrimiento visual que utiliza técnicas de inteligencia artificial. Caso de Estudio: Recomendación de interiores de viviendas.",
+    "autores": [
+        "Montero Aguilar, Anthonny Alexander"
+    ],
+    "director": "Navarrete Pinto, Sandra Marianela",
+    "editores": "Universidad Central del Ecuador",
+    "tipo_material": "Trabajo de grado - Pregrado",
+    "fecha": 2024,
+    "palabras_clave": [
+        "Inteligencia artificial",
+        "informática",
+        "aplicación informática",
+        "Artificial intelligence",
+        "computer science",
+        "computer applications",
+        "Cita bibliográfica",
+        "Montero Aguilar, A y Súñiga García, L. (2024). Análisis, diseño y desarrollo de una aplicación móvil de descubrimiento visual que utiliza técnicas de inteligencia artificial. Caso de Estudio: Recomendación de interiores de viviendas. Universidad Central del Ecuador."
+    ],
+    "resumen_es": "El acceso a internet ha simplificado la búsqueda de información y ofrece a los usuarios diversas opciones para la adquisición de productos, incluyendo bienes inmuebles. Los catálogos en línea se destacan por su amplio alcance, este proyecto busca mejorar la experiencia del usuario al ofrecer viviendas con interiores similares a sus preferencias, facilitando la toma de decisiones de compra. Para lograrlo se propone emplear técnicas de web scraping para recopilar datos de sitios web, utilizar técnicas de inteligencia artificial y aprendizaje automático para identificar imágenes de interiores afines a las preferencias del consumidor, y desarrollar una aplicación móvil para una interacción eficiente. En el proceso de entrenamiento del modelo, se aplicaron diferentes métodos entre los que destacan la reducción de colores en cada imagen a 256, utilizando Mini-batch K-Means, la implementación de un autoencoder para reducir la dimensionalidad de las imágenes, seguido por UMAP para remarcar patrones en los datos y visualizar una parte de la estructura de estos. La combinación de ambos métodos optimizó las imágenes de entrada para la implementación del algoritmo de clustering. Finalmente, se utilizó K-Means con 100 clústeres, pues sobresale en la evaluación de distintas métricas, lo que representa una sólida cohesión y separación entre clústeres, posicionándolo como el modelo más efectivo, de entre los evaluados, para la tarea. Finalmente, el sistema de web scraping ha recopilado una base de datos robusta de publicaciones de portales inmobiliarios que ha sido esencial para evaluar diversas técnicas de inteligencia artificial. El modelo implementado es eficiente para agrupar viviendas por similitud visual, el cual ha sido integrado con éxito en el aplicativo móvil, diseñado para una búsqueda y recomendación intuitiva basada en imágenes de interiores de viviendas.",
+    "resumen_en": "Internet access has simplified the search for information and offers users various options for the acquisition of products, including real estate. Online catalogs are known for their wide reach, this project seeks to improve the user experience by offering homes with interiors similar to their preferences, facilitating the purchase decision making process. To achieve this, it is proposed to implement web scraping techniques to collect data from websites, use artificial intelligence and machine learning techniques to identify images of interiors that match consumer preferences, and develop a mobile application for efficient interaction. In the model training process, different methods were applied, including the reduction of colors in each image to 256, using Mini-batch K-Means, the implementation of an autoencoder to reduce the dimensionality of the images, followed by UMAP to highlight patterns in the data and visualize a part of the data structure. The combination of both methods optimized the input images for the implementation of the clustering algorithm. Finally, K-Means with 100 clusters was used, as it excels in the evaluation of different metrics, which represents a solid cohesion and separation between clusters, positioning it as the most effective model, among those evaluated, for the task. The web scraping system has compiled a robust database of real estate portal postings that has been essential for evaluating various artificial intelligence techniques. The implemented model is efficient for grouping homes by visual similarity, which has been successfully integrated into the mobile application, designed for intuitive search and recommendation based on images of home interiors.\n\nDescripción general\nilustraciones, gráficos.",
+    "uri": "https://www.dspace.uce.edu.ec/handle/25000/34534",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

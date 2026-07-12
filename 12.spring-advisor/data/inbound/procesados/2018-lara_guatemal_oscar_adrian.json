@@ -1,0 +1,22 @@
+{
+    "titulo": "Desarrollo de una aplicación de realidad aumentada para resaltar el valor histórico de Quito como Patrimonio Cultural de la Humanidad",
+    "autores": [
+        "Lara Guatemal, Oscar Adrian"
+    ],
+    "director": null,
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2018,
+    "palabras_clave": [
+        "APLICACIÓN MÓVIL",
+        "TURISMO",
+        "DESARROLLO WEB",
+        "REALIDAD AUMENTADA"
+    ],
+    "resumen_es": "El presente proyecto se centra en el desarrollo de una aplicación para dispositivos móviles haciendo uso de diferentes tecnologías informáticas, que permiten presentar al usuario un software interactivo con la capacidad de capturar imágenes en tiempo real de las principales edificaciones de la ciudad de Quito. Esta aplicación, haciendo uso de la API Vision de Google Cloud Platform detecta el sitio de interés captado en la imagen y muestra información relevante del lugar mediante una infografía, compuesta de una fotografía histórica del lugar y una breve reseña informativa. Además, haciendo uso de Realidad Aumentada, la aplicación muestra la geolocalización de los atractivos turísticos de Quito seleccionados para el presente trabajo. Para lograr este objetivo, se utilizaron herramientas de desarrollo web tales como HTML5, CSS, JavaScript así como entornos de desarrollo de aplicaciones móviles como Cordova. La aplicación está dirigida al turismo, para brindar al usuario información interactiva y de esta manera impulsar el valor histórico cultural de Quito.",
+    "resumen_en": "This project focuses on the development of a mobile app that present the ability to capture real time images of the main buildings of Quito. The app, using the Google Cloud Vision API, detects the site of interest captured in the image and shows relevant information about the place through an infographic made up of an historical photography of the place and a brief informative review. Also using Augmented Reality the application shows the geolocation of Quito's tourist attractions selected for the present work. To achieve this goal we used web development tools such as HTML5, CSS, JavaScript as well as mobile app development environments like Cordova. The application is tourist-oriented, providing the user with interactive information about the main touristic places in Quito, which represents one of the main touristic cities since several years.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/17268",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

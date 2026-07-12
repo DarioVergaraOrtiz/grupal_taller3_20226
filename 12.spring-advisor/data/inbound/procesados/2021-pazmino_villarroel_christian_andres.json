@@ -1,0 +1,27 @@
+{
+    "titulo": "Desarrollo de un videojuego de carreras orientado a dotar de información sobre cuatro animales del Ecuador en peligro de extinción y cómo evitar su desaparición.",
+    "autores": [
+        "Pazmiño Villarroel, Christian Andrés"
+    ],
+    "director": "Campuzano Nieto, Gonzalo Bayardo",
+    "editores": "Quito : UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2021,
+    "palabras_clave": [
+        "PROTOTIPO",
+        "VIDEOJUEGO",
+        "VEHÍCULOS",
+        "UNREAL ENGINE",
+        "C++",
+        "CINEMA 4D",
+        "WHEEL",
+        "BEHAVIOR TREE",
+        "PELIGRO DE EXTINCIÓN"
+    ],
+    "resumen_es": "El presente proyecto consiste en un prototipo de un videojuego de carreras 3D de un solo jugador con cuatro personajes que son animales en peligro de extinción del Ecuador, el objetivo es brindar al usuario una buena jugabilidad y mayor familiaridad con el personaje que elija, con su habitad y con las formas para ayudar a preservarlo, sirviendo este juego como un medio interactivo e informativo sobre los animales para el conocimiento del usuario. El motor de videojuegos Unreal Engine 4, utilizado para el desarrollo de este proyecto, utiliza el lenguaje de programación C++. El software Cinema 4D fue utilizado para el modelado, texturizado y animación 3D, Photoshop para el mapa de alturas de las pistas de carreras, VehichleWheel.cpp y los blueprints de animación para el manejo y funcionamiento del vehículo junto con su sistema de suspensión, VehicleWheel.cpp para el funcionamiento de las llantas y las físicas que ellas aplican. Un teclado YAMAHA fue usado para el sonido de las músicas del juego y finalmente el AI Controller de UE4 fue usado para la inteligencia artificial del juego.",
+    "resumen_en": "This project consists of a prototype of a single-player 3D racing video game with four characters, four endangered animals of Ecuador. The objective of this project is to provide users with good playability and greater familiarity with the characters they choose, with their habitats and ways to help preserve them, this way, users are informed about the status of these animals in an interactive manner. The Unreal Engine 4 game engine, which uses C++ programming language, was used for the development of this project. In addition, Cinema 4D software was used for modeling, texturing and 3D animation; Photoshop, for creating racetrack height maps; VehichleWheel.cpp and animation blueprints, for handling and operating the vehicles along with their suspension system; VehicleWheel.cpp, for operating tires and the physics applied to them. A YAMAHA keyboard was used for developing the game's music and, finally, the UE4 AI Controller was employed for generating the game's artificial intelligence.",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/26000",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}

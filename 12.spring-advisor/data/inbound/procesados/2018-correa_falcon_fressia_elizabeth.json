@@ -1,0 +1,22 @@
+{
+    "titulo": "Creación de una aplicación interactiva utilizando realidad virtual para plataforma Android",
+    "autores": [
+        "Correa Falcón, Fressia Elizabeth"
+    ],
+    "director": "Ruiz Chávez, Zoila De Lourdes",
+    "editores": "Quito: UCE",
+    "tipo_material": "bachelorThesis",
+    "fecha": 2018,
+    "palabras_clave": [
+        "REALIDAD VIRTUAL",
+        "ANDROID",
+        "GOOGLE VR",
+        "UNITY 3D"
+    ],
+    "resumen_es": "En el presente proyecto integrador se llevó a cabo el desarrollo de una aplicación móvil para plataforma Android, utilizando la realidad virtual inmersiva. El aplicativo consiste en un videojuego de acertijos, el cual permite al usuario experimentar la sensación de encontrarse en un mundo virtual, la aventura inicia con un rapto por parte de unos monstruos y el jugador debe superar una serie de obstáculos para poder escapar del lugar. El software que se utilizó para la implementación de la aplicación fue Unity 3D, aquí se dio vida al videojuego, haciendo uso del SDK de Google VR para implementar la realidad virtual y mediante el uso del lenguaje C# se desarrolló la interacción con el usuario, los modelos tridimensionales y sus respectivas animaciones fueron creados en Blender, para las texturas y gráficos 2D se utilizó Adobe Photoshop",
+    "resumen_en": "The present project consists in the development of a mobile application for Android platform, using immersive virtual reality. The application is a puzzles videogame, which allows the user to experience the feeling of being in a virtual world, the adventure begins with a rapture by some monsters and the player must overcome a series of obstacles to escape the place. The software that was used for the implementation of the application was Unity 3D, the videogame was brought to life, using the Google VR SDK to implement virtual reality and through the C# language, the interaction with the user was developed. Three-dimensional models and their respective animations were created in Blender, Adobe Photoshop was used for textures and 2D graphics",
+    "uri": "http://www.dspace.uce.edu.ec/handle/25000/15839",
+    "colecciones": [
+        "Ingeniería en Computación"
+    ]
+}
