@@ -134,6 +134,33 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message, isGenerating 
               </svg>
             </button>
 
+            {/* Metrics */}
+            {message.tokens !== undefined && message.timeMs !== undefined && (
+              <div className="message-metrics-gemini">
+                <div className="metric-item" title="Tokens consumidos">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                  <span>{message.tokens} tokens</span>
+                </div>
+                <div className="metric-item" title="Tiempo de respuesta">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>{(message.timeMs / 1000).toFixed(1)}s</span>
+                </div>
+                <div className="metric-item" title="Velocidad de generación">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 14l4-4"></path>
+                    <path d="M3.34 16A10 10 0 1 1 20.66 16"></path>
+                  </svg>
+                  <span>{((message.tokens) / (message.timeMs / 1000)).toFixed(2)} t/s</span>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -169,6 +169,7 @@ public class ChatController {
         var vectorMemoryAdvisor = VectorStoreChatMemoryAdvisor.builder(this.memoryVectorStore)
                 .build();
 
+        long startTime = System.currentTimeMillis();
         StringBuilder assistantResponse = new StringBuilder();
 
         Flux<ServerSentEvent<String>> tokens = chatClient.prompt()
@@ -178,13 +179,40 @@ public class ChatController {
                 .tools(thesisSimilarityTool)
                 .user(message)
                 .stream()
-                .content()
-                .doOnNext(assistantResponse::append)
-                .map(chunk -> ServerSentEvent.<String>builder()
-                        .event("token")
-                        .data(Base64.getEncoder().encodeToString(chunk.getBytes(StandardCharsets.UTF_8)))
-                        .build()
-                );
+                .chatResponse()
+                .flatMap(response -> {
+                    java.util.List<ServerSentEvent<String>> events = new java.util.ArrayList<>();
+                    
+                    if (response.getResult() != null && response.getResult().getOutput() != null) {
+                        String textChunk = response.getResult().getOutput().getText();
+                        if (textChunk != null && !textChunk.isEmpty()) {
+                            assistantResponse.append(textChunk);
+                            events.add(ServerSentEvent.<String>builder()
+                                    .event("token")
+                                    .data(Base64.getEncoder().encodeToString(textChunk.getBytes(StandardCharsets.UTF_8)))
+                                    .build());
+                        }
+                    }
+                    
+                    if (response.getMetadata() != null && response.getMetadata().getUsage() != null) {
+                        var usage = response.getMetadata().getUsage();
+                        long totalTokens = usage.getTotalTokens();
+                        if (totalTokens > 0) {
+                            long timeMs = System.currentTimeMillis() - startTime;
+                            String metaJson = String.format("{\"tokens\":%d, \"timeMs\":%d}", totalTokens, timeMs);
+                            events.add(ServerSentEvent.<String>builder()
+                                    .event("metadata")
+                                    .data(Base64.getEncoder().encodeToString(metaJson.getBytes(StandardCharsets.UTF_8)))
+                                    .build());
+                        }
+                    }
+                    
+                    if (events.isEmpty()) {
+                        events.add(ServerSentEvent.<String>builder().event("ping").data("").build());
+                    }
+                    return Flux.fromIterable(events);
+                })
+                .filter(sse -> !sse.event().equals("ping"));
 
         Flux<ServerSentEvent<String>> done = Flux.just(
                 ServerSentEvent.<String>builder()

@@ -270,6 +270,7 @@ export const App: React.FC = () => {
       let buffer = '';
 
       if (reader) {
+        let currentEvent = 'token';
         while (true) {
           const { value, done } = await reader.read();
           if (done) break;
@@ -283,32 +284,60 @@ export const App: React.FC = () => {
             const trimmed = line.trim();
             if (!trimmed) continue;
 
+            if (trimmed.startsWith('event:')) {
+              currentEvent = trimmed.substring(6).trim();
+              continue;
+            }
+
             if (trimmed.startsWith('data:')) {
               const base64Data = trimmed.substring(5).trim();
               if (base64Data === '[DONE]') break;
 
-              try {
-                // Decode base64 UTF-8 string safely
-                const decodedToken = decodeURIComponent(
-                  escape(window.atob(base64Data))
-                );
-                fullReply += decodedToken;
+              if (currentEvent === 'metadata') {
+                try {
+                  const metaStr = decodeURIComponent(escape(window.atob(base64Data)));
+                  const meta = JSON.parse(metaStr);
+                  setSessions((prev) =>
+                    prev.map((s) => {
+                      if (s.id === currentSessionId) {
+                        const msgs = [...s.messages];
+                        msgs[msgs.length - 1] = {
+                          ...msgs[msgs.length - 1],
+                          tokens: meta.tokens,
+                          timeMs: meta.timeMs
+                        };
+                        return { ...s, messages: msgs };
+                      }
+                      return s;
+                    })
+                  );
+                } catch (e) {
+                  console.error('Error al decodificar metadata:', e);
+                }
+              } else if (currentEvent === 'token') {
+                try {
+                  // Decode base64 UTF-8 string safely
+                  const decodedToken = decodeURIComponent(
+                    escape(window.atob(base64Data))
+                  );
+                  fullReply += decodedToken;
 
-                setSessions((prev) =>
-                  prev.map((s) => {
-                    if (s.id === currentSessionId) {
-                      const msgs = [...s.messages];
-                      msgs[msgs.length - 1] = {
-                        ...msgs[msgs.length - 1],
-                        content: fullReply
-                      };
-                      return { ...s, messages: msgs };
-                    }
-                    return s;
-                  })
-                );
-              } catch (e) {
-                console.error('Error al decodificar base64:', e);
+                  setSessions((prev) =>
+                    prev.map((s) => {
+                      if (s.id === currentSessionId) {
+                        const msgs = [...s.messages];
+                        msgs[msgs.length - 1] = {
+                          ...msgs[msgs.length - 1],
+                          content: fullReply
+                        };
+                        return { ...s, messages: msgs };
+                      }
+                      return s;
+                    })
+                  );
+                } catch (e) {
+                  console.error('Error al decodificar base64:', e);
+                }
               }
             }
           }

@@ -910,6 +910,27 @@ body {
   gap: 6px;
   margin-top: 6px;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.message-metrics-gemini {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+}
+
+.metric-item svg {
+  color: var(--text-secondary);
 }
 
 .action-btn {
