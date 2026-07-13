@@ -45,7 +45,7 @@ services:
 
   cloudflared:
     image: cloudflare/cloudflared:latest
-    container_name: spring-advisor-tunnel
+    container_name: cloudflared-tunnel
     command: tunnel --url http://frontend:80
     depends_on:
       - frontend
