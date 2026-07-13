@@ -27,6 +27,12 @@ public class StartupDataLoader implements ApplicationRunner {
     @Value("${advisor.thesis.collection-name:springai_thesis}")
     private String thesisCollectionName;
 
+    @Value("${spring.ai.vectorstore.qdrant.collection-name:springai_advisor}")
+    private String documentCollectionName;
+
+    @Value("${app.files.inbound:./data/inbound}")
+    private String inboundPath;
+
     @Value("${app.files.procesados:./data/inbound/procesados}")
     private String procesadosPath;
 
@@ -121,25 +127,42 @@ public class StartupDataLoader implements ApplicationRunner {
             }
         }
 
-        // Cargar lote de Tesis similares
+        // Cargar Tesis similares
         if (!thesisToLoad.isEmpty()) {
-            System.out.println("StartupDataLoader :: Insertando " + thesisToLoad.size() + " temas de tesis en Qdrant en lotes...");
-            int batchSize = 15;
-            for (int i = 0; i < thesisToLoad.size(); i += batchSize) {
-                int end = Math.min(i + batchSize, thesisToLoad.size());
-                List<Document> batch = thesisToLoad.subList(i, end);
-                System.out.println("StartupDataLoader :: Insertando lote Tesis " + (i / batchSize + 1) + " (docs " + (i + 1) + " a " + end + ")...");
-                thesisVectorStore.add(batch);
-                
-                if (end < thesisToLoad.size()) {
-                    try {
-                        Thread.sleep(15000);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
+            System.out.println("StartupDataLoader :: Insertando " + thesisToLoad.size() + " temas de tesis en Qdrant...");
+            thesisVectorStore.add(thesisToLoad);
+            System.out.println("StartupDataLoader :: Carga de colección Tesis completada con éxito.");
+        }
+
+        // Carga de documentos normales (RAG)
+        System.out.println("StartupDataLoader :: Verificando si Qdrant ya tiene datos para RAG (advisor)...");
+        try {
+            var infoDoc = qdrantClient.getCollectionInfoAsync(documentCollectionName).get();
+            if (infoDoc.getPointsCount() == 0) {
+                System.out.println("StartupDataLoader :: La colección de RAG está vacía. Restaurando PDFs procesados...");
+                File inboundDir = new File(inboundPath);
+                File procesadosDir = new File(inboundDir, "procesados");
+                if (procesadosDir.exists() && procesadosDir.isDirectory()) {
+                    File[] pdfs = procesadosDir.listFiles((d, name) -> name.toLowerCase().endsWith(".pdf"));
+                    if (pdfs != null && pdfs.length > 0) {
+                        for (File pdf : pdfs) {
+                            File dest = new File(inboundDir, pdf.getName());
+                            boolean moved = pdf.renameTo(dest);
+                            if (moved) {
+                                System.out.println("StartupDataLoader :: Movido a inbound para reprocesar: " + pdf.getName());
+                            } else {
+                                System.err.println("StartupDataLoader :: No se pudo mover el archivo: " + pdf.getName());
+                            }
+                        }
+                    } else {
+                        System.out.println("StartupDataLoader :: No hay PDFs en la carpeta de procesados para restaurar.");
                     }
                 }
+            } else {
+                System.out.println("StartupDataLoader :: Qdrant ya tiene " + infoDoc.getPointsCount() + " documentos en RAG.");
             }
-            System.out.println("StartupDataLoader :: Carga de colección Tesis completada con éxito.");
+        } catch (Exception e) {
+            System.err.println("StartupDataLoader :: Error al consultar colección RAG: " + e.getMessage());
         }
     }
 }

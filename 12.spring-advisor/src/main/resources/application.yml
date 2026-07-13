@@ -6,8 +6,8 @@ app:
   aimodel: gemini-3.1-flash-lite
   url: https://generativelanguage.googleapis.com/v1beta/openai/
   files:
-    inbound: ./data/inbound
-    procesados: ./data/inbound/procesados
+    inbound: ./12.spring-advisor/data/inbound
+    procesados: ./12.spring-advisor/data/inbound/tesis/procesados
 
 spring:
   docker:
