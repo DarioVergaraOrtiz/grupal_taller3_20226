@@ -43,6 +43,16 @@ services:
       - app-network
     restart: unless-stopped
 
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: spring-advisor-tunnel
+    command: tunnel --url http://frontend:80
+    depends_on:
+      - frontend
+    networks:
+      - app-network
+    restart: unless-stopped
+
 networks:
   app-network:
     driver: bridge
