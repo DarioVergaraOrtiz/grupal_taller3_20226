@@ -25,14 +25,12 @@ public class VectorStoreConfig {
     @Value("${advisor.memory.collection-name:springai_memory}")
     private String memoryCollectionName;
 
+    @Value("${advisor.thesis.collection-name:springai_thesis}")
+    private String thesisCollectionName;
+
     @Value("${app.key}")
     private String apiKey;
 
-    @Bean
-    @Primary
-    public EmbeddingModel customEmbeddingModel() {
-        return new GeminiCustomEmbeddingModel(apiKey);
-    }
 
     @Value("${spring.ai.vectorstore.qdrant.host:localhost}")
     private String qdrantHost;
@@ -55,7 +53,7 @@ public class VectorStoreConfig {
     @org.springframework.beans.factory.annotation.Qualifier("documentVectorStore")
     public VectorStore documentVectorStore(EmbeddingModel embeddingModel, QdrantClient qdrantClient) {
         // dimension is 3072 for gemini-embedding-2
-        ensureCollectionExists(qdrantClient, documentCollectionName, 3072);
+        ensureCollectionExists(qdrantClient, documentCollectionName, 384);
 
         return QdrantVectorStore.builder(qdrantClient, embeddingModel)
                 .collectionName(documentCollectionName)
@@ -68,10 +66,25 @@ public class VectorStoreConfig {
     @Bean
     @org.springframework.beans.factory.annotation.Qualifier("memoryVectorStore")
     public VectorStore memoryVectorStore(QdrantClient qdrantClient, EmbeddingModel embeddingModel) {
-        ensureCollectionExists(qdrantClient, memoryCollectionName, 3072);
+        ensureCollectionExists(qdrantClient, memoryCollectionName, 384);
         
         VectorStore qdrantStore = QdrantVectorStore.builder(qdrantClient, embeddingModel)
                 .collectionName(memoryCollectionName)
+                .build();
+                
+        return SanitizingVectorStore.createProxy(qdrantStore);
+    }
+
+    /**
+     * VectorStore para temas de tesis similares (colección independiente)
+     */
+    @Bean
+    @org.springframework.beans.factory.annotation.Qualifier("thesisVectorStore")
+    public VectorStore thesisVectorStore(QdrantClient qdrantClient, EmbeddingModel embeddingModel) {
+        ensureCollectionExists(qdrantClient, thesisCollectionName, 384);
+        
+        VectorStore qdrantStore = QdrantVectorStore.builder(qdrantClient, embeddingModel)
+                .collectionName(thesisCollectionName)
                 .build();
                 
         return SanitizingVectorStore.createProxy(qdrantStore);

@@ -9,7 +9,7 @@ version = "0.0.1-SNAPSHOT"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
@@ -34,6 +34,9 @@ dependencies {
     // Spring AI - Vector Store (Qdrant)
     implementation("org.springframework.ai:spring-ai-starter-vector-store-qdrant")
     implementation("org.springframework.ai:spring-ai-vector-store-advisor")
+
+    // Embeddings Locales (Transformers ONNX)
+    implementation("org.springframework.ai:spring-ai-starter-model-transformers")
 
 
     // Apache Camel (file ingestion pipeline)

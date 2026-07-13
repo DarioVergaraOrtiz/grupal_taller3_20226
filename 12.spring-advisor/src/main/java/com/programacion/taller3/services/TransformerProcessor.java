@@ -10,6 +10,15 @@ import java.util.List;
 public class TransformerProcessor {
 
     public List<Document> procesar(List<Document> documents) {
+        if (documents.isEmpty()) return documents;
+
+        // Si ya es un documento estructurado de tesis (JSON) o tiene los campos de metadatos de tesis, no lo dividimos
+        String sourceFile = (String) documents.get(0).getMetadata().getOrDefault("source_file", "");
+        if (sourceFile.toLowerCase().endsWith(".json") || documents.get(0).getMetadata().containsKey("titulo")) {
+            System.out.println("TransformerProcessor :: Omitiendo división para documento estructurado de tesis.");
+            return documents;
+        }
+
         TokenTextSplitter splitter = TokenTextSplitter.builder()
                 .withChunkSize(300)
                 .build();

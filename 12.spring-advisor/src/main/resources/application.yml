@@ -16,7 +16,13 @@ spring:
       file: docker-compose.yml
   ai:
     model:
-      embedding: openai
+      embedding: transformers
+    embedding:
+      transformer:
+        onnx:
+          model-uri: classpath:models/model.onnx
+        tokenizer:
+          uri: classpath:models/tokenizer.json
     vectorstore:
       qdrant:
         collection-name: springai_advisor
@@ -28,6 +34,8 @@ spring:
         model: ${app.aimodel}
 
 advisor:
+  thesis:
+    collection-name: springai_thesis
   memory:
     collection-name: springai_memory
     top-k: 4

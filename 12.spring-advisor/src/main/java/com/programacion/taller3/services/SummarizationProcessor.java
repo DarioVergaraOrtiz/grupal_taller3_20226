@@ -39,6 +39,15 @@ public class SummarizationProcessor {
     }
 
     public List<Document> procesar(List<Document> documents) {
+        if (documents.isEmpty()) return documents;
+
+        // Si ya es un documento estructurado de tesis (JSON) o tiene los campos de metadatos de tesis, no lo resumimos
+        String sourceFile = (String) documents.get(0).getMetadata().getOrDefault("source_file", "");
+        if (sourceFile.toLowerCase().endsWith(".json") || documents.get(0).getMetadata().containsKey("titulo")) {
+            System.out.println("SummarizationProcessor :: Omitiendo resumen para documento estructurado de tesis.");
+            return documents;
+        }
+
         if (!summarizationEnabled) {
             System.out.println("SummarizationProcessor :: Resumen deshabilitado, pasando chunks sin cambios.");
             return documents;

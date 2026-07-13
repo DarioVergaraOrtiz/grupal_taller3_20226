@@ -15,11 +15,26 @@ public class EmbeddingProcessor {
     @Qualifier("documentVectorStore")
     VectorStore documentVectorStore;
 
-    public void procesar(List<Document> documents) {
-        System.out.println("EmbeddingProcessor :: Almacenando " + documents.size()
-                + " documentos en la base vectorial");
+    @Autowired
+    @Qualifier("thesisVectorStore")
+    VectorStore thesisVectorStore;
 
-        documentVectorStore.add(documents);
+    public void procesar(List<Document> documents) {
+        if (documents.isEmpty()) return;
+
+        Document first = documents.get(0);
+        String sourceFile = (String) first.getMetadata().getOrDefault("source_file", "");
+        boolean isThesis = sourceFile.toLowerCase().endsWith(".json") || first.getMetadata().containsKey("titulo");
+
+        if (isThesis) {
+            System.out.println("EmbeddingProcessor :: Almacenando " + documents.size()
+                    + " tesis en la base vectorial (thesisVectorStore)...");
+            thesisVectorStore.add(documents);
+        } else {
+            System.out.println("EmbeddingProcessor :: Almacenando " + documents.size()
+                    + " documentos en la base vectorial RAG (documentVectorStore)...");
+            documentVectorStore.add(documents);
+        }
 
         System.out.println("EmbeddingProcessor :: Almacenamiento completado.");
     }

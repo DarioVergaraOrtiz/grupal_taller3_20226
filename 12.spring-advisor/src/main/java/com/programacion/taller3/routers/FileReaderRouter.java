@@ -18,15 +18,31 @@ public class FileReaderRouter extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
+        // Ruta 1: Documentos Institucionales Normales (PDFs en C:/Taller3)
+        // Procesados se mueven a C:/Taller3/procesados
+        String normalFrom = "file:%s?antInclude=*.pdf&delay=1000&move=procesados".formatted(inboundPath);
 
-        String from = "file:%s?antInclude=*.pdf,*.json&delay=1000&move=procesados".formatted(inboundPath);
+        from(normalFrom)
+                .routeId("normalDocumentsRoute")
+                .log("Documento Normal leído: ${header.CamelFileName}")
+                .bean("fileProcessor")                  // Lectura con Tika (PDF)
+                .bean("transformerProcessor")            // Chunking
+                .bean("metadataEnricher")                // Metadatos
+                .bean("summarizationProcessor")          // Resumen
+                .bean("embeddingProcessor");             // Guarda en RAG (documentVectorStore)
 
-        from(from)
-                .log("Archivo leído: ${header.CamelFileName}")
-                .bean("fileProcessor")                  // Lectura con Tika
-                .bean("transformerProcessor")            // Chunking a 300 tokens
-                .bean("metadataEnricher")                // Metadatos: document_id, doc_content
-                .bean("summarizationProcessor")          // Estrategia 2: Resumen vía LLM
-                .bean("embeddingProcessor");             // Vectorización + Qdrant
+        // Ruta 2: Temas de Tesis (JSONs en C:/Taller3/tesis)
+        // Procesados se mueven a C:/Taller3/tesis/procesados
+        String thesisInboundPath = inboundPath + "/tesis";
+        String thesisFrom = "file:%s?antInclude=*.json&delay=1000&move=procesados".formatted(thesisInboundPath);
+
+        from(thesisFrom)
+                .routeId("thesisDocumentsRoute")
+                .log("Tesis leída: ${header.CamelFileName}")
+                .bean("fileProcessor")                  // Parseo JSON de tesis
+                .bean("transformerProcessor")            // Se salta el splitter en código
+                .bean("metadataEnricher")                // Metadatos
+                .bean("summarizationProcessor")          // Se salta el resumen en código
+                .bean("embeddingProcessor");             // Guarda en Tesis (thesisVectorStore)
     }
 }

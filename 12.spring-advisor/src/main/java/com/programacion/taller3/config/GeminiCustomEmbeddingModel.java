@@ -40,7 +40,7 @@ public class GeminiCustomEmbeddingModel extends AbstractEmbeddingModel {
 
     @Override
     public int dimensions() {
-        return 3072; // dimension for gemini-embedding-2
+        return 3072;
     }
 
     @Override
@@ -84,6 +84,7 @@ public class GeminiCustomEmbeddingModel extends AbstractEmbeddingModel {
                 }
             } catch (Exception e) {
                 System.err.println("Error generating embedding for chunk: " + e.getMessage());
+                throw new RuntimeException("Error al generar embeddings con la API de Google (posiblemente límite de cuota/Rate Limit excedido). Detalle: " + e.getMessage(), e);
             }
         }
 

@@ -13,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.codec.ServerSentEvent;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import com.programacion.taller3.services.ThesisSimilarityTool;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
@@ -29,6 +30,7 @@ public class ChatController {
     private final ChatClient chatClient;
     private final VectorStore documentVectorStore;
     private final VectorStore memoryVectorStore;
+    private final ThesisSimilarityTool thesisSimilarityTool;
 
     @Value("classpath:/prompts/systemPrompt.st")
     Resource systemPrompt;
@@ -39,7 +41,8 @@ public class ChatController {
     public ChatController(
             ChatClient.Builder builder,
             @Qualifier("documentVectorStore") VectorStore documentVectorStore,
-            @Qualifier("memoryVectorStore") VectorStore memoryVectorStore) {
+            @Qualifier("memoryVectorStore") VectorStore memoryVectorStore,
+            ThesisSimilarityTool thesisSimilarityTool) {
 
         this.chatClient = builder
                 .defaultAdvisors(new SimpleLoggerAdvisor())
@@ -47,6 +50,7 @@ public class ChatController {
 
         this.documentVectorStore = documentVectorStore;
         this.memoryVectorStore = memoryVectorStore;
+        this.thesisSimilarityTool = thesisSimilarityTool;
     }
 
     @PostMapping(path = "/api/chat", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_EVENT_STREAM_VALUE)
@@ -78,9 +82,43 @@ public class ChatController {
             var results = documentVectorStore.similaritySearch(
                     SearchRequest.builder()
                             .query(message)
-                            .topK(5)
+                            .topK(this.ragTopK)
                             .build()
             );
+
+            // Búsqueda determinista para artículos específicos (Búsqueda híbrida por palabra clave)
+            // Si el usuario pregunta por "artículo X" o "art. X"
+            java.util.regex.Pattern pattern = java.util.regex.Pattern.compile("(?i)(art[ií]culo|art\\.?)\\s*(\\d+)");
+            java.util.regex.Matcher matcher = pattern.matcher(message);
+            if (matcher.find()) {
+                String artNum = matcher.group(2);
+                System.out.println("ChatController :: Detectado interés en artículo: " + artNum);
+                
+                try {
+                    // Hacemos una búsqueda amplia para traer los chunks y buscar el artículo exacto en memoria
+                    java.util.List<Document> allDocs = documentVectorStore.similaritySearch(
+                            SearchRequest.builder().query("de").topK(80).build()
+                    );
+                    for (var doc : allDocs) {
+                        String text = doc.getText();
+                        // Buscamos coincidencia exacta del artículo en el texto
+                        if (text.contains("Art. " + artNum + ".-") || 
+                            text.contains("Art. " + artNum + ".") || 
+                            text.contains("Artículo " + artNum)) {
+                            
+                            System.out.println("ChatController :: ¡Coincidencia determinista encontrada para Art. " + artNum + "!");
+                            // Si no estaba ya en los resultados, lo agregamos al principio
+                            if (results.stream().noneMatch(d -> d.getId().equals(doc.getId()))) {
+                                results = new java.util.ArrayList<>(results);
+                                results.add(0, doc);
+                            }
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.err.println("ChatController :: Error en escaneo determinista: " + e.getMessage());
+                }
+            }
 
             System.out.println("ChatController :: RAG recuperó " + results.size() + " docs");
 
@@ -109,16 +147,17 @@ public class ChatController {
             String ragContext = contextBuilder.toString();
             System.out.println("ChatController :: Contexto RAG total: " + ragContext.length() + " caracteres");
 
-            finalSystemPrompt = "Eres un asistente académico especializado en Tesis y Trabajos de Titulación de la carrera de Computación de la Universidad Central del Ecuador (UCE).\n\n" +
+            finalSystemPrompt = "Eres un asistente académico especializado en la carrera de Computación de la Universidad Central del Ecuador (UCE).\n\n" +
+                    "Tienes acceso a dos fuentes de información:\n" +
+                    "1. CONTEXTO DE NORMATIVAS (Instructivo General de Titulación): Se proporciona abajo en este prompt. Utilízalo para responder dudas sobre reglas, artículos, modalidades y reglamentos.\n" +
+                    "2. CONSULTA DE TESIS REALES: Tienes una herramienta llamada 'consultarTemas' (Tool) para buscar proyectos de titulación y temas de tesis reales. Si el usuario te pregunta por proyectos de titulación, temas de tesis, tesis similares o te pide buscar sobre algún tema de investigación (como realidad virtual, procesamiento de imágenes, etc.), DEBES llamar a la herramienta 'consultarTemas' usando la consulta de búsqueda como parámetro y responder usando los resultados devueltos por la herramienta.\n\n" +
                     "REGLAS:\n" +
-                    "1. Basa tus respuestas EXCLUSIVAMENTE en el contexto de las tesis proporcionado abajo.\n" +
-                    "2. Si no encuentras información relevante en el contexto para responder la pregunta, indícalo de forma natural y amable.\n" +
-                    "3. Cita los autores o el título de la tesis cuando sea posible.\n" +
-                    "4. Sé conciso pero completo. Prioriza datos concretos de las investigaciones.\n" +
-                    "5. RESPONDE ÚNICAMENTE EN ESPAÑOL y de forma muy natural.\n" +
-                    "6. PROHIBIDO usar etiquetas como <thought> o incluir tus procesos de razonamiento interno. Escribe SOLO la respuesta final para el usuario.\n" +
-                    "7. Mantén una conversación fluida y directa.\n\n" +
-                    "CONTEXTO RECUPERADO (TESIS):\n" +
+                    "1. Basa tus respuestas sobre normativas e instructivos en el contexto proporcionado abajo.\n" +
+                    "2. Si la consulta es sobre temas de tesis o trabajos similares, llama a la herramienta 'consultarTemas' para obtener los datos reales. Cita el título, autores, director y año de las tesis encontradas.\n" +
+                    "3. Si no encuentras información en el contexto ni en la herramienta, indícalo de forma natural y amable.\n" +
+                    "4. RESPONDE ÚNICAMENTE EN ESPAÑOL.\n" +
+                    "5. PROHIBIDO usar etiquetas como <thought> o incluir tus procesos de razonamiento interno en la respuesta final.\n\n" +
+                    "CONTEXTO DE NORMATIVAS RECUPERADO:\n" +
                     ragContext;
         }
 
@@ -136,6 +175,7 @@ public class ChatController {
                 .system(finalSystemPrompt)
                 .advisors(vectorMemoryAdvisor)
                 .advisors(a -> a.param("chat_memory_conversation_id", sessionId))
+                .tools(thesisSimilarityTool)
                 .user(message)
                 .stream()
                 .content()
