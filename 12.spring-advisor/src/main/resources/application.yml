@@ -2,7 +2,7 @@ server:
   port: 8091
 
 app:
-  key: AQ.Ab8RN6LfZ9u7xNtGmUWx3UPU-QMd8h6htktebszdy4up8v2KlA 
+  key: AIzaSyDhNnQhY_UaTcplOlHaRjekm1tyTAAzIxY
   aimodel: gemini-3.1-flash-lite
   url: https://generativelanguage.googleapis.com/v1beta/openai/
   files:

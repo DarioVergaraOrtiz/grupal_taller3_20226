@@ -67,12 +67,14 @@ public class VectorStoreConfig {
      */
     @Bean
     @org.springframework.beans.factory.annotation.Qualifier("memoryVectorStore")
-    public VectorStore memoryVectorStore(EmbeddingModel embeddingModel, QdrantClient qdrantClient) {
+    public VectorStore memoryVectorStore(QdrantClient qdrantClient, EmbeddingModel embeddingModel) {
         ensureCollectionExists(qdrantClient, memoryCollectionName, 3072);
-
-        return QdrantVectorStore.builder(qdrantClient, embeddingModel)
+        
+        VectorStore qdrantStore = QdrantVectorStore.builder(qdrantClient, embeddingModel)
                 .collectionName(memoryCollectionName)
                 .build();
+                
+        return SanitizingVectorStore.createProxy(qdrantStore);
     }
 
     /**
